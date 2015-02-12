@@ -2,9 +2,8 @@ import java.util.Hashtable;
 import java.util.Stack;
 
 public class ChessBoard {
-	Hashtable<Position, ChessPiece> cells;
-	Stack<Record>  records;
-	String[] colors;
+	Hashtable<Position, ChessPiece> cells;	// store the chess piece in each cell by position
+	Stack<Record>  	records;  // store the record of movement on chess board
 	
 	/**
 	 * Constructor for a new chessBoard with chess pieces defined

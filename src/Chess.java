@@ -15,6 +15,6 @@ public class Chess {
 		ChessBoard chessBoard = new ChessBoard();
 		Position position = new Position(8, 2);
 		System.out.print(chessBoard.getChessPieceInPosition(position));
-		System.out.print(chessBoard.getChessPieceInPosition(position).type);
+		chessBoard.getChessPieceInPosition(position).showPossibleNextPosition(chessBoard);
 	}
 }

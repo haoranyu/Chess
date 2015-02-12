@@ -9,6 +9,7 @@ public class Position {
 	
 	/**
 	 * Constructor with no parameters
+	 * Get a position without meaning
 	 */
 	public Position() {
 		this.row = 0;

@@ -8,6 +8,8 @@
  */
 public class CPBlackPawn extends ChessPiece {
 
+	
+	
 	public CPBlackPawn(int number) {
 		this.position = new Position(7, number);
 		this.number = number;

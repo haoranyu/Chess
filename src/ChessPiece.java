@@ -5,10 +5,14 @@ import java.util.ArrayList;
  *
  */
 public abstract class ChessPiece {
-	String type;
-	int number;
-	Position position;
-	ArrayList<Position> possibleNextPosition = new ArrayList<>();
+	
+	boolean 	moved; 	// is chess piece moved or not
+	String 		type;   // the color or null
+	int 		number;	// the numbering for the same kind of chess piece
+	Position 	position; // the position of the chess piece
+	
+	ArrayList<Position> possibleNextPosition = new ArrayList<>(); 
+	// the list for storing the next possible positions
 	
 	/**
 	 * The move function for a chessPiece to move
@@ -106,7 +110,8 @@ public abstract class ChessPiece {
 	 * Help function to show all possible function
 	 * WILL BE REMOVED LATER
 	 */
-	public void showPossibleNextPosition() {
+	public void showPossibleNextPosition(ChessBoard chessBoard) {
+		this.getPossibleNextPosition(chessBoard);
 		for (int counter = 0; counter < this.possibleNextPosition.size(); counter++) {
 			this.possibleNextPosition.get(counter).show();
 		}
