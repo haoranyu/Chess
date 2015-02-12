@@ -18,9 +18,19 @@ public class King extends ChessPiece {
 	}
 	
 	@Override
-	public void getPossibleNextPosition() {
-		// TODO Auto-generated method stub
+	public void getPossibleNextPosition(ChessBoard chessBoard) {
+		// remove all before computing new possible next position
+		this.possibleNextPosition.clear();
 		
+		this.addIfNotSelfOccupied(chessBoard, this.position.getLeft(1));
+		this.addIfNotSelfOccupied(chessBoard, this.position.getRight(1));
+		this.addIfNotSelfOccupied(chessBoard, this.position.getUp(1));
+		this.addIfNotSelfOccupied(chessBoard, this.position.getDown(1));
+		
+		this.addIfNotSelfOccupied(chessBoard, this.position.getLeft(1).getUp(1));
+		this.addIfNotSelfOccupied(chessBoard, this.position.getRight(1).getUp(1));
+		this.addIfNotSelfOccupied(chessBoard, this.position.getLeft(1).getDown(1));
+		this.addIfNotSelfOccupied(chessBoard, this.position.getRight(1).getDown(1));
 	}
 
 }
