@@ -16,23 +16,36 @@ public class ChessBoard {
 		this.initilizeKings();
 		this.initilizeQueens();
 		this.initilizeRooks();
+		this.initilizeBishops();
+		this.initilizeKnights();
 		this.initilizePawns();
 		
 		this.setEmpty();
 	}
 	
+	/**
+	 * Initialize kings on chess board
+	 */
 	public void initilizeKings() {
 		CPKing whiteKing = new CPKing("white");
 		this.cells.put(whiteKing.position, whiteKing);
 		CPKing blackKing = new CPKing("black");
 		this.cells.put(blackKing.position, blackKing);
 	}
+	
+	/**
+	 * Initialize queens on chess board
+	 */
 	public void initilizeQueens() {
 		CPQueen whiteQueen = new CPQueen("white");
 		this.cells.put(whiteQueen.position, whiteQueen);
 		CPQueen blackQueen = new CPQueen("black");
 		this.cells.put(blackQueen.position, blackQueen);
 	}
+	
+	/**
+	 * Initialize rooks on chess board
+	 */
 	public void initilizeRooks() {
 		for(int count = 1; count <= 2; count++) {
 			CPRook whiteRook = new CPRook("white", count);
@@ -41,6 +54,34 @@ public class ChessBoard {
 			this.cells.put(blackRook.position, blackRook);
 		}
 	}
+	
+	/**
+	 * Initialize bishops on chess board
+	 */
+	public void initilizeBishops() {
+		for(int count = 1; count <= 2; count++) {
+			CPBishop whiteBishop = new CPBishop("white", count);
+			this.cells.put(whiteBishop.position, whiteBishop);
+			CPBishop blackBishop = new CPBishop("black", count);
+			this.cells.put(blackBishop.position, blackBishop);
+		}
+	}
+	
+	/**
+	 * Initialize knights on chess board
+	 */
+	public void initilizeKnights() {
+		for(int count = 1; count <= 2; count++) {
+			CPKnight whiteKnight = new CPKnight("white", count);
+			this.cells.put(whiteKnight.position, whiteKnight);
+			CPKnight blackKnight = new CPKnight("black", count);
+			this.cells.put(blackKnight.position, blackKnight);
+		}
+	}
+	
+	/**
+	 * Initialize pawns on chess board
+	 */
 	public void initilizePawns() {
 		for(int count = 1; count <= 8; count++) {
 			CPWhitePawn whitePawn = new CPWhitePawn(count);
@@ -50,6 +91,9 @@ public class ChessBoard {
 		}
 	}
 	
+	/**
+	 * Set a cell in the chess board as empty
+	 */
 	public void setEmpty() {
 		for(int row = 1; row <= 8; row++) {
 			for(int col = 1; col <= 8; col++) {
