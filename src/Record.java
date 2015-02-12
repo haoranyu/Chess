@@ -1,5 +1,3 @@
-import java.util.Hashtable;
-
 /**
  * 
  */
@@ -9,6 +7,22 @@ import java.util.Hashtable;
  *
  */
 public class Record {
-	Hashtable<Position, ChessPiece> from;
-	Hashtable<Position, ChessPiece> to;
+	Position fromPosition;
+	Position toPosition;
+	ChessPiece fromChessPiece;
+	ChessPiece toChessPiece;
+	
+	/**
+	 * Constructor for Record
+	 * @param fromPosition
+	 * @param fromChessPiece
+	 * @param toPosition
+	 * @param toChessPiece
+	 */
+	public Record(Position fromPosition, ChessPiece fromChessPiece, Position toPosition, ChessPiece toChessPiece) {
+		this.fromPosition = fromPosition;
+		this.fromChessPiece = fromChessPiece;
+		this.toPosition = toPosition;
+		this.toChessPiece = toChessPiece;
+	}
 }

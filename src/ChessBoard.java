@@ -1,21 +1,65 @@
 import java.util.Hashtable;
-
+import java.util.Stack;
 
 public class ChessBoard {
 	Hashtable<Position, ChessPiece> cells;
+	Stack<Record>  records;
+	String[] colors;
 	
 	/**
-	 * Constructor for a new chessBoard
+	 * Constructor for a new chessBoard with chess pieces defined
 	 */
 	public ChessBoard() {
 		this.cells = new Hashtable<Position, ChessPiece>();
+		this.records = new Stack<Record>();
 		
-		King whiteKing = new King("white");
+		this.initilizeKings();
+		this.initilizeQueens();
+		this.initilizeRooks();
+		this.initilizePawns();
+		
+		this.setEmpty();
+	}
+	
+	public void initilizeKings() {
+		CPKing whiteKing = new CPKing("white");
 		this.cells.put(whiteKing.position, whiteKing);
-		
-		King blackKing = new King("black");
+		CPKing blackKing = new CPKing("black");
 		this.cells.put(blackKing.position, blackKing);
-		
+	}
+	public void initilizeQueens() {
+		CPQueen whiteQueen = new CPQueen("white");
+		this.cells.put(whiteQueen.position, whiteQueen);
+		CPQueen blackQueen = new CPQueen("black");
+		this.cells.put(blackQueen.position, blackQueen);
+	}
+	public void initilizeRooks() {
+		for(int count = 1; count <= 2; count++) {
+			CPRook whiteRook = new CPRook("white", count);
+			this.cells.put(whiteRook.position, whiteRook);
+			CPRook blackRook = new CPRook("black", count);
+			this.cells.put(blackRook.position, blackRook);
+		}
+	}
+	public void initilizePawns() {
+		for(int count = 1; count <= 8; count++) {
+			CPWhitePawn whitePawn = new CPWhitePawn(count);
+			this.cells.put(whitePawn.position, whitePawn);
+			CPBlackPawn blackPawn = new CPBlackPawn(count);
+			this.cells.put(blackPawn.position, blackPawn);
+		}
+	}
+	
+	public void setEmpty() {
+		for(int row = 1; row <= 8; row++) {
+			for(int col = 1; col <= 8; col++) {
+				Position position = new Position(row, col);
+				if(this.getChessPieceInPosition(position) == null) {
+					CPEmpty empty = new CPEmpty();
+					this.cells.put(position, empty);
+				}
+			}
+		}
 	}
 	
 	/**
@@ -41,15 +85,8 @@ public class ChessBoard {
 	 * @param position
 	 */
 	public void clearPosition(Position position) {
-		this.cells.remove(position);
+		CPEmpty empty = new CPEmpty();
+		this.cells.put(position, empty);
 	}
 	
-	/**
-	 * Use position on board to get the cell status
-	 * @param position
-	 * @return
-	 */
-	public Hashtable<Position, ChessPiece> getCellByPosition(Position position) {
-		return this.cells;
-	}
 }

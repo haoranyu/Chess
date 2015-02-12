@@ -5,12 +5,13 @@ import java.util.ArrayList;
  *
  */
 public abstract class ChessPiece {
-	String color;
+	String type;
+	int number;
 	Position position;
 	ArrayList<Position> possibleNextPosition = new ArrayList<>();
 	
 	/**
-	 * The move function for a chessPiece to movev
+	 * The move function for a chessPiece to move
 	 * @param chessBoard
 	 * @param newPosition
 	 * @return
@@ -19,6 +20,16 @@ public abstract class ChessPiece {
 		this.getPossibleNextPosition(chessBoard);
 		if(this.possibleNextPosition.contains(newPosition)){
 			// TODO add the original dead piece to the stack
+			
+			// Add a record for this movement
+			Record moveRecord = new Record(
+					this.position,
+					chessBoard.getChessPieceInPosition(this.position), 
+					newPosition,
+					chessBoard.getChessPieceInPosition(newPosition)
+					);
+			
+			chessBoard.records.push(moveRecord);
 			
 			chessBoard.setChessPieceInPosition(newPosition, this);
 			chessBoard.clearPosition(this.position);
@@ -40,12 +51,17 @@ public abstract class ChessPiece {
 	 * @return
 	 */
 	public boolean selfOccupied(ChessBoard chessBoard, Position position) {
-		if(chessBoard.getChessPieceInPosition(position) == null) {
-			// check if is an empty cell
+		if(this.type.equals(chessBoard.getChessPieceInPosition(position).type)){
+			// check non-empty, color equal to color of itself
+			return true;
+		}
+		else {
 			return false;
 		}
-		else if(this.color.equals(chessBoard.getChessPieceInPosition(position).color)){
-			// check non-empty color equal to color of itself
+	}
+	
+	public boolean occupied(ChessBoard chessBoard, Position position) {
+		if(!chessBoard.getChessPieceInPosition(position).type.equals("null")){
 			return true;
 		}
 		else {
@@ -58,13 +74,31 @@ public abstract class ChessPiece {
 	 * @param chessBoard
 	 * @param position
 	 */
-	public void addIfNotSelfOccupied(ChessBoard chessBoard, Position position) {
+	public boolean addIfAvaliable(ChessBoard chessBoard, Position position) {
+		boolean shouldGoOn = true;
+		if(occupied(chessBoard, position)) {
+			shouldGoOn = false;
+		}
 		if(!this.selfOccupied(chessBoard, position)) {
 			// do not add available if self occupied
 			if(!this.possibleNextPosition.contains(position)) {
 				// get rid of duplicates
 				this.possibleNextPosition.add(position);
 			}
+		}
+		return shouldGoOn;
+	}
+	
+	public void iterativeAddPossiblePosition(ChessBoard chessBoard, Position startPosition, int maxIteration, int toRight, int toUp) {
+		boolean shouldGoOn = true;
+		Position position = new Position(startPosition);
+		while(maxIteration > 0) {
+			position = new Position(position.getRight(toRight).getUp(toUp));
+			shouldGoOn = addIfAvaliable(chessBoard, position);
+			if(!shouldGoOn) {
+				break;
+			}
+			maxIteration--;
 		}
 	}
 	
@@ -73,8 +107,8 @@ public abstract class ChessPiece {
 	 * WILL BE REMOVED LATER
 	 */
 	public void showPossibleNextPosition() {
-		for (int i = 0; i < this.possibleNextPosition.size(); i++) {
-			this.possibleNextPosition.get(i).show();
+		for (int counter = 0; counter < this.possibleNextPosition.size(); counter++) {
+			this.possibleNextPosition.get(counter).show();
 		}
 	}
 	
