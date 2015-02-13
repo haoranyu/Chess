@@ -1,17 +1,20 @@
 /**
- * 
+ * This is the class for knight
  */
 
 /**
  * @author haoranyu
- *
+ * @since  2015-02-13 01:19:26
+ * @version 1.0
  */
+
 public class CPKnight extends ChessPiece {
 
 	/**
 	 * Constructor for default Knight
-	 * @param type
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param number	the numbering of knight
 	 */
 	public CPKnight(String type, int number) {
 		if(type == "white") {
@@ -33,9 +36,10 @@ public class CPKnight extends ChessPiece {
 	
 	/**
 	 * Constructor for Knight with specified position
-	 * @param type
-	 * @param position
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param position	the position of this knight
+	 * @param number	the numbering of knight
 	 */
 	public CPKnight(String type, Position position, int number) {
 		this.position = position;

@@ -1,9 +1,21 @@
+/**
+ * This is the class for chess board
+ */
+
+/**
+ * @author haoranyu
+ * @since  2015-02-13 01:16:02
+ * @version 1.0
+ */
+
 import java.util.Hashtable;
 import java.util.Stack;
 
 public class ChessBoard {
 	Hashtable<Position, ChessPiece> cells;	// store the chess piece in each cell by position
 	Stack<Record>  	records;  // store the record of movement on chess board
+	int	row; // how many rows for the chessboard
+	int col; // how many columns for the chessboard
 	
 	/**
 	 * Constructor for a new chessBoard with chess pieces defined
@@ -11,6 +23,8 @@ public class ChessBoard {
 	public ChessBoard() {
 		this.cells = new Hashtable<Position, ChessPiece>();
 		this.records = new Stack<Record>();
+		this.row = 8;
+		this.col = 8;
 		
 		this.initilizeKings();
 		this.initilizeQueens();
@@ -25,7 +39,7 @@ public class ChessBoard {
 	/**
 	 * Initialize kings on chess board
 	 */
-	public void initilizeKings() {
+	private void initilizeKings() {
 		CPKing whiteKing = new CPKing("white");
 		this.cells.put(whiteKing.position, whiteKing);
 		CPKing blackKing = new CPKing("black");
@@ -35,7 +49,7 @@ public class ChessBoard {
 	/**
 	 * Initialize queens on chess board
 	 */
-	public void initilizeQueens() {
+	private void initilizeQueens() {
 		CPQueen whiteQueen = new CPQueen("white");
 		this.cells.put(whiteQueen.position, whiteQueen);
 		CPQueen blackQueen = new CPQueen("black");
@@ -45,7 +59,7 @@ public class ChessBoard {
 	/**
 	 * Initialize rooks on chess board
 	 */
-	public void initilizeRooks() {
+	private void initilizeRooks() {
 		for(int count = 1; count <= 2; count++) {
 			CPRook whiteRook = new CPRook("white", count);
 			this.cells.put(whiteRook.position, whiteRook);
@@ -57,7 +71,7 @@ public class ChessBoard {
 	/**
 	 * Initialize bishops on chess board
 	 */
-	public void initilizeBishops() {
+	private void initilizeBishops() {
 		for(int count = 1; count <= 2; count++) {
 			CPBishop whiteBishop = new CPBishop("white", count);
 			this.cells.put(whiteBishop.position, whiteBishop);
@@ -69,7 +83,7 @@ public class ChessBoard {
 	/**
 	 * Initialize knights on chess board
 	 */
-	public void initilizeKnights() {
+	private void initilizeKnights() {
 		for(int count = 1; count <= 2; count++) {
 			CPKnight whiteKnight = new CPKnight("white", count);
 			this.cells.put(whiteKnight.position, whiteKnight);
@@ -81,7 +95,7 @@ public class ChessBoard {
 	/**
 	 * Initialize pawns on chess board
 	 */
-	public void initilizePawns() {
+	private void initilizePawns() {
 		for(int count = 1; count <= 8; count++) {
 			CPPawn whitePawn = new CPPawn("white", count);
 			this.cells.put(whitePawn.position, whitePawn);
@@ -91,9 +105,9 @@ public class ChessBoard {
 	}
 	
 	/**
-	 * Set a cell in the chess board as empty
+	 * Set all other cells with no chess piece as empty
 	 */
-	public void setEmpty() {
+	private void setEmpty() {
 		for(int row = 1; row <= 8; row++) {
 			for(int col = 1; col <= 8; col++) {
 				Position position = new Position(row, col);
@@ -107,8 +121,9 @@ public class ChessBoard {
 	
 	/**
 	 * Get the chessPiece in the position
-	 * @param position
-	 * @return
+	 * 
+	 * @param position		The position we see into
+	 * @return chessPiece	Return the chess piece in this position
 	 */
 	public ChessPiece getChessPieceInPosition(Position position) {
 		return this.cells.get(position);
@@ -116,8 +131,9 @@ public class ChessBoard {
 	
 	/**
 	 * Set a chessPiece into the chessBoard
-	 * @param position
-	 * @param chessPiece
+	 * 
+	 * @param position		The position we see into
+	 * @param chessPiece	The chess piece we want to put into the position
 	 */
 	public void setChessPieceInPosition(Position position, ChessPiece chessPiece) {
 		this.cells.put(position, chessPiece);
@@ -125,11 +141,27 @@ public class ChessBoard {
 	
 	/**
 	 * Make the cell of position null
-	 * @param position
+	 * 
+	 * @param position	The position we want to clear
 	 */
 	public void clearPosition(Position position) {
 		CPEmpty empty = new CPEmpty();
 		this.cells.put(position, empty);
+	}
+	
+	/**
+	 * Check if the position is occupied by any chess piece
+	 * 
+	 * @param position	The position we see into
+	 * @return			True if any chess piece in this position
+	 */
+	public boolean occupied(Position position) {
+		if(!this.getChessPieceInPosition(position).type.equals("null")){
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 }

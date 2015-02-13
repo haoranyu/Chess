@@ -1,9 +1,15 @@
-import java.util.ArrayList;
+/**
+ * This is the super class for chess piece
+ */
 
 /**
  * @author haoranyu
- *
+ * @since  2015-02-13 01:19:08
+ * @version 1.0
  */
+
+import java.util.ArrayList;
+
 public abstract class ChessPiece {
 	
 	boolean 	moved; 	// is chess piece moved or not
@@ -16,9 +22,10 @@ public abstract class ChessPiece {
 	
 	/**
 	 * The move function for a chessPiece to move
-	 * @param chessBoard
-	 * @param newPosition
-	 * @return
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @param newPosition	The position we are moving to
+	 * @return				Return true if it is possible
 	 */
 	public boolean move(ChessBoard chessBoard, Position newPosition) {
 		this.getPossibleNextPosition(chessBoard);
@@ -58,11 +65,12 @@ public abstract class ChessPiece {
 	
 	/**
 	 * Check whether the expected position is occupied by the same color
-	 * @param chessBoard
-	 * @param position
-	 * @return
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @param position		The position we see into
+	 * @return				Return true if occupied by player himself
 	 */
-	public boolean selfOccupied(ChessBoard chessBoard, Position position) {
+	protected boolean selfOccupied(ChessBoard chessBoard, Position position) {
 		if(this.type.equals(chessBoard.getChessPieceInPosition(position).type)){
 			// check non-empty, color equal to color of itself
 			return true;
@@ -73,31 +81,18 @@ public abstract class ChessPiece {
 	}
 	
 	/**
-	 * Check if the position is occupied by any chess piece
-	 * @param chessBoard
-	 * @param position
-	 * @return
-	 */
-	public boolean occupied(ChessBoard chessBoard, Position position) {
-		if(!chessBoard.getChessPieceInPosition(position).type.equals("null")){
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
-	/**
-	 * If the cell is vaild & is not self-occupied & not duplicates, 
+	 * If the cell is valid AND is not self-occupied AND not duplicates, 
 	 * Then add to possible position
-	 * @param chessBoard
-	 * @param position
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @param position		The position we see into
+	 * @return				Return true if the outer iteration should going on
 	 */
-	public boolean addIfAvaliable(ChessBoard chessBoard, Position position) {
+	protected boolean addIfAvaliable(ChessBoard chessBoard, Position position) {
 		boolean shouldGoOn = true;
 		
-		if(position.valid()){
-			if(occupied(chessBoard, position)) {
+		if(position.valid(chessBoard)){
+			if(chessBoard.occupied(position)) {
 				shouldGoOn = false;
 			}
 			if(!this.selfOccupied(chessBoard, position)) {
@@ -114,13 +109,14 @@ public abstract class ChessPiece {
 	
 	/**
 	 * Iteratively checking the cells to see if available and then add 
-	 * @param chessBoard
-	 * @param startPosition
-	 * @param maxIteration
-	 * @param toRight
-	 * @param toUp
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @param startPosition	The position where iteration starts
+	 * @param maxIteration	The maximum iterations we are expecting
+	 * @param toRight		In each iteration we move how many step to right
+	 * @param toUp			In each iteration we move how many step to top
 	 */
-	public void iterativeAddPossiblePosition(ChessBoard chessBoard, Position startPosition, int maxIteration, int toRight, int toUp) {
+	protected void iterativeAddPossiblePosition(ChessBoard chessBoard, Position startPosition, int maxIteration, int toRight, int toUp) {
 		boolean shouldGoOn = true;
 		Position position = new Position(startPosition);
 		while(maxIteration > 0) {
@@ -136,7 +132,10 @@ public abstract class ChessPiece {
 	/**
 	 * Help function to show all possible function
 	 * WILL BE REMOVED LATER
+	 * 
+	 * @param chessBoard	The object of chess board
 	 */
+
 	public void showPossibleNextPosition(ChessBoard chessBoard) {
 		System.out.print("All possible next positions are:\n");
 		this.getPossibleNextPosition(chessBoard);
@@ -147,7 +146,8 @@ public abstract class ChessPiece {
 	
 	/**
 	 * According to the type of chessPiece and than calculate the possibleNextPosition
-	 * @param chessBoard
+	 * 
+	 * @param chessBoard	The object of chess board
 	 */
 	public abstract void getPossibleNextPosition(ChessBoard chessBoard);
 	

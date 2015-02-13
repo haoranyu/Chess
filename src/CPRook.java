@@ -1,17 +1,20 @@
 /**
- * 
+ * This is the class for rook
  */
 
 /**
  * @author haoranyu
- *
+ * @since  2015-02-13 01:19:42
+ * @version 1.0
  */
+
 public class CPRook extends ChessPiece {
 
 	/**
 	 * Constructor for default Rook
-	 * @param type
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param number	the numbering of rook
 	 */
 	public CPRook(String type, int number) {
 		if(type == "white") {
@@ -33,9 +36,10 @@ public class CPRook extends ChessPiece {
 	
 	/**
 	 * Constructor for Rook with specified position
-	 * @param type
-	 * @param position
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param position	the position of this rook
+	 * @param number	the numbering of rook
 	 */
 	public CPRook(String type, Position position, int number) {
 		this.position = position;

@@ -1,16 +1,19 @@
 /**
- * 
+ * This is the class for king
  */
 
 /**
  * @author haoranyu
- *
+ * @since  2015-02-13 01:19:22
+ * @version 1.0
  */
+
 public class CPKing extends ChessPiece {
 
 	/**
 	 * Constructor for default King
-	 * @param type
+	 * 
+	 * @param type		the color or null
 	 */
 	public CPKing(String type) {
 		if(type == "white") {
@@ -27,8 +30,9 @@ public class CPKing extends ChessPiece {
 	
 	/**
 	 * Constructor for King with specified position
-	 * @param type
-	 * @param position
+	 * 
+	 * @param type		the color or null
+	 * @param position	the position of this king
 	 */
 	public CPKing(String type, Position position) {
 		this.position = position;

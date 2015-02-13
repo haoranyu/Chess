@@ -1,17 +1,21 @@
 /**
- * 
+ * This is the class for bishop
  */
 
 /**
  * @author haoranyu
- *
+ * @since  2015-02-13 01:19:13
+ * @version 1.0
  */
+
+
 public class CPBishop extends ChessPiece {
 
 	/**
 	 * Constructor for default Bishop
-	 * @param type
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param number	the numbering of bishop
 	 */
 	public CPBishop(String type, int number) {
 		if(type == "white") {
@@ -34,9 +38,10 @@ public class CPBishop extends ChessPiece {
 	
 	/**
 	 * Constructor for Bishop with specified position
-	 * @param type
-	 * @param position
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param position	the position of this bishop
+	 * @param number	the numbering of bishop
 	 */
 	public CPBishop(String type, Position position, int number) {
 		this.position = position;

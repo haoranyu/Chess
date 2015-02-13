@@ -1,17 +1,20 @@
 /**
- * 
+ * This is the class for pawn
  */
 
 /**
  * @author haoranyu
- *
+ * @since  2015-02-13 01:19:30
+ * @version 1.0
  */
+
 public class CPPawn extends ChessPiece {
 
 	/**
 	 * Constructor for default Pawn
-	 * @param type
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param number	the numbering of pawn
 	 */
 	public CPPawn(String type, int number) {
 		if(type == "white") {
@@ -27,9 +30,10 @@ public class CPPawn extends ChessPiece {
 	
 	/**
 	 * Constructor for Pawn with specified position
-	 * @param type
-	 * @param position
-	 * @param number
+	 * 
+	 * @param type		the color or null
+	 * @param position	the position of this pawn
+	 * @param number	the numbering of pawn
 	 */
 	public CPPawn(String type, Position position, int number) {
 		this.position = position;
@@ -40,17 +44,18 @@ public class CPPawn extends ChessPiece {
 	
 	/**
 	 * This override for Pawn case which is special
-	 * If the cell is valid & is not self-occupied & not duplicates, 
+	 * If the cell is valid AND is not self-occupied AND not duplicates, 
 	 * Then add to possible position
-	 * @param chessBoard
-	 * @param position
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @param position		The position we see into
 	 */
 	@Override
-	public boolean addIfAvaliable(ChessBoard chessBoard, Position position) {
-		if(position.valid()){
+	protected boolean addIfAvaliable(ChessBoard chessBoard, Position position) {
+		if(position.valid(chessBoard)){
 			if(this.position.col == position.col) {
 				// go in a line
-				if(!occupied(chessBoard, position)) {
+				if(!chessBoard.occupied(position)) {
 					// should be empty for going straightforward
 					if(!this.possibleNextPosition.contains(position)) {
 						this.possibleNextPosition.add(position);
@@ -59,7 +64,7 @@ public class CPPawn extends ChessPiece {
 			}
 			else {
 				// go in diagonal  
-				if(occupied(chessBoard, position) && !selfOccupied(chessBoard, position)) {
+				if(chessBoard.occupied(position) && !this.selfOccupied(chessBoard, position)) {
 					if(!this.possibleNextPosition.contains(position)) {
 						this.possibleNextPosition.add(position);
 					}

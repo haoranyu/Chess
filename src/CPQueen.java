@@ -1,16 +1,19 @@
 /**
- * 
+ * This is the class for queen
  */
 
 /**
  * @author haoranyu
- *
+ * @since  2015-02-13 01:19:38
+ * @version 1.0
  */
+
 public class CPQueen extends ChessPiece {
 
 	/**
 	 * Constructor for default Queen
-	 * @param type
+	 * 
+	 * @param type		the color or null
 	 */
 	public CPQueen(String type) {
 		if(type == "white") {
@@ -27,8 +30,9 @@ public class CPQueen extends ChessPiece {
 	
 	/**
 	 * Constructor for Queen with specified position
-	 * @param type
-	 * @param position
+	 * 
+	 * @param type		the color or null
+	 * @param position	the position of this queen
 	 */
 	public CPQueen(String type, Position position) {
 		this.position = position;

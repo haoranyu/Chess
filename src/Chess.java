@@ -9,7 +9,7 @@
 public class Chess {
 
 	/**
-	 * @param args
+	 * @param args not specified
 	 */
 	public static void main(String[] args) {
 		ChessBoard chessBoard = new ChessBoard();
