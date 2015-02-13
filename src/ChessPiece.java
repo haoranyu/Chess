@@ -25,6 +25,11 @@ public abstract class ChessPiece {
 		if(this.possibleNextPosition.contains(newPosition)){
 			// TODO add the original dead piece to the stack
 			
+			// Mark this chess piece as moved
+			if(this.moved == false) {
+				this.moved = true;
+			}
+			
 			// Add a record for this movement
 			Record moveRecord = new Record(
 					this.position,
@@ -43,7 +48,10 @@ public abstract class ChessPiece {
 			return true;
 		}
 		else{
-			// will be handled for GUI
+			// will be handled by controller. Now just print error out
+			System.out.print("WARNING: You cannot move to ");
+			newPosition.show();
+			System.out.print("\n");
 			return false;
 		}
 	}
@@ -64,6 +72,12 @@ public abstract class ChessPiece {
 		}
 	}
 	
+	/**
+	 * Check if the position is occupied by any chess piece
+	 * @param chessBoard
+	 * @param position
+	 * @return
+	 */
 	public boolean occupied(ChessBoard chessBoard, Position position) {
 		if(!chessBoard.getChessPieceInPosition(position).type.equals("null")){
 			return true;
@@ -74,25 +88,38 @@ public abstract class ChessPiece {
 	}
 	
 	/**
-	 * If the cell is not occupied by itself, we add the cell to possibleNextPosition list
+	 * If the cell is vaild & is not self-occupied & not duplicates, 
+	 * Then add to possible position
 	 * @param chessBoard
 	 * @param position
 	 */
 	public boolean addIfAvaliable(ChessBoard chessBoard, Position position) {
 		boolean shouldGoOn = true;
-		if(occupied(chessBoard, position)) {
-			shouldGoOn = false;
-		}
-		if(!this.selfOccupied(chessBoard, position)) {
-			// do not add available if self occupied
-			if(!this.possibleNextPosition.contains(position)) {
-				// get rid of duplicates
-				this.possibleNextPosition.add(position);
+		
+		if(position.valid()){
+			if(occupied(chessBoard, position)) {
+				shouldGoOn = false;
+			}
+			if(!this.selfOccupied(chessBoard, position)) {
+				// do not add available if self occupied
+				if(!this.possibleNextPosition.contains(position)) {
+					// get rid of duplicates
+					this.possibleNextPosition.add(position);
+				}
 			}
 		}
+
 		return shouldGoOn;
 	}
 	
+	/**
+	 * Iteratively checking the cells to see if available and then add 
+	 * @param chessBoard
+	 * @param startPosition
+	 * @param maxIteration
+	 * @param toRight
+	 * @param toUp
+	 */
 	public void iterativeAddPossiblePosition(ChessBoard chessBoard, Position startPosition, int maxIteration, int toRight, int toUp) {
 		boolean shouldGoOn = true;
 		Position position = new Position(startPosition);
@@ -111,6 +138,7 @@ public abstract class ChessPiece {
 	 * WILL BE REMOVED LATER
 	 */
 	public void showPossibleNextPosition(ChessBoard chessBoard) {
+		System.out.print("All possible next positions are:\n");
 		this.getPossibleNextPosition(chessBoard);
 		for (int counter = 0; counter < this.possibleNextPosition.size(); counter++) {
 			this.possibleNextPosition.get(counter).show();

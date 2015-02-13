@@ -40,19 +40,7 @@ public class Position {
 	 * @return
 	 */
 	public Position getRight(int step) {
-		int newCol;
-		
-		if(this.col + step > 8) {
-			newCol = 8;
-		}
-		else if(this.col + step < 1) {
-			newCol = 1;
-		}
-		else {
-			newCol = this.col + step;
-		}
-		
-		Position newPosition = new Position(this.row, newCol);
+		Position newPosition = new Position(this.row, this.col + step);
 		return newPosition;
 	}
 	
@@ -71,19 +59,7 @@ public class Position {
 	 * @return
 	 */
 	public Position getUp(int step) {
-		int newRow;
-		
-		if(this.row + step > 8) {
-			newRow = 8;
-		}
-		else if(this.row + step < 1) {
-			newRow = 1;
-		}
-		else {
-			newRow = this.row + step;
-		}
-		
-		Position newPosition = new Position(newRow, this.col);
+		Position newPosition = new Position(this.row + step, this.col);
 		return newPosition;
 	}
 	
@@ -101,6 +77,13 @@ public class Position {
 	 */
 	public void show() {
 		System.out.print("(" + row + "," + col + ")\n");
+	}
+	
+	public boolean valid(){
+		if(this.row > 0 && this.col > 0 && this.row <= 8 && this.col <= 8) {
+			return true;
+		}
+		return false;
 	}
 	
 	/**

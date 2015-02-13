@@ -83,9 +83,9 @@ public class ChessBoard {
 	 */
 	public void initilizePawns() {
 		for(int count = 1; count <= 8; count++) {
-			CPWhitePawn whitePawn = new CPWhitePawn(count);
+			CPPawn whitePawn = new CPPawn("white", count);
 			this.cells.put(whitePawn.position, whitePawn);
-			CPBlackPawn blackPawn = new CPBlackPawn(count);
+			CPPawn blackPawn = new CPPawn("black", count);
 			this.cells.put(blackPawn.position, blackPawn);
 		}
 	}

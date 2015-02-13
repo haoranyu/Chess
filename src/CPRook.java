@@ -8,6 +8,11 @@
  */
 public class CPRook extends ChessPiece {
 
+	/**
+	 * Constructor for default Rook
+	 * @param type
+	 * @param number
+	 */
 	public CPRook(String type, int number) {
 		if(type == "white") {
 			switch(number){
@@ -23,12 +28,20 @@ public class CPRook extends ChessPiece {
 		}
 		this.number = number;
 		this.type = type;
+		this.moved = false;
 	}
 	
+	/**
+	 * Constructor for Rook with specified position
+	 * @param type
+	 * @param position
+	 * @param number
+	 */
 	public CPRook(String type, Position position, int number) {
 		this.position = position;
 		this.type = type;
 		this.number = number;
+		this.moved = true;
 	}
 	
 	@Override

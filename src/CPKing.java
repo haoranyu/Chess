@@ -8,6 +8,10 @@
  */
 public class CPKing extends ChessPiece {
 
+	/**
+	 * Constructor for default King
+	 * @param type
+	 */
 	public CPKing(String type) {
 		if(type == "white") {
 			this.position = new Position(1, 5);
@@ -18,11 +22,18 @@ public class CPKing extends ChessPiece {
 		
 		this.type = type;
 		this.number = 1;
+		this.moved = false;
 	}
 	
+	/**
+	 * Constructor for King with specified position
+	 * @param type
+	 * @param position
+	 */
 	public CPKing(String type, Position position) {
 		this.position = position;
 		this.type = type;
+		this.moved = true;
 	}
 	
 	@Override
