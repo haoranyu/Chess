@@ -125,10 +125,13 @@ public class ChessBoard {
 	 * Get the chessPiece in the position
 	 * 
 	 * @param position		The position we see into
-	 * @return chessPiece	Return the chess piece in this position
+	 * @return chessPiece	Return the chess piece in this position | Null if not valid
 	 */
 	public ChessPiece getChessPieceInPosition(Position position) {
-		return this.cells.get(position);
+		if(position.valid(this)){
+			return this.cells.get(position);
+		}
+		return null;
 	}
 	
 	/**

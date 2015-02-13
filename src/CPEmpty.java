@@ -12,6 +12,10 @@ public class CPEmpty extends ChessPiece {
 
 	public CPEmpty() {
 		this.type = "null";
+		this.name = "null";
+		this.moved = false;
+		this.number = 0;
+		this.position = new Position();
 	}
 	
 	@Override

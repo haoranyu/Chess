@@ -42,18 +42,23 @@ public abstract class ChessPiece {
 			if(chessBoard.getChessPieceInPosition(newPosition).name.equals("king") &&
 				!chessBoard.getChessPieceInPosition(newPosition).type.equals(this.type)) {
 				chessBoard.win = this.type;
+				System.out.print("WARNING: "+this.type+" win!\n");
 			}
 
 			// Add a record for this movement
 			Record moveRecord = new Record(this.position, chessBoard.getChessPieceInPosition(this.position), 
 											newPosition, chessBoard.getChessPieceInPosition(newPosition));
-			
 			chessBoard.records.push(moveRecord);
+			
 			
 			chessBoard.setChessPieceInPosition(newPosition, this);
 			chessBoard.clearPosition(this.position);
 			
 			this.position = newPosition;
+			
+			if(this.checkOtherKing(chessBoard)) {
+				System.out.print("WARNING: Other's king get checked\n");
+			}
 			
 			return true;
 		}
