@@ -17,14 +17,14 @@ import models.Position;
  * @version 1.0
  */
 
-public class CPKing extends ChessPiece {
+public class King extends ChessPiece {
 
 	/**
 	 * Constructor for default King
 	 * 
 	 * @param type		the color or null
 	 */
-	public CPKing(String type) {
+	public King(String type) {
 		if(type == "white") {
 			this.setPosition(new Position(1, 5));
 		}
@@ -43,7 +43,7 @@ public class CPKing extends ChessPiece {
 	 * @param type		the color or null
 	 * @param position	the position of this king
 	 */
-	public CPKing(String type, Position position) {
+	public King(String type, Position position) {
 		this.moved = true;
 		this.setName("king");
 		this.setType(type);

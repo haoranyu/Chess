@@ -18,7 +18,7 @@ import models.Position;
  */
 
 
-public class CPBishop extends ChessPiece {
+public class Bishop extends ChessPiece {
 
 	/**
 	 * Constructor for default Bishop
@@ -26,7 +26,7 @@ public class CPBishop extends ChessPiece {
 	 * @param type		the color or null
 	 * @param number	the numbering of bishop
 	 */
-	public CPBishop(String type, int number) {
+	public Bishop(String type, int number) {
 		if(type == "white") {
 			switch(number){
 			case 1: this.setPosition(new Position(1, 3)); break;
@@ -52,7 +52,7 @@ public class CPBishop extends ChessPiece {
 	 * @param position	the position of this bishop
 	 * @param number	the numbering of bishop
 	 */
-	public CPBishop(String type, Position position, int number) {
+	public Bishop(String type, Position position, int number) {
 		this.moved = true;
 		this.setName("bishop");
 		this.setType(type);

@@ -13,11 +13,11 @@ import models.Position;
 
 /**
  * @author haoranyu
- * @since  2015-02-13 01:19:30
+ * @since  2015-02-13 16:48:36
  * @version 1.0
  */
 
-public class CPPawn extends ChessPiece {
+public class Pawn extends ChessPiece {
 
 	/**
 	 * Constructor for default Pawn
@@ -25,7 +25,7 @@ public class CPPawn extends ChessPiece {
 	 * @param type		the color or null
 	 * @param number	the numbering of pawn
 	 */
-	public CPPawn(String type, int number) {
+	public Pawn(String type, int number) {
 		if(type == "white") {
 			this.setPosition(new Position(2, number));
 		}
@@ -46,7 +46,7 @@ public class CPPawn extends ChessPiece {
 	 * @param position	the position of this pawn
 	 * @param number	the numbering of pawn
 	 */
-	public CPPawn(String type, Position position, int number) {
+	public Pawn(String type, Position position, int number) {
 		this.moved = true;
 		this.setName("pawn");
 		this.setType(type);

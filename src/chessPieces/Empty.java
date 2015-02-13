@@ -17,9 +17,9 @@ import models.Position;
  * @version 1.0
  */
 
-public class CPEmpty extends ChessPiece {
+public class Empty extends ChessPiece {
 
-	public CPEmpty() {
+	public Empty() {
 		this.setType("null");
 		this.setName("null");
 		this.moved = false;

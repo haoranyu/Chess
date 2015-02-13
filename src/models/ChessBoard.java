@@ -9,13 +9,13 @@ package models;
 import java.util.Hashtable;
 import java.util.Stack;
 
-import chessPieces.CPBishop;
-import chessPieces.CPEmpty;
-import chessPieces.CPKing;
-import chessPieces.CPKnight;
-import chessPieces.CPPawn;
-import chessPieces.CPQueen;
-import chessPieces.CPRook;
+import chessPieces.Bishop;
+import chessPieces.Empty;
+import chessPieces.King;
+import chessPieces.Knight;
+import chessPieces.Pawn;
+import chessPieces.Queen;
+import chessPieces.Rook;
 import chessPieces.ChessPiece;
 
 public class ChessBoard {
@@ -49,9 +49,9 @@ public class ChessBoard {
 	 * Initialize kings on chess board
 	 */
 	private void initilizeKings() {
-		CPKing whiteKing = new CPKing("white");
+		King whiteKing = new King("white");
 		this.cells.put(whiteKing.getPosition(), whiteKing);
-		CPKing blackKing = new CPKing("black");
+		King blackKing = new King("black");
 		this.cells.put(blackKing.getPosition(), blackKing);
 	}
 	
@@ -59,9 +59,9 @@ public class ChessBoard {
 	 * Initialize queens on chess board
 	 */
 	private void initilizeQueens() {
-		CPQueen whiteQueen = new CPQueen("white");
+		Queen whiteQueen = new Queen("white");
 		this.cells.put(whiteQueen.getPosition(), whiteQueen);
-		CPQueen blackQueen = new CPQueen("black");
+		Queen blackQueen = new Queen("black");
 		this.cells.put(blackQueen.getPosition(), blackQueen);
 	}
 	
@@ -70,9 +70,9 @@ public class ChessBoard {
 	 */
 	private void initilizeRooks() {
 		for(int count = 1; count <= 2; count++) {
-			CPRook whiteRook = new CPRook("white", count);
+			Rook whiteRook = new Rook("white", count);
 			this.cells.put(whiteRook.getPosition(), whiteRook);
-			CPRook blackRook = new CPRook("black", count);
+			Rook blackRook = new Rook("black", count);
 			this.cells.put(blackRook.getPosition(), blackRook);
 		}
 	}
@@ -82,9 +82,9 @@ public class ChessBoard {
 	 */
 	private void initilizeBishops() {
 		for(int count = 1; count <= 2; count++) {
-			CPBishop whiteBishop = new CPBishop("white", count);
+			Bishop whiteBishop = new Bishop("white", count);
 			this.cells.put(whiteBishop.getPosition(), whiteBishop);
-			CPBishop blackBishop = new CPBishop("black", count);
+			Bishop blackBishop = new Bishop("black", count);
 			this.cells.put(blackBishop.getPosition(), blackBishop);
 		}
 	}
@@ -94,9 +94,9 @@ public class ChessBoard {
 	 */
 	private void initilizeKnights() {
 		for(int count = 1; count <= 2; count++) {
-			CPKnight whiteKnight = new CPKnight("white", count);
+			Knight whiteKnight = new Knight("white", count);
 			this.cells.put(whiteKnight.getPosition(), whiteKnight);
-			CPKnight blackKnight = new CPKnight("black", count);
+			Knight blackKnight = new Knight("black", count);
 			this.cells.put(blackKnight.getPosition(), blackKnight);
 		}
 	}
@@ -106,9 +106,9 @@ public class ChessBoard {
 	 */
 	private void initilizePawns() {
 		for(int count = 1; count <= 8; count++) {
-			CPPawn whitePawn = new CPPawn("white", count);
+			Pawn whitePawn = new Pawn("white", count);
 			this.cells.put(whitePawn.getPosition(), whitePawn);
-			CPPawn blackPawn = new CPPawn("black", count);
+			Pawn blackPawn = new Pawn("black", count);
 			this.cells.put(blackPawn.getPosition(), blackPawn);
 		}
 	}
@@ -121,7 +121,7 @@ public class ChessBoard {
 			for(int col = 1; col <= 8; col++) {
 				Position position = new Position(row, col);
 				if(this.getChessPieceInPosition(position) == null) {
-					CPEmpty empty = new CPEmpty();
+					Empty empty = new Empty();
 					this.cells.put(position, empty);
 				}
 			}
@@ -157,7 +157,7 @@ public class ChessBoard {
 	 * @param position	The position we want to clear
 	 */
 	public void clearPosition(Position position) {
-		CPEmpty empty = new CPEmpty();
+		Empty empty = new Empty();
 		this.cells.put(position, empty);
 	}
 	

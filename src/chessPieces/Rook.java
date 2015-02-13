@@ -8,47 +8,55 @@ import models.Position;
 
 
 /**
- * This is the class for queen
+ * This is the class for rook
  */
 
 /**
  * @author haoranyu
- * @since  2015-02-13 01:19:38
+ * @since  2015-02-13 01:19:42
  * @version 1.0
  */
 
-public class CPQueen extends ChessPiece {
+public class Rook extends ChessPiece {
 
 	/**
-	 * Constructor for default Queen
+	 * Constructor for default Rook
 	 * 
 	 * @param type		the color or null
+	 * @param number	the numbering of rook
 	 */
-	public CPQueen(String type) {
+	public Rook(String type, int number) {
 		if(type == "white") {
-			this.setPosition(new Position(1, 4));
+			switch(number){
+			case 1: this.setPosition(new Position(1, 1)); break;
+			case 2: this.setPosition(new Position(1, 8)); 
+			}
 		}
 		else { // black
-			this.setPosition(new Position(8, 4));
+			switch(number){
+			case 1: this.setPosition(new Position(8, 1)); break;
+			case 2: this.setPosition(new Position(8, 8)); 
+			}
 		}
-				
+		
 		this.moved = false;
-		this.setName("queen");
+		this.setName("rook");
 		this.setType(type);
-		this.number = 1;
+		this.number = number;
 	}
 	
 	/**
-	 * Constructor for Queen with specified position
+	 * Constructor for Rook with specified position
 	 * 
 	 * @param type		the color or null
-	 * @param position	the position of this queen
+	 * @param position	the position of this rook
+	 * @param number	the numbering of rook
 	 */
-	public CPQueen(String type, Position position) {
+	public Rook(String type, Position position, int number) {
 		this.moved = true;
-		this.setName("queen");
+		this.setName("rook");
 		this.setType(type);
-		this.number = 1;
+		this.number = number;
 		this.setPosition(position);
 	}
 	
@@ -61,10 +69,6 @@ public class CPQueen extends ChessPiece {
 		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 1, 0);
 		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 0, 1);
 		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 0, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 1, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 1, 1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, -1, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, -1, 1);
 	}
 
 }

@@ -1,11 +1,8 @@
 package chessPieces;
 
-
-
-
 /**
  * @author haoranyu
- * @since  2015-02-13 01:19:08
+ * @since  2015-02-13 16:48:21
  * @version 1.0
  */
 

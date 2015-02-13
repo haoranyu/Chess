@@ -17,7 +17,7 @@ import models.Position;
  * @version 1.0
  */
 
-public class CPKnight extends ChessPiece {
+public class Knight extends ChessPiece {
 
 	/**
 	 * Constructor for default Knight
@@ -25,7 +25,7 @@ public class CPKnight extends ChessPiece {
 	 * @param type		the color or null
 	 * @param number	the numbering of knight
 	 */
-	public CPKnight(String type, int number) {
+	public Knight(String type, int number) {
 		if(type == "white") {
 			switch(number){
 			case 1: this.setPosition(new Position(1, 2)); break;
@@ -51,7 +51,7 @@ public class CPKnight extends ChessPiece {
 	 * @param position	the position of this knight
 	 * @param number	the numbering of knight
 	 */
-	public CPKnight(String type, Position position, int number) {
+	public Knight(String type, Position position, int number) {
 		this.moved = true;
 		this.setName("knight");
 		this.setType(type);
