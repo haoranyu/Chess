@@ -130,17 +130,15 @@ public abstract class ChessPiece {
 	 * @param toRight		In each iteration we move how many step to right
 	 * @param toUp			In each iteration we move how many step to top
 	 */
-	protected void iterativeAddPossiblePosition(ChessBoard chessBoard, Position startPosition, 
-						int maxIteration, int toRight, int toUp) {
+	protected void iterativeAddPossiblePosition(ChessBoard chessBoard, Position startPosition, int toRight, int toUp) {
 		boolean shouldGoOn = true;
 		Position position = new Position(startPosition);
-		while(maxIteration > 0) {
+		while(position.valid(chessBoard)) {
 			position = new Position(position.getRight(toRight).getUp(toUp));
 			shouldGoOn = addIfAvaliable(chessBoard, position);
 			if(!shouldGoOn) {
 				break;
 			}
-			maxIteration--;
 		}
 	}
 	

@@ -56,14 +56,16 @@ public class King extends ChessPiece {
 		// remove all before computing new possible next position
 		this.possibleNextPosition.clear();
 		
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, -1, 0);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 1, 0);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 0, 1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 0, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 1, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 1, 1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, -1, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, -1, 1);
+		this.addIfAvaliable(chessBoard, this.getPosition().getLeft(1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getDown(1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getUp(1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRight(1));
+		
+		this.addIfAvaliable(chessBoard, this.getPosition().getDown(1).getLeft(1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getDown(1).getRight(1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getUp(1).getLeft(1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getUp(1).getRight(1));
+		
 	}
 
 }

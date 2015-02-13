@@ -57,14 +57,14 @@ public class Queen extends ChessPiece {
 		// remove all before computing new possible next position
 		this.possibleNextPosition.clear();
 		
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, -1, 0);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 1, 0);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 0, 1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 0, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 1, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, 1, 1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, -1, -1);
-		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 7, -1, 1);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), -1, 0);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 0);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 0, 1);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 0, -1);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, -1);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 1);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), -1, -1);
+		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), -1, 1);
 	}
 
 }
