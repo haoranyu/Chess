@@ -23,9 +23,11 @@ public class CPPawn extends ChessPiece {
 		else { // black
 			this.position = new Position(7, number);
 		}
-		this.number = number;
-		this.type = type;
+		
 		this.moved = false;
+		this.name = "pawn";
+		this.type = type;
+		this.number = number;
 	}
 	
 	/**
@@ -36,10 +38,11 @@ public class CPPawn extends ChessPiece {
 	 * @param number	the numbering of pawn
 	 */
 	public CPPawn(String type, Position position, int number) {
-		this.position = position;
+		this.moved = true;
+		this.name = "pawn";
 		this.type = type;
 		this.number = number;
-		this.moved = true;
+		this.position = position;
 	}
 	
 	/**

@@ -30,10 +30,10 @@ public class CPBishop extends ChessPiece {
 			case 2: this.position = new Position(8, 6); 
 			}
 		}
-		
-		this.number = number;
-		this.type = type;
 		this.moved = false;
+		this.name = "bishop";
+		this.type = type;
+		this.number = number;
 	}
 	
 	/**
@@ -44,10 +44,11 @@ public class CPBishop extends ChessPiece {
 	 * @param number	the numbering of bishop
 	 */
 	public CPBishop(String type, Position position, int number) {
-		this.position = position;
+		this.moved = true;
+		this.name = "bishop";
 		this.type = type;
 		this.number = number;
-		this.moved = true;
+		this.position = position;
 	}
 	
 	@Override

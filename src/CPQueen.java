@@ -22,10 +22,11 @@ public class CPQueen extends ChessPiece {
 		else { // black
 			this.position = new Position(8, 4);
 		}
-		
+				
+		this.moved = false;
+		this.name = "queen";
 		this.type = type;
 		this.number = 1;
-		this.moved = false;
 	}
 	
 	/**
@@ -35,9 +36,11 @@ public class CPQueen extends ChessPiece {
 	 * @param position	the position of this queen
 	 */
 	public CPQueen(String type, Position position) {
-		this.position = position;
-		this.type = type;
 		this.moved = true;
+		this.name = "queen";
+		this.type = type;
+		this.number = 1;
+		this.position = position;
 	}
 	
 	@Override

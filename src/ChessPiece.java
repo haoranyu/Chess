@@ -9,10 +9,12 @@
  */
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public abstract class ChessPiece {
 	
 	boolean 	moved; 	// is chess piece moved or not
+	String 		name;	// the name of the chess piece
 	String 		type;   // the color or null
 	int 		number;	// the numbering for the same kind of chess piece
 	Position 	position; // the position of the chess piece
@@ -36,14 +38,15 @@ public abstract class ChessPiece {
 			if(this.moved == false) {
 				this.moved = true;
 			}
-			
+
+			if(chessBoard.getChessPieceInPosition(newPosition).name.equals("king") &&
+				!chessBoard.getChessPieceInPosition(newPosition).type.equals(this.type)) {
+				chessBoard.win = this.type;
+			}
+
 			// Add a record for this movement
-			Record moveRecord = new Record(
-					this.position,
-					chessBoard.getChessPieceInPosition(this.position), 
-					newPosition,
-					chessBoard.getChessPieceInPosition(newPosition)
-					);
+			Record moveRecord = new Record(this.position, chessBoard.getChessPieceInPosition(this.position), 
+											newPosition, chessBoard.getChessPieceInPosition(newPosition));
 			
 			chessBoard.records.push(moveRecord);
 			
@@ -135,13 +138,32 @@ public abstract class ChessPiece {
 	 * 
 	 * @param chessBoard	The object of chess board
 	 */
-
 	public void showPossibleNextPosition(ChessBoard chessBoard) {
 		System.out.print("All possible next positions are:\n");
 		this.getPossibleNextPosition(chessBoard);
 		for (int counter = 0; counter < this.possibleNextPosition.size(); counter++) {
 			this.possibleNextPosition.get(counter).show();
 		}
+	}
+	
+	/**
+	 * See whether the chess piece is now checking the other king
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @return	True if there king of others is under checking
+	 */
+	public boolean checkOtherKing(ChessBoard chessBoard) {
+		this.getPossibleNextPosition(chessBoard);
+		
+		Iterator<Position> nextPositionItr = possibleNextPosition.iterator();
+		while (nextPositionItr.hasNext()) {
+			Position aimPosition = nextPositionItr.next();
+			if(chessBoard.getChessPieceInPosition(aimPosition).name.equals("king") &&
+				!chessBoard.getChessPieceInPosition(aimPosition).type.equals(this.type)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**

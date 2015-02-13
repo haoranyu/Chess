@@ -20,4 +20,5 @@ public class Chess {
 		System.out.println(chessBoard.getChessPieceInPosition(position.getDown(1)));
 		chessBoard.getChessPieceInPosition(position.getDown(1)).showPossibleNextPosition(chessBoard);
 	}
+	
 }

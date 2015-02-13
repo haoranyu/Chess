@@ -22,10 +22,10 @@ public class CPKing extends ChessPiece {
 		else { // black
 			this.position = new Position(8, 5);
 		}
-		
+		this.moved = false;
+		this.name = "king";
 		this.type = type;
 		this.number = 1;
-		this.moved = false;
 	}
 	
 	/**
@@ -35,9 +35,11 @@ public class CPKing extends ChessPiece {
 	 * @param position	the position of this king
 	 */
 	public CPKing(String type, Position position) {
-		this.position = position;
-		this.type = type;
 		this.moved = true;
+		this.name = "king";
+		this.type = type;
+		this.number = 1;
+		this.position = position;
 	}
 	
 	@Override

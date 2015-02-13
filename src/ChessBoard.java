@@ -14,6 +14,7 @@ import java.util.Stack;
 public class ChessBoard {
 	Hashtable<Position, ChessPiece> cells;	// store the chess piece in each cell by position
 	Stack<Record>  	records;  // store the record of movement on chess board
+	String win;  // who win
 	int	row; // how many rows for the chessboard
 	int col; // how many columns for the chessboard
 	
@@ -23,6 +24,7 @@ public class ChessBoard {
 	public ChessBoard() {
 		this.cells = new Hashtable<Position, ChessPiece>();
 		this.records = new Stack<Record>();
+		this.win = "nobody";
 		this.row = 8;
 		this.col = 8;
 		

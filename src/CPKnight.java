@@ -29,9 +29,10 @@ public class CPKnight extends ChessPiece {
 			case 2: this.position = new Position(8, 7); 
 			}
 		}
-		this.number = number;
-		this.type = type;
 		this.moved = false;
+		this.name = "knight";
+		this.type = type;
+		this.number = number;
 	}
 	
 	/**
@@ -42,10 +43,11 @@ public class CPKnight extends ChessPiece {
 	 * @param number	the numbering of knight
 	 */
 	public CPKnight(String type, Position position, int number) {
-		this.position = position;
+		this.moved = true;
+		this.name = "knight";
 		this.type = type;
 		this.number = number;
-		this.moved = true;
+		this.position = position;
 	}
 	
 	@Override

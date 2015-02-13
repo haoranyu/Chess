@@ -29,9 +29,11 @@ public class CPRook extends ChessPiece {
 			case 2: this.position = new Position(8, 8); 
 			}
 		}
-		this.number = number;
-		this.type = type;
+		
 		this.moved = false;
+		this.name = "rook";
+		this.type = type;
+		this.number = number;
 	}
 	
 	/**
@@ -42,10 +44,11 @@ public class CPRook extends ChessPiece {
 	 * @param number	the numbering of rook
 	 */
 	public CPRook(String type, Position position, int number) {
-		this.position = position;
+		this.moved = true;
+		this.name = "rook";
 		this.type = type;
 		this.number = number;
-		this.moved = true;
+		this.position = position;
 	}
 	
 	@Override
