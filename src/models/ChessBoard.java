@@ -1,4 +1,9 @@
 package models;
+/**
+ * Note:
+ * This is the class for chess board. You may notice that there is a function called setEmpty.
+ * It will set all cells without normal pieces as a special chess piece called Empty.
+ */
 
 /**
  * @author haoranyu

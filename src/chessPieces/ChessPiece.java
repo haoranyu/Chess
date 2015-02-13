@@ -1,6 +1,10 @@
 package chessPieces;
 
 /**
+ * Any empty cell in the chess board will be viewed as empty chess piece.
+ */
+
+/**
  * @author haoranyu
  * @since  2015-02-13 16:48:21
  * @version 1.0

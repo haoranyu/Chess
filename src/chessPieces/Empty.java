@@ -3,12 +3,9 @@ import models.ChessBoard;
 import models.Position;
 
 
-
-
-
-
 /**
- * This is the class for no chess piece
+ * This is the class for no chess piece (a special chess piece called Empty)
+ * Any empty cell in the chess board will be viewed as empty chess piece.
  */
 
 /**
