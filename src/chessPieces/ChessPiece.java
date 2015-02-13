@@ -24,7 +24,7 @@ public abstract class ChessPiece {
 	protected 	String 		name;	// the name of the chess piece
 	protected 	String 		type;   // the color or null
 	protected 	int 		number;	// the numbering for the same kind of chess piece
-	private 	Position 	position; // the position of the chess piece
+	protected 	Position 	position; // the position of the chess piece
 	
 	ArrayList<Position> possibleNextPosition = new ArrayList<>(); 
 	// the list for storing the next possible positions

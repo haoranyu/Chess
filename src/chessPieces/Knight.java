@@ -39,8 +39,8 @@ public class Knight extends ChessPiece {
 			}
 		}
 		this.moved = false;
-		this.setName("knight");
-		this.setType(type);
+		this.name = "knight";
+		this.type = type;
 		this.number = number;
 	}
 	
@@ -53,10 +53,10 @@ public class Knight extends ChessPiece {
 	 */
 	public Knight(String type, Position position, int number) {
 		this.moved = true;
-		this.setName("knight");
-		this.setType(type);
+		this.name = "knight";
+		this.type = type;
 		this.number = number;
-		this.setPosition(position);
+		this.position = position;
 	}
 	
 	@Override

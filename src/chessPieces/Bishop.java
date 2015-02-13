@@ -54,10 +54,10 @@ public class Bishop extends ChessPiece {
 	 */
 	public Bishop(String type, Position position, int number) {
 		this.moved = true;
-		this.setName("bishop");
-		this.setType(type);
+		this.name = "bishop";
+		this.type = type;
 		this.number = number;
-		this.setPosition(position);
+		this.position = position;
 	}
 	
 	@Override

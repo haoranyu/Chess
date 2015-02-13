@@ -17,11 +17,11 @@ import models.Position;
 public class Empty extends ChessPiece {
 
 	public Empty() {
-		this.setType("null");
-		this.setName("null");
+		this.type = "null";
+		this.name = "null";
 		this.moved = false;
 		this.number = 0;
-		this.setPosition(new Position());
+		this.position = new Position();
 	}
 	
 	@Override

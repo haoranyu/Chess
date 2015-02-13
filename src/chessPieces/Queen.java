@@ -33,8 +33,8 @@ public class Queen extends ChessPiece {
 		}
 				
 		this.moved = false;
-		this.setName("queen");
-		this.setType(type);
+		this.name = "queen";
+		this.type = type;
 		this.number = 1;
 	}
 	
@@ -46,10 +46,10 @@ public class Queen extends ChessPiece {
 	 */
 	public Queen(String type, Position position) {
 		this.moved = true;
-		this.setName("queen");
-		this.setType(type);
+		this.name = "queen";
+		this.type = type;
 		this.number = 1;
-		this.setPosition(position);
+		this.position = position;
 	}
 	
 	@Override

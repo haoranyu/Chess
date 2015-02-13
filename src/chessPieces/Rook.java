@@ -40,8 +40,8 @@ public class Rook extends ChessPiece {
 		}
 		
 		this.moved = false;
-		this.setName("rook");
-		this.setType(type);
+		this.name = "rook";
+		this.type = type;
 		this.number = number;
 	}
 	
@@ -54,10 +54,10 @@ public class Rook extends ChessPiece {
 	 */
 	public Rook(String type, Position position, int number) {
 		this.moved = true;
-		this.setName("rook");
-		this.setType(type);
+		this.name = "rook";
+		this.type = type;
 		this.number = number;
-		this.setPosition(position);
+		this.position = position;
 	}
 	
 	@Override

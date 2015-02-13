@@ -34,8 +34,8 @@ public class Pawn extends ChessPiece {
 		}
 		
 		this.moved = false;
-		this.setName("pawn");
-		this.setType(type);
+		this.name = "pawn";
+		this.type = type;
 		this.number = number;
 	}
 	
@@ -48,10 +48,10 @@ public class Pawn extends ChessPiece {
 	 */
 	public Pawn(String type, Position position, int number) {
 		this.moved = true;
-		this.setName("pawn");
-		this.setType(type);
+		this.name = "pawn";
+		this.type = type;
 		this.number = number;
-		this.setPosition(position);
+		this.position = position;
 	}
 	
 	/**

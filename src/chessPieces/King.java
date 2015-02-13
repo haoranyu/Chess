@@ -32,8 +32,8 @@ public class King extends ChessPiece {
 			this.setPosition(new Position(8, 5));
 		}
 		this.moved = false;
-		this.setName("king");
-		this.setType(type);
+		this.name = "king";
+		this.type = type;
 		this.number = 1;
 	}
 	
@@ -45,10 +45,10 @@ public class King extends ChessPiece {
 	 */
 	public King(String type, Position position) {
 		this.moved = true;
-		this.setName("king");
-		this.setType(type);
+		this.name = "king";
+		this.type = type;
 		this.number = 1;
-		this.setPosition(position);
+		this.position = position;
 	}
 	
 	@Override
