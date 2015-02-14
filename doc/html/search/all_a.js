@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['pawn',['Pawn',['../classchess_pieces_1_1_pawn.html',1,'chessPieces']]],
-  ['pawn',['Pawn',['../classchess_pieces_1_1_pawn.html#a7cb5f02c0e0dd7707d4d3abdf7161c84',1,'chessPieces.Pawn.Pawn(String type, int number)'],['../classchess_pieces_1_1_pawn.html#a2c4bdb4c195fbd53e4cea91dd4cab53c',1,'chessPieces.Pawn.Pawn(String type, Position position, int number)']]],
-  ['position',['Position',['../classmodels_1_1_position.html#ae70489b2d6b4738da8a2018e61634a6d',1,'models.Position.Position()'],['../classmodels_1_1_position.html#ac71bfa61225c295e8554e9f22858e105',1,'models.Position.Position(Position position)'],['../classmodels_1_1_position.html#a3ca0f8a082cd6da56549403397facdbf',1,'models.Position.Position(int row, int col)']]],
-  ['position',['Position',['../classmodels_1_1_position.html',1,'models']]]
+  ['main',['main',['../classmodel_core_1_1_chess.html#ad1b2d5c67a2d07367f36542ba9233d0b',1,'modelCore::Chess']]],
+  ['move',['move',['../classmodel_chess_pieces_1_1_chess_piece.html#a12d4674577ac125df63eb022cd02e5e9',1,'modelChessPieces::ChessPiece']]],
+  ['moved',['moved',['../classmodel_chess_pieces_1_1_chess_piece.html#a5bc0722badda5dc066b6a73476fc933c',1,'modelChessPieces::ChessPiece']]]
 ];

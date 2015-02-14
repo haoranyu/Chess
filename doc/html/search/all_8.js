@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['main',['main',['../classmodels_1_1_chess.html#ad823ec16e2214b5f6a9a05988cd3b67d',1,'models::Chess']]],
-  ['move',['move',['../classchess_pieces_1_1_chess_piece.html#ac54942df9783962c97fc3df65e075a57',1,'chessPieces::ChessPiece']]]
+  ['king',['King',['../classmodel_chess_pieces_1_1_king.html',1,'modelChessPieces']]],
+  ['king',['King',['../classmodel_chess_pieces_1_1_king.html#addca0068eced10beccbb62407358e10a',1,'modelChessPieces.King.King(String type)'],['../classmodel_chess_pieces_1_1_king.html#a304e8f6364f887674d05a98e7a6f3ea1',1,'modelChessPieces.King.King(String type, Position position)']]],
+  ['knight',['Knight',['../classmodel_chess_pieces_1_1_knight.html#a147ddcbdf9160932c8b0b386db3954eb',1,'modelChessPieces.Knight.Knight(String type, int number)'],['../classmodel_chess_pieces_1_1_knight.html#ac3d5048db997f503429d11d455db2c42',1,'modelChessPieces.Knight.Knight(String type, Position position, int number)']]],
+  ['knight',['Knight',['../classmodel_chess_pieces_1_1_knight.html',1,'modelChessPieces']]]
 ];

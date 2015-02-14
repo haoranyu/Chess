@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['chess',['Chess',['../classmodels_1_1_chess.html',1,'models']]],
-  ['chessboard',['ChessBoard',['../classmodels_1_1_chess_board.html',1,'models']]],
-  ['chesspiece',['ChessPiece',['../classchess_pieces_1_1_chess_piece.html',1,'chessPieces']]]
+  ['chess',['Chess',['../classmodel_core_1_1_chess.html',1,'modelCore']]],
+  ['chessboard',['ChessBoard',['../classmodel_core_1_1_chess_board.html',1,'modelCore']]],
+  ['chesspiece',['ChessPiece',['../classmodel_chess_pieces_1_1_chess_piece.html',1,'modelChessPieces']]]
 ];

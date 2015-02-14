@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['empty',['Empty',['../classchess_pieces_1_1_empty.html',1,'chessPieces']]],
-  ['equals',['equals',['../classmodels_1_1_position.html#a25c38e3b3fbdf544b88dc328aceb0aad',1,'models::Position']]]
+  ['empress',['Empress',['../classmodel_chess_pieces_1_1_empress.html',1,'modelChessPieces']]],
+  ['empress',['Empress',['../classmodel_chess_pieces_1_1_empress.html#a6e3bd690dae8ab6f26ece63c27f0e144',1,'modelChessPieces.Empress.Empress(String type, int number)'],['../classmodel_chess_pieces_1_1_empress.html#ac38cc0d134a721d07434d3d9b9793e30',1,'modelChessPieces.Empress.Empress(String type, Position position, int number)']]],
+  ['empty',['Empty',['../classmodel_chess_pieces_1_1_empty.html',1,'modelChessPieces']]],
+  ['equals',['equals',['../classmodel_core_1_1_position.html#ad6cd6dc938426f8e328374e6130e51a6',1,'modelCore::Position']]]
 ];

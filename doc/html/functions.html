@@ -76,6 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -84,16 +85,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_q"><span>q</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
       <li class="current"><a href="#index_v"><span>v</span></a></li>
     </ul>
   </div>
@@ -117,7 +122,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -131,178 +136,239 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>addIfAvaliable()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#ae2d53226500eae41edb706d492fe46ec">chessPieces.ChessPiece</a>
-, <a class="el" href="classchess_pieces_1_1_pawn.html#a5788751e93b88159665f3533b3b5b311">chessPieces.Pawn</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a247db1a354f7792b0a79b8128629a1c5">modelChessPieces.ChessPiece</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_pawn.html#adf484645070f9dd3a774ea779aa84260">modelChessPieces.Pawn</a>
 </li>
 <li>addRecord()
-: <a class="el" href="classmodels_1_1_chess_board.html#a0c6d29f835f288a3107103a9f33ce016">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#af36430e89b73d56b322509621d8b27ee">modelCore.ChessBoard</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
 <li>Bishop()
-: <a class="el" href="classchess_pieces_1_1_bishop.html#ac939ccc917297b61fa1bc86f38bfebda">chessPieces.Bishop</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_bishop.html#ae2d6a71368f3304f8191acdf20949dc0">modelChessPieces.Bishop</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>checkOtherKing()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a30832f783f609eac27f3ade1e70a67d3">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a4c3f413337032a7328d0f06edca6fdcd">modelChessPieces.ChessPiece</a>
 </li>
 <li>ChessBoard()
-: <a class="el" href="classmodels_1_1_chess_board.html#a4242ebe32dd357bd7d44b70b51eb4bf1">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#a50f1163eb1a59a7193668a8d1cf89435">modelCore.ChessBoard</a>
 </li>
 <li>clearPosition()
-: <a class="el" href="classmodels_1_1_chess_board.html#ab6fe2c2acb8db64021d646ffb76cc679">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#a59800c1635a93d08909d34814bfffd20">modelCore.ChessBoard</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>Empress()
+: <a class="el" href="classmodel_chess_pieces_1_1_empress.html#a6e3bd690dae8ab6f26ece63c27f0e144">modelChessPieces.Empress</a>
+</li>
 <li>equals()
-: <a class="el" href="classmodels_1_1_position.html#a25c38e3b3fbdf544b88dc328aceb0aad">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#ad6cd6dc938426f8e328374e6130e51a6">modelCore.Position</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>fromChessPiece
+: <a class="el" href="classmodel_core_1_1_record.html#a38bcd5a97552a51ac6c3e657a2d59c77">modelCore.Record</a>
+</li>
+<li>fromPosition
+: <a class="el" href="classmodel_core_1_1_record.html#ae7cca522f71f0fb7b5e25b9c3fe00e46">modelCore.Record</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>getChessPieceInPosition()
-: <a class="el" href="classmodels_1_1_chess_board.html#ab4160abcbb58f4195aa95f49263825dd">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#ad700d180ac71927b8fd0e5c3e09ddd2b">modelCore.ChessBoard</a>
 </li>
 <li>getCol()
-: <a class="el" href="classmodels_1_1_position.html#ae3739c95264be83590bdd5cc8800f5c3">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#a2e369524c690d77e4fe5a2f387d6351c">modelCore.Position</a>
 </li>
 <li>getDown()
-: <a class="el" href="classmodels_1_1_position.html#a5edb65a1f0e1e83b116ec155315da33a">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#ad22eb535ce11e1ca0a846a98c37e2b43">modelCore.Position</a>
 </li>
 <li>getLeft()
-: <a class="el" href="classmodels_1_1_position.html#af6beee2dd50788597e1ee1a44854bdd7">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#a43c2653aa7b9bd2ece8a746aa488e890">modelCore.Position</a>
 </li>
 <li>getName()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a0e86e35efbd5d56b4377f9eba8b15569">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#ac73d3ae34142cdbf7571a086ffb122c9">modelChessPieces.ChessPiece</a>
 </li>
 <li>getPosition()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a4b144240cc5b1ccec0622d72342fab99">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a6e88271516d06a50162a36321d10ff0e">modelChessPieces.ChessPiece</a>
 </li>
 <li>getPossibleNextPosition()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a2286de37351ba3b330e82e6184549b01">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_bishop.html#aedae3e2213937b96cc893ccb89fc205a">modelChessPieces.Bishop</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a3f9b600bf3206059f4a4b5542c5a5706">modelChessPieces.ChessPiece</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_empress.html#aaa970b6e95d691e6c6f912ea4f1d91bb">modelChessPieces.Empress</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_empty.html#ad67a7561ce8e4d8f2f216adf85ab90a1">modelChessPieces.Empty</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_king.html#ac5d6a00b703d61fb300a193e960c3b08">modelChessPieces.King</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_knight.html#a0bdd805e2f68c2665ab8d4c5e9aa384d">modelChessPieces.Knight</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_pawn.html#a309e120aa9f1884cb8b18b7e607eb586">modelChessPieces.Pawn</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_princess.html#aa7c8b759767abcfc81e9e5ba74ac0bc0">modelChessPieces.Princess</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_queen.html#af661882e66b15eb897cb437774f136ad">modelChessPieces.Queen</a>
+, <a class="el" href="classmodel_chess_pieces_1_1_rook.html#a7e434d240d3d0e04e44a5f816edbdbd8">modelChessPieces.Rook</a>
 </li>
 <li>getRight()
-: <a class="el" href="classmodels_1_1_position.html#a15c414693b69ee5685697faa77b35247">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#a414339238322766507ee2ce61e4f18fc">modelCore.Position</a>
 </li>
 <li>getType()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#ad19f7b5dd7e7918664b90c679925d733">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a189d923d883085ce16d051c161c93e68">modelChessPieces.ChessPiece</a>
 </li>
 <li>getUp()
-: <a class="el" href="classmodels_1_1_position.html#af2c7aeae4f0c5cf9d9c752020fada35a">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#a922189e8018dd157a322dd55581ccd19">modelCore.Position</a>
 </li>
 <li>getWin()
-: <a class="el" href="classmodels_1_1_chess_board.html#a7237577f7cc1880eee35f1b1ed29b762">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#a34e37f076c55fdc46d66ac2dc0280267">modelCore.ChessBoard</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
 <li>hashCode()
-: <a class="el" href="classmodels_1_1_position.html#ae8e5288bb6a72118ef901adb7e70e756">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#a87f61d46274b310c7c4edae150f20d89">modelCore.Position</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>iterativeAddPossiblePosition()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a584538d6c160d1b10c71979f30ec7c46">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a3768e0328f7eec372daeed33a58644ba">modelChessPieces.ChessPiece</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
 <li>King()
-: <a class="el" href="classchess_pieces_1_1_king.html#a66cabcc1ead5022216f5ed170a4c4bd6">chessPieces.King</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_king.html#addca0068eced10beccbb62407358e10a">modelChessPieces.King</a>
 </li>
 <li>Knight()
-: <a class="el" href="classchess_pieces_1_1_knight.html#aca1a0fe4a874da1aa6ebfa21afa9a6fc">chessPieces.Knight</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_knight.html#a147ddcbdf9160932c8b0b386db3954eb">modelChessPieces.Knight</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>lastRecord()
+: <a class="el" href="classmodel_core_1_1_chess_board.html#ae899ac8bc62aaf23e4724870932ac6bf">modelCore.ChessBoard</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>main()
-: <a class="el" href="classmodels_1_1_chess.html#ad823ec16e2214b5f6a9a05988cd3b67d">models.Chess</a>
+: <a class="el" href="classmodel_core_1_1_chess.html#ad1b2d5c67a2d07367f36542ba9233d0b">modelCore.Chess</a>
 </li>
 <li>move()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#ac54942df9783962c97fc3df65e075a57">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a12d4674577ac125df63eb022cd02e5e9">modelChessPieces.ChessPiece</a>
+</li>
+<li>moved
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a5bc0722badda5dc066b6a73476fc933c">modelChessPieces.ChessPiece</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>name
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a03d2fb76fbbff0dab72d00f2173a69ff">modelChessPieces.ChessPiece</a>
+</li>
+<li>number
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a979e63b99128333883acedc38d25dc87">modelChessPieces.ChessPiece</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
 <li>occupied()
-: <a class="el" href="classmodels_1_1_chess_board.html#a8db97c5d6d0b15f42d7aa06054c2023f">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#abf420a5f1ea25fe7a8c6cdce3427c0af">modelCore.ChessBoard</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>Pawn()
-: <a class="el" href="classchess_pieces_1_1_pawn.html#a7cb5f02c0e0dd7707d4d3abdf7161c84">chessPieces.Pawn</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_pawn.html#a7621de9604258a4ec1c58480b1655564">modelChessPieces.Pawn</a>
+</li>
+<li>position
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a3d4362d5b28f6edb14161196d9c6807d">modelChessPieces.ChessPiece</a>
 </li>
 <li>Position()
-: <a class="el" href="classmodels_1_1_position.html#ac71bfa61225c295e8554e9f22858e105">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#a689df995977dd8da01d733c5b0940e8b">modelCore.Position</a>
+</li>
+<li>Princess()
+: <a class="el" href="classmodel_chess_pieces_1_1_princess.html#a4c6de589407a7e236d78a89cffd41b97">modelChessPieces.Princess</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
 <li>Queen()
-: <a class="el" href="classchess_pieces_1_1_queen.html#a72bb7eddfbc1b52ccb3869454cacf631">chessPieces.Queen</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_queen.html#a7b704ff103b506b01303c9acfc777240">modelChessPieces.Queen</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>Record()
-: <a class="el" href="classmodels_1_1_record.html#aab11b9bfb04e143b8724bf70f2281d7b">models.Record</a>
+: <a class="el" href="classmodel_core_1_1_record.html#a8ea296d191e5510b45eece7db72478fd">modelCore.Record</a>
 </li>
 <li>Rook()
-: <a class="el" href="classchess_pieces_1_1_rook.html#abf88a6f46fee569655f05f56ed50631a">chessPieces.Rook</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_rook.html#af2c466d81052c7adcbb443d235aecdb6">modelChessPieces.Rook</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>selfOccupied()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a77b641798a0a706b4fa7a9ba9b2b99a7">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a8045974b8d8f1e88722cd54b050774c5">modelChessPieces.ChessPiece</a>
 </li>
 <li>setChessPieceInPosition()
-: <a class="el" href="classmodels_1_1_chess_board.html#a17e3a22dfd4e07066e8751872a06b08a">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#af1a00d0d402bde8b8b5e5a23a96e6374">modelCore.ChessBoard</a>
 </li>
 <li>setName()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a1a4ec57ad0f35722b789cd77bbf1f689">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a86e3e4135360b5bdc7ce9f6bad817b99">modelChessPieces.ChessPiece</a>
 </li>
 <li>setPosition()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#ae365e81c758786651b7cf6fe06139177">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#abdd69cca4ca429e531ab58297c0036c7">modelChessPieces.ChessPiece</a>
 </li>
 <li>setType()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a8ee50123a2c6efcaf6681aa37bdf57de">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a7d2fa4377c4409371487f3e5afd5e100">modelChessPieces.ChessPiece</a>
 </li>
 <li>setWin()
-: <a class="el" href="classmodels_1_1_chess_board.html#a432547694019772c4aeee24c4e3af839">models.ChessBoard</a>
+: <a class="el" href="classmodel_core_1_1_chess_board.html#a504f3ee56db184a7e2d8a0aa0b4da1a5">modelCore.ChessBoard</a>
 </li>
 <li>show()
-: <a class="el" href="classmodels_1_1_position.html#ad0778a05537f93acd82e31a6d053e380">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#aa88918fe5d6446eb3c9f04c0b1ba92d0">modelCore.Position</a>
 </li>
 <li>showPossibleNextPosition()
-: <a class="el" href="classchess_pieces_1_1_chess_piece.html#a28c442bb8fb5c8481f5ba76da5a9b95b">chessPieces.ChessPiece</a>
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a2be89ce9b9a6affec1d5fd9df990d386">modelChessPieces.ChessPiece</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>toChessPiece
+: <a class="el" href="classmodel_core_1_1_record.html#abdc3856c453073728a148a4aec3a91e9">modelCore.Record</a>
+</li>
+<li>toPosition
+: <a class="el" href="classmodel_core_1_1_record.html#a9beacb5341758e83ebe459f71b6e2511">modelCore.Record</a>
+</li>
+<li>type
+: <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a195487ca88c197af7c1604247be31db2">modelChessPieces.ChessPiece</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
 <li>valid()
-: <a class="el" href="classmodels_1_1_position.html#af999cad6749ec695abed16c2f4404370">models.Position</a>
+: <a class="el" href="classmodel_core_1_1_position.html#aeb1285fd0e8aa11728692d3a40c644f5">modelCore.Position</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -310,7 +376,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Feb 13 2015 17:57:37 for Chess by
+    <li class="footer">Generated on Sat Feb 14 2015 00:04:30 for Chess by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

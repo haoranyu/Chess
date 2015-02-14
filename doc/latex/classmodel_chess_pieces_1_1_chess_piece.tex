@@ -1,0 +1,286 @@
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece}{\section{model\+Chess\+Pieces.\+Chess\+Piece Class Reference}
+\label{classmodel_chess_pieces_1_1_chess_piece}\index{model\+Chess\+Pieces.\+Chess\+Piece@{model\+Chess\+Pieces.\+Chess\+Piece}}
+}
+Inheritance diagram for model\+Chess\+Pieces.\+Chess\+Piece\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classmodel_chess_pieces_1_1_chess_piece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a12d4674577ac125df63eb022cd02e5e9}{move} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board, \hyperlink{classmodel_core_1_1_position}{Position} new\+Position)
+\item 
+void \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a2be89ce9b9a6affec1d5fd9df990d386}{show\+Possible\+Next\+Position} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board)
+\item 
+boolean \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a4c3f413337032a7328d0f06edca6fdcd}{check\+Other\+King} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board)
+\item 
+abstract void \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a3f9b600bf3206059f4a4b5542c5a5706}{get\+Possible\+Next\+Position} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board)
+\item 
+\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a6e88271516d06a50162a36321d10ff0e}{get\+Position} ()
+\item 
+void \hyperlink{classmodel_chess_pieces_1_1_chess_piece_abdd69cca4ca429e531ab58297c0036c7}{set\+Position} (\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a3d4362d5b28f6edb14161196d9c6807d}{position})
+\item 
+String \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a189d923d883085ce16d051c161c93e68}{get\+Type} ()
+\item 
+void \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a7d2fa4377c4409371487f3e5afd5e100}{set\+Type} (String \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a195487ca88c197af7c1604247be31db2}{type})
+\item 
+String \hyperlink{classmodel_chess_pieces_1_1_chess_piece_ac73d3ae34142cdbf7571a086ffb122c9}{get\+Name} ()
+\item 
+void \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a86e3e4135360b5bdc7ce9f6bad817b99}{set\+Name} (String \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a03d2fb76fbbff0dab72d00f2173a69ff}{name})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a8045974b8d8f1e88722cd54b050774c5}{self\+Occupied} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board, \hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a3d4362d5b28f6edb14161196d9c6807d}{position})
+\item 
+boolean \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a247db1a354f7792b0a79b8128629a1c5}{add\+If\+Avaliable} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board, \hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a3d4362d5b28f6edb14161196d9c6807d}{position})
+\item 
+void \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a3768e0328f7eec372daeed33a58644ba}{iterative\+Add\+Possible\+Position} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board, \hyperlink{classmodel_core_1_1_position}{Position} start\+Position, int to\+Right, int to\+Up)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boolean \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a5bc0722badda5dc066b6a73476fc933c}{moved}
+\item 
+String \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a03d2fb76fbbff0dab72d00f2173a69ff}{name}
+\item 
+String \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a195487ca88c197af7c1604247be31db2}{type}
+\item 
+int \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a979e63b99128333883acedc38d25dc87}{number}
+\item 
+\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_chess_pieces_1_1_chess_piece_a3d4362d5b28f6edb14161196d9c6807d}{position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+haoranyu 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+2015-\/02-\/13 16\+:48\+:21 
+\end{DoxySince}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a247db1a354f7792b0a79b8128629a1c5}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!add\+If\+Avaliable@{add\+If\+Avaliable}}
+\index{add\+If\+Avaliable@{add\+If\+Avaliable}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{add\+If\+Avaliable}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Chess\+Pieces.\+Chess\+Piece.\+add\+If\+Avaliable (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board, }
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a247db1a354f7792b0a79b8128629a1c5}
+If the cell is valid A\+N\+D is not self-\/occupied A\+N\+D not duplicates, Then add to possible position
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The object of chess board \\
+\hline
+{\em position} & The position we see into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true if the outer iteration should going on 
+\end{DoxyReturn}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a4c3f413337032a7328d0f06edca6fdcd}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!check\+Other\+King@{check\+Other\+King}}
+\index{check\+Other\+King@{check\+Other\+King}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{check\+Other\+King}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Chess\+Pieces.\+Chess\+Piece.\+check\+Other\+King (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_a4c3f413337032a7328d0f06edca6fdcd}
+See whether the chess piece is now checking the other king
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The object of chess board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there king of others is under checking 
+\end{DoxyReturn}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_ac73d3ae34142cdbf7571a086ffb122c9}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String model\+Chess\+Pieces.\+Chess\+Piece.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_ac73d3ae34142cdbf7571a086ffb122c9}
+\begin{DoxyReturn}{Returns}
+the name 
+\end{DoxyReturn}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a6e88271516d06a50162a36321d10ff0e}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} model\+Chess\+Pieces.\+Chess\+Piece.\+get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_a6e88271516d06a50162a36321d10ff0e}
+\begin{DoxyReturn}{Returns}
+the position 
+\end{DoxyReturn}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a3f9b600bf3206059f4a4b5542c5a5706}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!get\+Possible\+Next\+Position@{get\+Possible\+Next\+Position}}
+\index{get\+Possible\+Next\+Position@{get\+Possible\+Next\+Position}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{get\+Possible\+Next\+Position}]{\setlength{\rightskip}{0pt plus 5cm}abstract void model\+Chess\+Pieces.\+Chess\+Piece.\+get\+Possible\+Next\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [abstract]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a3f9b600bf3206059f4a4b5542c5a5706}
+According to the type of chess\+Piece and than calculate the possible\+Next\+Position
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The object of chess board \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a189d923d883085ce16d051c161c93e68}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}String model\+Chess\+Pieces.\+Chess\+Piece.\+get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_a189d923d883085ce16d051c161c93e68}
+\begin{DoxyReturn}{Returns}
+the type 
+\end{DoxyReturn}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a3768e0328f7eec372daeed33a58644ba}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!iterative\+Add\+Possible\+Position@{iterative\+Add\+Possible\+Position}}
+\index{iterative\+Add\+Possible\+Position@{iterative\+Add\+Possible\+Position}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{iterative\+Add\+Possible\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Chess\+Pieces.\+Chess\+Piece.\+iterative\+Add\+Possible\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board, }
+\item[{{\bf Position}}]{start\+Position, }
+\item[{int}]{to\+Right, }
+\item[{int}]{to\+Up}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a3768e0328f7eec372daeed33a58644ba}
+Iteratively checking the cells to see if available and then add
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The object of chess board \\
+\hline
+{\em start\+Position} & The position where iteration starts \\
+\hline
+{\em to\+Right} & In each iteration we move how many step to right \\
+\hline
+{\em to\+Up} & In each iteration we move how many step to top \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a12d4674577ac125df63eb022cd02e5e9}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!move@{move}}
+\index{move@{move}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Chess\+Pieces.\+Chess\+Piece.\+move (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board, }
+\item[{{\bf Position}}]{new\+Position}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_a12d4674577ac125df63eb022cd02e5e9}
+The move function for a chess\+Piece to move
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The object of chess board \\
+\hline
+{\em new\+Position} & The position we are moving to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true if it is possible 
+\end{DoxyReturn}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a8045974b8d8f1e88722cd54b050774c5}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!self\+Occupied@{self\+Occupied}}
+\index{self\+Occupied@{self\+Occupied}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{self\+Occupied}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Chess\+Pieces.\+Chess\+Piece.\+self\+Occupied (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board, }
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a8045974b8d8f1e88722cd54b050774c5}
+Check whether the expected position is occupied by the same color
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The object of chess board \\
+\hline
+{\em position} & The position we see into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true if occupied by player himself 
+\end{DoxyReturn}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a86e3e4135360b5bdc7ce9f6bad817b99}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Chess\+Pieces.\+Chess\+Piece.\+set\+Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_a86e3e4135360b5bdc7ce9f6bad817b99}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_abdd69cca4ca429e531ab58297c0036c7}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Chess\+Pieces.\+Chess\+Piece.\+set\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_abdd69cca4ca429e531ab58297c0036c7}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a7d2fa4377c4409371487f3e5afd5e100}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{set\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Chess\+Pieces.\+Chess\+Piece.\+set\+Type (
+\begin{DoxyParamCaption}
+\item[{String}]{type}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_a7d2fa4377c4409371487f3e5afd5e100}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the type to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a2be89ce9b9a6affec1d5fd9df990d386}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!show\+Possible\+Next\+Position@{show\+Possible\+Next\+Position}}
+\index{show\+Possible\+Next\+Position@{show\+Possible\+Next\+Position}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{show\+Possible\+Next\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Chess\+Pieces.\+Chess\+Piece.\+show\+Possible\+Next\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board}
+\end{DoxyParamCaption}
+)}}\label{classmodel_chess_pieces_1_1_chess_piece_a2be89ce9b9a6affec1d5fd9df990d386}
+Help function to show all possible function W\+I\+L\+L B\+E R\+E\+M\+O\+V\+E\+D L\+A\+T\+E\+R
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The object of chess board \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmodel_chess_pieces_1_1_chess_piece_a5bc0722badda5dc066b6a73476fc933c}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!moved@{moved}}
+\index{moved@{moved}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{moved}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Chess\+Pieces.\+Chess\+Piece.\+moved\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a5bc0722badda5dc066b6a73476fc933c}
+is chess piece moved or not \hypertarget{classmodel_chess_pieces_1_1_chess_piece_a03d2fb76fbbff0dab72d00f2173a69ff}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!name@{name}}
+\index{name@{name}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}String model\+Chess\+Pieces.\+Chess\+Piece.\+name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a03d2fb76fbbff0dab72d00f2173a69ff}
+the name of the chess piece \hypertarget{classmodel_chess_pieces_1_1_chess_piece_a979e63b99128333883acedc38d25dc87}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!number@{number}}
+\index{number@{number}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{number}]{\setlength{\rightskip}{0pt plus 5cm}int model\+Chess\+Pieces.\+Chess\+Piece.\+number\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a979e63b99128333883acedc38d25dc87}
+the numbering for the same kind of chess piece \hypertarget{classmodel_chess_pieces_1_1_chess_piece_a3d4362d5b28f6edb14161196d9c6807d}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!position@{position}}
+\index{position@{position}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} model\+Chess\+Pieces.\+Chess\+Piece.\+position\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a3d4362d5b28f6edb14161196d9c6807d}
+the position of the chess piece \hypertarget{classmodel_chess_pieces_1_1_chess_piece_a195487ca88c197af7c1604247be31db2}{\index{model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}!type@{type}}
+\index{type@{type}!model\+Chess\+Pieces\+::\+Chess\+Piece@{model\+Chess\+Pieces\+::\+Chess\+Piece}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}String model\+Chess\+Pieces.\+Chess\+Piece.\+type\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_chess_pieces_1_1_chess_piece_a195487ca88c197af7c1604247be31db2}
+the color or null 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/model\+Chess\+Pieces/Chess\+Piece.\+java\end{DoxyCompactItemize}

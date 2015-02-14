@@ -1,19 +1,21 @@
 var annotated =
 [
-    [ "chessPieces", null, [
-      [ "Bishop", "classchess_pieces_1_1_bishop.html", "classchess_pieces_1_1_bishop" ],
-      [ "ChessPiece", "classchess_pieces_1_1_chess_piece.html", "classchess_pieces_1_1_chess_piece" ],
-      [ "Empty", "classchess_pieces_1_1_empty.html", "classchess_pieces_1_1_empty" ],
-      [ "King", "classchess_pieces_1_1_king.html", "classchess_pieces_1_1_king" ],
-      [ "Knight", "classchess_pieces_1_1_knight.html", "classchess_pieces_1_1_knight" ],
-      [ "Pawn", "classchess_pieces_1_1_pawn.html", "classchess_pieces_1_1_pawn" ],
-      [ "Queen", "classchess_pieces_1_1_queen.html", "classchess_pieces_1_1_queen" ],
-      [ "Rook", "classchess_pieces_1_1_rook.html", "classchess_pieces_1_1_rook" ]
+    [ "modelChessPieces", null, [
+      [ "Bishop", "classmodel_chess_pieces_1_1_bishop.html", "classmodel_chess_pieces_1_1_bishop" ],
+      [ "ChessPiece", "classmodel_chess_pieces_1_1_chess_piece.html", "classmodel_chess_pieces_1_1_chess_piece" ],
+      [ "Empress", "classmodel_chess_pieces_1_1_empress.html", "classmodel_chess_pieces_1_1_empress" ],
+      [ "Empty", "classmodel_chess_pieces_1_1_empty.html", "classmodel_chess_pieces_1_1_empty" ],
+      [ "King", "classmodel_chess_pieces_1_1_king.html", "classmodel_chess_pieces_1_1_king" ],
+      [ "Knight", "classmodel_chess_pieces_1_1_knight.html", "classmodel_chess_pieces_1_1_knight" ],
+      [ "Pawn", "classmodel_chess_pieces_1_1_pawn.html", "classmodel_chess_pieces_1_1_pawn" ],
+      [ "Princess", "classmodel_chess_pieces_1_1_princess.html", "classmodel_chess_pieces_1_1_princess" ],
+      [ "Queen", "classmodel_chess_pieces_1_1_queen.html", "classmodel_chess_pieces_1_1_queen" ],
+      [ "Rook", "classmodel_chess_pieces_1_1_rook.html", "classmodel_chess_pieces_1_1_rook" ]
     ] ],
-    [ "models", null, [
-      [ "Chess", "classmodels_1_1_chess.html", null ],
-      [ "ChessBoard", "classmodels_1_1_chess_board.html", "classmodels_1_1_chess_board" ],
-      [ "Position", "classmodels_1_1_position.html", "classmodels_1_1_position" ],
-      [ "Record", "classmodels_1_1_record.html", "classmodels_1_1_record" ]
+    [ "modelCore", null, [
+      [ "Chess", "classmodel_core_1_1_chess.html", null ],
+      [ "ChessBoard", "classmodel_core_1_1_chess_board.html", "classmodel_core_1_1_chess_board" ],
+      [ "Position", "classmodel_core_1_1_position.html", "classmodel_core_1_1_position" ],
+      [ "Record", "classmodel_core_1_1_record.html", "classmodel_core_1_1_record" ]
     ] ]
 ];

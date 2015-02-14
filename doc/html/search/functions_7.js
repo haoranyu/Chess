@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['king',['King',['../classchess_pieces_1_1_king.html#a66cabcc1ead5022216f5ed170a4c4bd6',1,'chessPieces.King.King(String type)'],['../classchess_pieces_1_1_king.html#a7a84e3a42cf0ea6b242383381ceee51b',1,'chessPieces.King.King(String type, Position position)']]],
-  ['knight',['Knight',['../classchess_pieces_1_1_knight.html#aca1a0fe4a874da1aa6ebfa21afa9a6fc',1,'chessPieces.Knight.Knight(String type, int number)'],['../classchess_pieces_1_1_knight.html#a60358d795fb1c3ea5288b31df4388096',1,'chessPieces.Knight.Knight(String type, Position position, int number)']]]
+  ['king',['King',['../classmodel_chess_pieces_1_1_king.html#addca0068eced10beccbb62407358e10a',1,'modelChessPieces.King.King(String type)'],['../classmodel_chess_pieces_1_1_king.html#a304e8f6364f887674d05a98e7a6f3ea1',1,'modelChessPieces.King.King(String type, Position position)']]],
+  ['knight',['Knight',['../classmodel_chess_pieces_1_1_knight.html#a147ddcbdf9160932c8b0b386db3954eb',1,'modelChessPieces.Knight.Knight(String type, int number)'],['../classmodel_chess_pieces_1_1_knight.html#ac3d5048db997f503429d11d455db2c42',1,'modelChessPieces.Knight.Knight(String type, Position position, int number)']]]
 ];

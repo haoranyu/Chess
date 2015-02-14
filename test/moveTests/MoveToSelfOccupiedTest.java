@@ -1,7 +1,7 @@
 package moveTests;
 import static org.junit.Assert.*;
-import models.ChessBoard;
-import models.Position;
+import modelCore.ChessBoard;
+import modelCore.Position;
 
 import org.junit.Before;
 import org.junit.Test;

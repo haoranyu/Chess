@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['selfoccupied',['selfOccupied',['../classchess_pieces_1_1_chess_piece.html#a77b641798a0a706b4fa7a9ba9b2b99a7',1,'chessPieces::ChessPiece']]],
-  ['setchesspieceinposition',['setChessPieceInPosition',['../classmodels_1_1_chess_board.html#a17e3a22dfd4e07066e8751872a06b08a',1,'models::ChessBoard']]],
-  ['setname',['setName',['../classchess_pieces_1_1_chess_piece.html#a1a4ec57ad0f35722b789cd77bbf1f689',1,'chessPieces::ChessPiece']]],
-  ['setposition',['setPosition',['../classchess_pieces_1_1_chess_piece.html#ae365e81c758786651b7cf6fe06139177',1,'chessPieces::ChessPiece']]],
-  ['settype',['setType',['../classchess_pieces_1_1_chess_piece.html#a8ee50123a2c6efcaf6681aa37bdf57de',1,'chessPieces::ChessPiece']]],
-  ['setwin',['setWin',['../classmodels_1_1_chess_board.html#a432547694019772c4aeee24c4e3af839',1,'models::ChessBoard']]],
-  ['show',['show',['../classmodels_1_1_position.html#ad0778a05537f93acd82e31a6d053e380',1,'models::Position']]],
-  ['showpossiblenextposition',['showPossibleNextPosition',['../classchess_pieces_1_1_chess_piece.html#a28c442bb8fb5c8481f5ba76da5a9b95b',1,'chessPieces::ChessPiece']]]
+  ['pawn',['Pawn',['../classmodel_chess_pieces_1_1_pawn.html',1,'modelChessPieces']]],
+  ['pawn',['Pawn',['../classmodel_chess_pieces_1_1_pawn.html#a7621de9604258a4ec1c58480b1655564',1,'modelChessPieces.Pawn.Pawn(String type, int number)'],['../classmodel_chess_pieces_1_1_pawn.html#afcf3ca5e22f454c225ca2240af0f4519',1,'modelChessPieces.Pawn.Pawn(String type, Position position, int number)']]],
+  ['position',['position',['../classmodel_chess_pieces_1_1_chess_piece.html#a3d4362d5b28f6edb14161196d9c6807d',1,'modelChessPieces.ChessPiece.position()'],['../classmodel_core_1_1_position.html#a689df995977dd8da01d733c5b0940e8b',1,'modelCore.Position.Position()'],['../classmodel_core_1_1_position.html#aaf7d9f851733f7e4361eadab881b5d1e',1,'modelCore.Position.Position(Position position)'],['../classmodel_core_1_1_position.html#a9a5ab27a476a183a12f14b9644a74063',1,'modelCore.Position.Position(int row, int col)']]],
+  ['position',['Position',['../classmodel_core_1_1_position.html',1,'modelCore']]],
+  ['princess',['Princess',['../classmodel_chess_pieces_1_1_princess.html',1,'modelChessPieces']]],
+  ['princess',['Princess',['../classmodel_chess_pieces_1_1_princess.html#a33cb1197bcb1f8808ea931626f2cf90b',1,'modelChessPieces.Princess.Princess(String type, int number)'],['../classmodel_chess_pieces_1_1_princess.html#a4c6de589407a7e236d78a89cffd41b97',1,'modelChessPieces.Princess.Princess(String type, Position position, int number)']]]
 ];
