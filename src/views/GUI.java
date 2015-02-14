@@ -22,6 +22,10 @@ public class GUI implements ActionListener {
 	private JPanel gamePanel; 
 	private int gridSize;
 	
+	/**
+	 * The constructor for GUI
+	 * @param size 	The size base of the window (which is the grid block size)
+	 */
 	public GUI(int size) {
 		this.gridSize = size;
 		this.chessBoard = new ChessBoard();
@@ -31,10 +35,14 @@ public class GUI implements ActionListener {
 		initializeFrame();
 		initializePanel();
 		initializePieces();
+		initializeMenu();
 		
 		this.gameFrame.setVisible(true);
 	}
 	
+	/**
+	 * Initialize the frame of window
+	 */
 	private void initializeFrame() {
 		this.gameFrame = new JFrame("Chess Game");
 		this.gameFrame.setSize(this.gameFrameWidth, this.gameFrameHeight);
@@ -42,6 +50,9 @@ public class GUI implements ActionListener {
 		
 	}
 	
+	/**
+	 * Initialize the panel for the game
+	 */
 	private void initializePanel() {
 		this.gamePanel = new JPanel(new GridLayout(this.chessBoard.col, this.chessBoard.row)) {  
 			private static final long serialVersionUID = 1L;
@@ -56,12 +67,34 @@ public class GUI implements ActionListener {
         this.gameFrame.add(this.gamePanel);
 	}
 	
+	private void initializeMenu() {
+        JMenuBar menubar = new JMenuBar();
+        
+        JMenu game = new JMenu("Game");
+        game.add(new JMenuItem("New Traditional Game"));
+        game.add(new JMenuItem("New Customized Game"));
+        game.add(new JMenuItem("Exit"));
+        
+        JMenu option = new JMenu("Option");
+        option.add(new JMenuItem("Redo"));
+        option.add(new JMenuItem("Undo"));
+        
+        menubar.add(game);
+        menubar.add(option);
+        
+        this.gameFrame.setJMenuBar(menubar);
+    }
+	
+	/**
+	 * Initialize chess pieces in GUI
+	 */
 	private void initializePieces() {
 		for(int row = this.chessBoard.row; row >= 1; row--) {
 			for(int col = 1; col <= this.chessBoard.col; col++) {
 				String type = chessBoard.getChessPieceInPosition(new Position(row,col)).getType();
 				String name = chessBoard.getChessPieceInPosition(new Position(row,col)).getName(); 
 				JButton piece = new JButton(getIconForPieces(type, name));
+				piece.setBorder(BorderFactory.createEtchedBorder());
 				piece.setFont(new Font("Arial", Font.BOLD, this.gridSize / 2));
 				piece.setOpaque(false);
 				piece.setContentAreaFilled(false);
@@ -71,6 +104,13 @@ public class GUI implements ActionListener {
 		}
 	}
 	
+	/**
+	 * According to the type and name passed in to return a char as the icon 
+	 * of chess piece
+	 * @param type	The type of chess piece
+	 * @param name	The name of chess piece
+	 * @return	The right char for the icon of chess piece
+	 */
 	private String getIconForPieces(String type, String name) {
 		String iconString = null;
 		if(type.equals("white")) {
