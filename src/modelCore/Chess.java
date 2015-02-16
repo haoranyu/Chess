@@ -14,7 +14,7 @@ public class Chess {
 	 * @param args not specified
 	 */
 	public static void main(String[] args) {
-		new GUI(40);
+		new GUI(80);
 	}
 	
 }

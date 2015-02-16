@@ -69,16 +69,16 @@ public class Pawn extends ChessPiece {
 				// go in a line
 				if(!chessBoard.occupied(position)) {
 					// should be empty for going straightforward
-					if(!this.possibleNextPosition.contains(position)) {
-						this.possibleNextPosition.add(position);
+					if(!this.possibleNextPositions.contains(position)) {
+						this.possibleNextPositions.add(position);
 					}
 				}
 			}
 			else {
 				// go in diagonal  
 				if(chessBoard.occupied(position) && !this.selfOccupied(chessBoard, position)) {
-					if(!this.possibleNextPosition.contains(position)) {
-						this.possibleNextPosition.add(position);
+					if(!this.possibleNextPositions.contains(position)) {
+						this.possibleNextPositions.add(position);
 					}
 				}
 			}
@@ -93,9 +93,9 @@ public class Pawn extends ChessPiece {
 	 * @param chessBoard the chess board we are now on
 	 */
 	@Override
-	public void getPossibleNextPosition(ChessBoard chessBoard) {
+	public void getpossibleNextPositions(ChessBoard chessBoard) {
 		// remove all before computing new possible next position
-		this.possibleNextPosition.clear();
+		this.possibleNextPositions.clear();
 		
 		if(this.getType() == "white") {
 			if(this.moved == false) {

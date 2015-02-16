@@ -57,9 +57,9 @@ public class King extends ChessPiece {
 	 * @param chessBoard the chess board we are now on
 	 */
 	@Override
-	public void getPossibleNextPosition(ChessBoard chessBoard) {
+	public void getpossibleNextPositions(ChessBoard chessBoard) {
 		// remove all before computing new possible next position
-		this.possibleNextPosition.clear();
+		this.possibleNextPositions.clear();
 		
 		this.addIfAvaliable(chessBoard, this.getPosition().getLeft(1));
 		this.addIfAvaliable(chessBoard, this.getPosition().getDown(1));

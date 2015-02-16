@@ -12,7 +12,7 @@ import modelCore.ChessBoard;
 import modelCore.Position;
 /**
  * @author haoranyu
- *
+ * 
  */
 public class GUI implements ActionListener {
 	private ChessBoard chessBoard;

@@ -24,7 +24,7 @@ public abstract class ChessPiece {
 	protected 	int 		number;	/**< the numbering for the same kind of chess piece */
 	protected 	Position 	position; /**< the position of the chess piece */ 
 	
-	ArrayList<Position> possibleNextPosition = new ArrayList<>(); 
+	ArrayList<Position> possibleNextPositions = new ArrayList<>(); 
 	// the list for storing the next possible positions
 	
 	/**
@@ -35,8 +35,8 @@ public abstract class ChessPiece {
 	 * @return				Return true if it is possible
 	 */
 	public boolean move(ChessBoard chessBoard, Position newPosition) {
-		this.getPossibleNextPosition(chessBoard);
-		if(this.possibleNextPosition.contains(newPosition)){
+		this.getpossibleNextPositions(chessBoard);
+		if(this.possibleNextPositions.contains(newPosition)){
 			// TODO add the original dead piece to the stack
 			
 			// Mark this chess piece as moved
@@ -109,9 +109,9 @@ public abstract class ChessPiece {
 			}
 			if(!this.selfOccupied(chessBoard, position)) {
 				// do not add available if self occupied
-				if(!this.possibleNextPosition.contains(position)) {
+				if(!this.possibleNextPositions.contains(position)) {
 					// get rid of duplicates
-					this.possibleNextPosition.add(position);
+					this.possibleNextPositions.add(position);
 				}
 			}
 		}
@@ -145,11 +145,11 @@ public abstract class ChessPiece {
 	 * 
 	 * @param chessBoard	The object of chess board
 	 */
-	public void showPossibleNextPosition(ChessBoard chessBoard) {
+	public void showpossibleNextPositions(ChessBoard chessBoard) {
 		System.out.print("All possible next positions are:\n");
-		this.getPossibleNextPosition(chessBoard);
-		for (int counter = 0; counter < this.possibleNextPosition.size(); counter++) {
-			this.possibleNextPosition.get(counter).show();
+		this.getpossibleNextPositions(chessBoard);
+		for (int counter = 0; counter < this.possibleNextPositions.size(); counter++) {
+			this.possibleNextPositions.get(counter).show();
 		}
 	}
 	
@@ -160,9 +160,9 @@ public abstract class ChessPiece {
 	 * @return	True if there king of others is under checking
 	 */
 	public boolean checkOtherKing(ChessBoard chessBoard) {
-		this.getPossibleNextPosition(chessBoard);
+		this.getpossibleNextPositions(chessBoard);
 		
-		Iterator<Position> nextPositionItr = possibleNextPosition.iterator();
+		Iterator<Position> nextPositionItr = possibleNextPositions.iterator();
 		while (nextPositionItr.hasNext()) {
 			Position aimPosition = nextPositionItr.next();
 			if(chessBoard.getChessPieceInPosition(aimPosition).getName().equals("king") &&
@@ -174,11 +174,11 @@ public abstract class ChessPiece {
 	}
 	
 	/**
-	 * According to the type of chessPiece and than calculate the possibleNextPosition
+	 * According to the type of chessPiece and than calculate the possibleNextPositions
 	 * 
 	 * @param chessBoard	The object of chess board
 	 */
-	public abstract void getPossibleNextPosition(ChessBoard chessBoard);
+	public abstract void getpossibleNextPositions(ChessBoard chessBoard);
 
 	/**
 	 * @return the position
