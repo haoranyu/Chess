@@ -21,8 +21,8 @@ import modelChessPieces.Rook;
 
 /**
  * @author haoranyu
- * @since  2015-02-13 18:02:29
- * @version 1.0
+ * @since  2015-02-16 03:56:14
+ * @version 1.1
  */
 public class ChessBoard {
 	Hashtable<Position, ChessPiece> cells;	/**< store the chess piece in each cell by position */

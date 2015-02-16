@@ -12,8 +12,8 @@ import modelCore.Position;
 
 /**
  * @author haoranyu
- * @since  2015-02-13 16:48:21
- * @version 1.0
+ * @since  2015-02-16 03:56:20
+ * @version 1.1
  */
 public abstract class ChessPiece {
 	
