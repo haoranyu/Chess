@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('classmodel_chess_pieces_1_1_chess_piec
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classmodel_chess_pieces_1_1_chess_piece-members.html">List of all members</a>  </div>
@@ -131,14 +132,10 @@ Inheritance diagram for modelChessPieces.ChessPiece:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a12d4674577ac125df63eb022cd02e5e9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a12d4674577ac125df63eb022cd02e5e9">move</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard, <a class="el" href="classmodel_core_1_1_position.html">Position</a> newPosition)</td></tr>
-<tr class="separator:a12d4674577ac125df63eb022cd02e5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2be89ce9b9a6affec1d5fd9df990d386"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a2be89ce9b9a6affec1d5fd9df990d386">showPossibleNextPosition</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard)</td></tr>
-<tr class="separator:a2be89ce9b9a6affec1d5fd9df990d386"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3f413337032a7328d0f06edca6fdcd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a4c3f413337032a7328d0f06edca6fdcd">checkOtherKing</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard)</td></tr>
-<tr class="separator:a4c3f413337032a7328d0f06edca6fdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f9b600bf3206059f4a4b5542c5a5706"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a3f9b600bf3206059f4a4b5542c5a5706">getPossibleNextPosition</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard)</td></tr>
-<tr class="separator:a3f9b600bf3206059f4a4b5542c5a5706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a2f0f1a29b9545fcad604df3ad89c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a70a2f0f1a29b9545fcad604df3ad89c2">showpossibleNextPositions</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard)</td></tr>
+<tr class="separator:a70a2f0f1a29b9545fcad604df3ad89c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920de36744a00c01fde87cb4a12e4dec"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a920de36744a00c01fde87cb4a12e4dec">getpossibleNextPositions</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard)</td></tr>
+<tr class="separator:a920de36744a00c01fde87cb4a12e4dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e88271516d06a50162a36321d10ff0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmodel_core_1_1_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a6e88271516d06a50162a36321d10ff0e">getPosition</a> ()</td></tr>
 <tr class="separator:a6e88271516d06a50162a36321d10ff0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd69cca4ca429e531ab58297c0036c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#abdd69cca4ca429e531ab58297c0036c7">setPosition</a> (<a class="el" href="classmodel_core_1_1_position.html">Position</a> <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a3d4362d5b28f6edb14161196d9c6807d">position</a>)</td></tr>
@@ -151,6 +148,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac73d3ae34142cdbf7571a086ffb122c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86e3e4135360b5bdc7ce9f6bad817b99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a86e3e4135360b5bdc7ce9f6bad817b99">setName</a> (String <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a03d2fb76fbbff0dab72d00f2173a69ff">name</a>)</td></tr>
 <tr class="separator:a86e3e4135360b5bdc7ce9f6bad817b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b3bbf9101c70a29ad8087f9431b8ee"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#ad6b3bbf9101c70a29ad8087f9431b8ee">isMoved</a> ()</td></tr>
+<tr class="separator:ad6b3bbf9101c70a29ad8087f9431b8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b4de8cc87600ac934d85cb09c852a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a43b4de8cc87600ac934d85cb09c852a1">setMoved</a> (boolean <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a5bc0722badda5dc066b6a73476fc933c">moved</a>)</td></tr>
+<tr class="separator:a43b4de8cc87600ac934d85cb09c852a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa477ac8d33b4e7c98eb6f4aec2390477"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; <a class="el" href="classmodel_core_1_1_position.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#aa477ac8d33b4e7c98eb6f4aec2390477">possibleNextPositions</a> = new ArrayList&lt;&gt;()</td></tr>
+<tr class="separator:aa477ac8d33b4e7c98eb6f4aec2390477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -158,8 +164,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a8045974b8d8f1e88722cd54b050774c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a247db1a354f7792b0a79b8128629a1c5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a247db1a354f7792b0a79b8128629a1c5">addIfAvaliable</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard, <a class="el" href="classmodel_core_1_1_position.html">Position</a> <a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a3d4362d5b28f6edb14161196d9c6807d">position</a>)</td></tr>
 <tr class="separator:a247db1a354f7792b0a79b8128629a1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3768e0328f7eec372daeed33a58644ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a3768e0328f7eec372daeed33a58644ba">iterativeAddPossiblePosition</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard, <a class="el" href="classmodel_core_1_1_position.html">Position</a> startPosition, int toRight, int toUp)</td></tr>
-<tr class="separator:a3768e0328f7eec372daeed33a58644ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86900a063a4596d7445e8bd2af895445"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html#a86900a063a4596d7445e8bd2af895445">iterativeAddPossiblePosition</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard, <a class="el" href="classmodel_core_1_1_position.html">Position</a> startPosition, int xDelta, int yDelta)</td></tr>
+<tr class="separator:a86900a063a4596d7445e8bd2af895445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -222,30 +228,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4c3f413337032a7328d0f06edca6fdcd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">boolean modelChessPieces.ChessPiece.checkOtherKing </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a>&#160;</td>
-          <td class="paramname"><em>chessBoard</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>See whether the chess piece is now checking the other king</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">chessBoard</td><td>The object of chess board </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if there king of others is under checking </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="ac73d3ae34142cdbf7571a086ffb122c9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +260,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3f9b600bf3206059f4a4b5542c5a5706"></a>
+<a class="anchor" id="a920de36744a00c01fde87cb4a12e4dec"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -286,7 +268,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">abstract void modelChessPieces.ChessPiece.getPossibleNextPosition </td>
+          <td class="memname">abstract void modelChessPieces.ChessPiece.getpossibleNextPositions </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a>&#160;</td>
           <td class="paramname"><em>chessBoard</em></td><td>)</td>
@@ -299,7 +281,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>According to the type of chessPiece and than calculate the possibleNextPosition</p>
+<p>According to the type of chessPiece and than calculate the possibleNextPositions</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">chessBoard</td><td>The object of chess board </td></tr>
@@ -325,7 +307,23 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3768e0328f7eec372daeed33a58644ba"></a>
+<a class="anchor" id="ad6b3bbf9101c70a29ad8087f9431b8ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean modelChessPieces.ChessPiece.isMoved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the moved </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a86900a063a4596d7445e8bd2af895445"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -348,13 +346,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>toRight</em>, </td>
+          <td class="paramname"><em>xDelta</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>toUp</em>&#160;</td>
+          <td class="paramname"><em>yDelta</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -373,46 +371,11 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">chessBoard</td><td>The object of chess board </td></tr>
     <tr><td class="paramname">startPosition</td><td>The position where iteration starts </td></tr>
-    <tr><td class="paramname">toRight</td><td>In each iteration we move how many step to right </td></tr>
-    <tr><td class="paramname">toUp</td><td>In each iteration we move how many step to top </td></tr>
+    <tr><td class="paramname">xDelta</td><td>In each iteration we move how many step on x </td></tr>
+    <tr><td class="paramname">yDelta</td><td>In each iteration we move how many step on y </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a12d4674577ac125df63eb022cd02e5e9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">boolean modelChessPieces.ChessPiece.move </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a>&#160;</td>
-          <td class="paramname"><em>chessBoard</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classmodel_core_1_1_position.html">Position</a>&#160;</td>
-          <td class="paramname"><em>newPosition</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The move function for a chessPiece to move</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">chessBoard</td><td>The object of chess board </td></tr>
-    <tr><td class="paramname">newPosition</td><td>The position we are moving to </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if it is possible </dd></dl>
 
 </div>
 </div>
@@ -456,6 +419,28 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return true if occupied by player himself </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43b4de8cc87600ac934d85cb09c852a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void modelChessPieces.ChessPiece.setMoved </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>moved</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">moved</td><td>the moved to set </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -525,12 +510,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2be89ce9b9a6affec1d5fd9df990d386"></a>
+<a class="anchor" id="a70a2f0f1a29b9545fcad604df3ad89c2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void modelChessPieces.ChessPiece.showPossibleNextPosition </td>
+          <td class="memname">void modelChessPieces.ChessPiece.showpossibleNextPositions </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a>&#160;</td>
           <td class="paramname"><em>chessBoard</em></td><td>)</td>
@@ -633,6 +618,19 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa477ac8d33b4e7c98eb6f4aec2390477"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="classmodel_core_1_1_position.html">Position</a>&gt; modelChessPieces.ChessPiece.possibleNextPositions = new ArrayList&lt;&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the list for storing the next possible positions </p>
+
+</div>
+</div>
 <a class="anchor" id="a195487ca88c197af7c1604247be31db2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -663,7 +661,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>modelChessPieces</b></li><li class="navelem"><a class="el" href="classmodel_chess_pieces_1_1_chess_piece.html">ChessPiece</a></li>
-    <li class="footer">Generated on Sat Feb 14 2015 00:04:29 for Chess by
+    <li class="footer">Generated on Mon Feb 16 2015 03:55:17 for Chess by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -189,10 +189,11 @@ public class ChessBoard {
 	/**
 	 * The move function for a chessPiece to move
 	 * 
-	 * @param chessBoard	The object of chess board
+	 * @param chessPiece	The chessPiece to move
 	 * @param newPosition	The position we are moving to
 	 * @return				Return true if it is possible
 	 */
+	
 	public boolean move(ChessPiece chessPiece, Position newPosition) {
 		chessPiece.getpossibleNextPositions(this);
 		if(chessPiece.possibleNextPositions.contains(newPosition)){
@@ -251,7 +252,7 @@ public class ChessBoard {
 	 * See whether the chess piece is now checking the other king and 
 	 * should win the game
 	 * 
-	 * @param chessBoard	The object of chess board
+	 * @param chessPiece	the chessPiece it is now moving
 	 * @return	True if there king of others is under check-mate
 	 */
 	public boolean checkOtherKing(ChessPiece chessPiece) {

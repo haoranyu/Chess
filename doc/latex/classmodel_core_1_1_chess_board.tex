@@ -14,13 +14,30 @@ void \hyperlink{classmodel_core_1_1_chess_board_a59800c1635a93d08909d34814bfffd2
 \item 
 boolean \hyperlink{classmodel_core_1_1_chess_board_abf420a5f1ea25fe7a8c6cdce3427c0af}{occupied} (\hyperlink{classmodel_core_1_1_position}{Position} position)
 \item 
+boolean \hyperlink{classmodel_core_1_1_chess_board_ab9216efa0fa5ce7794f813a500887647}{move} (\hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} chess\+Piece, \hyperlink{classmodel_core_1_1_position}{Position} new\+Position)
+\item 
+boolean \hyperlink{classmodel_core_1_1_chess_board_a65d2495b5efc7db5a62e8af13ca0dda0}{check\+Other\+King} (\hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} chess\+Piece)
+\item 
+boolean \hyperlink{classmodel_core_1_1_chess_board_a031a84fd458cb11464d0eadc6317b945}{is\+King\+Checked} (\hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} king)
+\item 
+void \hyperlink{classmodel_core_1_1_chess_board_ad1bf119fff1c4af0b315c00ccec4c40b}{revert\+Move} ()
+\item 
 void \hyperlink{classmodel_core_1_1_chess_board_af36430e89b73d56b322509621d8b27ee}{add\+Record} (\hyperlink{classmodel_core_1_1_position}{Position} from\+Position, \hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} from\+Chess\+Piece, \hyperlink{classmodel_core_1_1_position}{Position} to\+Position, \hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} to\+Chess\+Piece)
+\item 
+Array\+List$<$ \hyperlink{classmodel_core_1_1_position}{Position} $>$ \hyperlink{classmodel_core_1_1_chess_board_a9580196da2802e440d64b5d6f8d50bf1}{all\+Possible\+Positions\+Of} (String color)
 \item 
 \hyperlink{classmodel_core_1_1_record}{Record} \hyperlink{classmodel_core_1_1_chess_board_ae899ac8bc62aaf23e4724870932ac6bf}{last\+Record} ()
 \item 
 String \hyperlink{classmodel_core_1_1_chess_board_a34e37f076c55fdc46d66ac2dc0280267}{get\+Win} ()
 \item 
 void \hyperlink{classmodel_core_1_1_chess_board_a504f3ee56db184a7e2d8a0aa0b4da1a5}{set\+Win} (String win)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmodel_core_1_1_chess_board_a97b8b44a011e141557812f801be59fb3}{row}
+\item 
+int \hyperlink{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e}{col}
 \end{DoxyCompactItemize}
 
 
@@ -68,6 +85,38 @@ A function for adding a new record
 {\em to\+Chess\+Piece} & \\
 \hline
 \end{DoxyParams}
+\hypertarget{classmodel_core_1_1_chess_board_a9580196da2802e440d64b5d6f8d50bf1}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!all\+Possible\+Positions\+Of@{all\+Possible\+Positions\+Of}}
+\index{all\+Possible\+Positions\+Of@{all\+Possible\+Positions\+Of}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{all\+Possible\+Positions\+Of}]{\setlength{\rightskip}{0pt plus 5cm}Array\+List$<${\bf Position}$>$ model\+Core.\+Chess\+Board.\+all\+Possible\+Positions\+Of (
+\begin{DoxyParamCaption}
+\item[{String}]{color}
+\end{DoxyParamCaption}
+)}}\label{classmodel_core_1_1_chess_board_a9580196da2802e440d64b5d6f8d50bf1}
+Find all possible positions for the chess pieces of player of C\+O\+L\+O\+R to move 
+\begin{DoxyParams}{Parameters}
+{\em color} & the player color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+all possible positions for the chess pieces of player of C\+O\+L\+O\+R to move 
+\end{DoxyReturn}
+\hypertarget{classmodel_core_1_1_chess_board_a65d2495b5efc7db5a62e8af13ca0dda0}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!check\+Other\+King@{check\+Other\+King}}
+\index{check\+Other\+King@{check\+Other\+King}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{check\+Other\+King}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Core.\+Chess\+Board.\+check\+Other\+King (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Piece}}]{chess\+Piece}
+\end{DoxyParamCaption}
+)}}\label{classmodel_core_1_1_chess_board_a65d2495b5efc7db5a62e8af13ca0dda0}
+See whether the chess piece is now checking the other king and should win the game
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Piece} & the chess\+Piece it is now moving \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there king of others is under check-\/mate 
+\end{DoxyReturn}
 \hypertarget{classmodel_core_1_1_chess_board_a59800c1635a93d08909d34814bfffd20}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!clear\+Position@{clear\+Position}}
 \index{clear\+Position@{clear\+Position}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
 \subsubsection[{clear\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Core.\+Chess\+Board.\+clear\+Position (
@@ -109,6 +158,21 @@ chess\+Piece Return the chess piece in this position $\vert$ Null if not valid
 \begin{DoxyReturn}{Returns}
 the win 
 \end{DoxyReturn}
+\hypertarget{classmodel_core_1_1_chess_board_a031a84fd458cb11464d0eadc6317b945}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!is\+King\+Checked@{is\+King\+Checked}}
+\index{is\+King\+Checked@{is\+King\+Checked}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{is\+King\+Checked}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Core.\+Chess\+Board.\+is\+King\+Checked (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Piece}}]{king}
+\end{DoxyParamCaption}
+)}}\label{classmodel_core_1_1_chess_board_a031a84fd458cb11464d0eadc6317b945}
+Check whether a king is under check-\/mate 
+\begin{DoxyParams}{Parameters}
+{\em king} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{classmodel_core_1_1_chess_board_ae899ac8bc62aaf23e4724870932ac6bf}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!last\+Record@{last\+Record}}
 \index{last\+Record@{last\+Record}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
 \subsubsection[{last\+Record}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Record} model\+Core.\+Chess\+Board.\+last\+Record (
@@ -118,6 +182,26 @@ the win
 )}}\label{classmodel_core_1_1_chess_board_ae899ac8bc62aaf23e4724870932ac6bf}
 \begin{DoxyReturn}{Returns}
 the last pushed in record 
+\end{DoxyReturn}
+\hypertarget{classmodel_core_1_1_chess_board_ab9216efa0fa5ce7794f813a500887647}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!move@{move}}
+\index{move@{move}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Core.\+Chess\+Board.\+move (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Piece}}]{chess\+Piece, }
+\item[{{\bf Position}}]{new\+Position}
+\end{DoxyParamCaption}
+)}}\label{classmodel_core_1_1_chess_board_ab9216efa0fa5ce7794f813a500887647}
+The move function for a chess\+Piece to move
+
+
+\begin{DoxyParams}{Parameters}
+{\em chess\+Piece} & The chess\+Piece to move \\
+\hline
+{\em new\+Position} & The position we are moving to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true if it is possible 
 \end{DoxyReturn}
 \hypertarget{classmodel_core_1_1_chess_board_abf420a5f1ea25fe7a8c6cdce3427c0af}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!occupied@{occupied}}
 \index{occupied@{occupied}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
@@ -136,7 +220,14 @@ Check if the position is occupied by any chess piece
 \begin{DoxyReturn}{Returns}
 True if any chess piece in this position 
 \end{DoxyReturn}
-\hypertarget{classmodel_core_1_1_chess_board_af1a00d0d402bde8b8b5e5a23a96e6374}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!set\+Chess\+Piece\+In\+Position@{set\+Chess\+Piece\+In\+Position}}
+\hypertarget{classmodel_core_1_1_chess_board_ad1bf119fff1c4af0b315c00ccec4c40b}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!revert\+Move@{revert\+Move}}
+\index{revert\+Move@{revert\+Move}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{revert\+Move}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Core.\+Chess\+Board.\+revert\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_core_1_1_chess_board_ad1bf119fff1c4af0b315c00ccec4c40b}
+Revert the last move \hypertarget{classmodel_core_1_1_chess_board_af1a00d0d402bde8b8b5e5a23a96e6374}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!set\+Chess\+Piece\+In\+Position@{set\+Chess\+Piece\+In\+Position}}
 \index{set\+Chess\+Piece\+In\+Position@{set\+Chess\+Piece\+In\+Position}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
 \subsubsection[{set\+Chess\+Piece\+In\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Core.\+Chess\+Board.\+set\+Chess\+Piece\+In\+Position (
 \begin{DoxyParamCaption}
@@ -166,6 +257,15 @@ Set a chess\+Piece into the chess\+Board
 \hline
 \end{DoxyParams}
 
+
+\subsection{Member Data Documentation}
+\hypertarget{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!col@{col}}
+\index{col@{col}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}int model\+Core.\+Chess\+Board.\+col}}\label{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e}
+how many columns for the chess board \hypertarget{classmodel_core_1_1_chess_board_a97b8b44a011e141557812f801be59fb3}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!row@{row}}
+\index{row@{row}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{row}]{\setlength{\rightskip}{0pt plus 5cm}int model\+Core.\+Chess\+Board.\+row}}\label{classmodel_core_1_1_chess_board_a97b8b44a011e141557812f801be59fb3}
+how many rows for the chess board 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

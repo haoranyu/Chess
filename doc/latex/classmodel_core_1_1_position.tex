@@ -10,13 +10,7 @@
 \item 
 \hyperlink{classmodel_core_1_1_position_a9a5ab27a476a183a12f14b9644a74063}{Position} (int row, int col)
 \item 
-\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_core_1_1_position_a414339238322766507ee2ce61e4f18fc}{get\+Right} (int step)
-\item 
-\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_core_1_1_position_a43c2653aa7b9bd2ece8a746aa488e890}{get\+Left} (int step)
-\item 
-\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_core_1_1_position_a922189e8018dd157a322dd55581ccd19}{get\+Up} (int step)
-\item 
-\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_core_1_1_position_ad22eb535ce11e1ca0a846a98c37e2b43}{get\+Down} (int step)
+\hyperlink{classmodel_core_1_1_position}{Position} \hyperlink{classmodel_core_1_1_position_abfeb23711adcef25931cccff47e6f52a}{get\+Relative\+Position} (int x\+Delta, int y\+Delta)
 \item 
 void \hyperlink{classmodel_core_1_1_position_aa88918fe5d6446eb3c9f04c0b1ba92d0}{show} ()
 \item 
@@ -106,73 +100,25 @@ java.\+lang.\+Object\+::equals(java.\+lang.\+Object)
 \begin{DoxyReturn}{Returns}
 the col 
 \end{DoxyReturn}
-\hypertarget{classmodel_core_1_1_position_ad22eb535ce11e1ca0a846a98c37e2b43}{\index{model\+Core\+::\+Position@{model\+Core\+::\+Position}!get\+Down@{get\+Down}}
-\index{get\+Down@{get\+Down}!model\+Core\+::\+Position@{model\+Core\+::\+Position}}
-\subsubsection[{get\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} model\+Core.\+Position.\+get\+Down (
+\hypertarget{classmodel_core_1_1_position_abfeb23711adcef25931cccff47e6f52a}{\index{model\+Core\+::\+Position@{model\+Core\+::\+Position}!get\+Relative\+Position@{get\+Relative\+Position}}
+\index{get\+Relative\+Position@{get\+Relative\+Position}!model\+Core\+::\+Position@{model\+Core\+::\+Position}}
+\subsubsection[{get\+Relative\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} model\+Core.\+Position.\+get\+Relative\+Position (
 \begin{DoxyParamCaption}
-\item[{int}]{step}
+\item[{int}]{x\+Delta, }
+\item[{int}]{y\+Delta}
 \end{DoxyParamCaption}
-)}}\label{classmodel_core_1_1_position_ad22eb535ce11e1ca0a846a98c37e2b43}
-Get the position to number of step away to the bottom
+)}}\label{classmodel_core_1_1_position_abfeb23711adcef25931cccff47e6f52a}
+Get the position relative to number of step away
 
 
 \begin{DoxyParams}{Parameters}
-{\em step} & The number of steps \\
+{\em x\+Delta} & \\
+\hline
+{\em y\+Delta} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The new position after calucation 
-\end{DoxyReturn}
-\hypertarget{classmodel_core_1_1_position_a43c2653aa7b9bd2ece8a746aa488e890}{\index{model\+Core\+::\+Position@{model\+Core\+::\+Position}!get\+Left@{get\+Left}}
-\index{get\+Left@{get\+Left}!model\+Core\+::\+Position@{model\+Core\+::\+Position}}
-\subsubsection[{get\+Left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} model\+Core.\+Position.\+get\+Left (
-\begin{DoxyParamCaption}
-\item[{int}]{step}
-\end{DoxyParamCaption}
-)}}\label{classmodel_core_1_1_position_a43c2653aa7b9bd2ece8a746aa488e890}
-Get the position to number of step away to the left
 
-
-\begin{DoxyParams}{Parameters}
-{\em step} & The number of steps \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The new position after calucation 
-\end{DoxyReturn}
-\hypertarget{classmodel_core_1_1_position_a414339238322766507ee2ce61e4f18fc}{\index{model\+Core\+::\+Position@{model\+Core\+::\+Position}!get\+Right@{get\+Right}}
-\index{get\+Right@{get\+Right}!model\+Core\+::\+Position@{model\+Core\+::\+Position}}
-\subsubsection[{get\+Right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} model\+Core.\+Position.\+get\+Right (
-\begin{DoxyParamCaption}
-\item[{int}]{step}
-\end{DoxyParamCaption}
-)}}\label{classmodel_core_1_1_position_a414339238322766507ee2ce61e4f18fc}
-Get the position to number of step away to the right
-
-
-\begin{DoxyParams}{Parameters}
-{\em step} & The number of steps \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The new position after calucation 
-\end{DoxyReturn}
-\hypertarget{classmodel_core_1_1_position_a922189e8018dd157a322dd55581ccd19}{\index{model\+Core\+::\+Position@{model\+Core\+::\+Position}!get\+Up@{get\+Up}}
-\index{get\+Up@{get\+Up}!model\+Core\+::\+Position@{model\+Core\+::\+Position}}
-\subsubsection[{get\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} model\+Core.\+Position.\+get\+Up (
-\begin{DoxyParamCaption}
-\item[{int}]{step}
-\end{DoxyParamCaption}
-)}}\label{classmodel_core_1_1_position_a922189e8018dd157a322dd55581ccd19}
-Get the position to number of step away to the top
-
-
-\begin{DoxyParams}{Parameters}
-{\em step} & The number of steps \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The new position after calucation 
 \end{DoxyReturn}
 \hypertarget{classmodel_core_1_1_position_a87f61d46274b310c7c4edae150f20d89}{\index{model\+Core\+::\+Position@{model\+Core\+::\+Position}!hash\+Code@{hash\+Code}}
 \index{hash\+Code@{hash\+Code}!model\+Core\+::\+Position@{model\+Core\+::\+Position}}

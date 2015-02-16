@@ -118,14 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf7d9f851733f7e4361eadab881b5d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5ab27a476a183a12f14b9644a74063"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#a9a5ab27a476a183a12f14b9644a74063">Position</a> (int row, int col)</td></tr>
 <tr class="separator:a9a5ab27a476a183a12f14b9644a74063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a414339238322766507ee2ce61e4f18fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmodel_core_1_1_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#a414339238322766507ee2ce61e4f18fc">getRight</a> (int step)</td></tr>
-<tr class="separator:a414339238322766507ee2ce61e4f18fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c2653aa7b9bd2ece8a746aa488e890"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmodel_core_1_1_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#a43c2653aa7b9bd2ece8a746aa488e890">getLeft</a> (int step)</td></tr>
-<tr class="separator:a43c2653aa7b9bd2ece8a746aa488e890"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a922189e8018dd157a322dd55581ccd19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmodel_core_1_1_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#a922189e8018dd157a322dd55581ccd19">getUp</a> (int step)</td></tr>
-<tr class="separator:a922189e8018dd157a322dd55581ccd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad22eb535ce11e1ca0a846a98c37e2b43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmodel_core_1_1_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#ad22eb535ce11e1ca0a846a98c37e2b43">getDown</a> (int step)</td></tr>
-<tr class="separator:ad22eb535ce11e1ca0a846a98c37e2b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfeb23711adcef25931cccff47e6f52a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmodel_core_1_1_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#abfeb23711adcef25931cccff47e6f52a">getRelativePosition</a> (int xDelta, int yDelta)</td></tr>
+<tr class="separator:abfeb23711adcef25931cccff47e6f52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa88918fe5d6446eb3c9f04c0b1ba92d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#aa88918fe5d6446eb3c9f04c0b1ba92d0">show</a> ()</td></tr>
 <tr class="separator:aa88918fe5d6446eb3c9f04c0b1ba92d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb1285fd0e8aa11728692d3a40c644f5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodel_core_1_1_position.html#aeb1285fd0e8aa11728692d3a40c644f5">valid</a> (<a class="el" href="classmodel_core_1_1_chess_board.html">ChessBoard</a> chessBoard)</td></tr>
@@ -250,99 +244,38 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad22eb535ce11e1ca0a846a98c37e2b43"></a>
+<a class="anchor" id="abfeb23711adcef25931cccff47e6f52a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmodel_core_1_1_position.html">Position</a> modelCore.Position.getDown </td>
+          <td class="memname"><a class="el" href="classmodel_core_1_1_position.html">Position</a> modelCore.Position.getRelativePosition </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>step</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>xDelta</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get the position to number of step away to the bottom</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">step</td><td>The number of steps </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The new position after calucation </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a43c2653aa7b9bd2ece8a746aa488e890"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmodel_core_1_1_position.html">Position</a> modelCore.Position.getLeft </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>step</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yDelta</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get the position to number of step away to the left</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">step</td><td>The number of steps </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The new position after calucation </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a414339238322766507ee2ce61e4f18fc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmodel_core_1_1_position.html">Position</a> modelCore.Position.getRight </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>step</em></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the position to number of step away to the right</p>
+<p>Get the position relative to number of step away</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">step</td><td>The number of steps </td></tr>
+    <tr><td class="paramname">xDelta</td><td></td></tr>
+    <tr><td class="paramname">yDelta</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The new position after calucation </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a922189e8018dd157a322dd55581ccd19"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classmodel_core_1_1_position.html">Position</a> modelCore.Position.getUp </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>step</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get the position to number of step away to the top</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">step</td><td>The number of steps </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The new position after calucation </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -412,7 +345,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>modelCore</b></li><li class="navelem"><a class="el" href="classmodel_core_1_1_position.html">Position</a></li>
-    <li class="footer">Generated on Sat Feb 14 2015 00:04:30 for Chess by
+    <li class="footer">Generated on Mon Feb 16 2015 03:55:17 for Chess by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

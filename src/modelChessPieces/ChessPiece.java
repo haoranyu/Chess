@@ -23,8 +23,7 @@ public abstract class ChessPiece {
 	protected 	int 		number;	/**< the numbering for the same kind of chess piece */
 	protected 	Position 	position; /**< the position of the chess piece */ 
 	
-	public ArrayList<Position> possibleNextPositions = new ArrayList<>(); 
-	// the list for storing the next possible positions
+	public ArrayList<Position> possibleNextPositions = new ArrayList<>(); /**< the list for storing the next possible positions */ 
 	
 	
 	
