@@ -100,22 +100,22 @@ public class Pawn extends ChessPiece {
 		if(this.getType() == "white") {
 			if(this.moved == false) {
 				// check if not moved at all. Pawn can move 2 steps forward
-				this.addIfAvaliable(chessBoard, this.getPosition().getUp(2));
+				this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(0, 2));
 			}
 			// Normal case for moved pawn. 
-			this.addIfAvaliable(chessBoard, this.getPosition().getUp(1));
-			this.addIfAvaliable(chessBoard, this.getPosition().getUp(1).getLeft(1));
-			this.addIfAvaliable(chessBoard, this.getPosition().getUp(1).getRight(1));
+			this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(0, 1));
+			this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(-1, 1));
+			this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(1, 1));
 		}
 		else { // black
 			if(this.moved == false) {
 				// check if not moved at all. Pawn can move 2 steps forward
-				this.addIfAvaliable(chessBoard, this.getPosition().getDown(2));
+				this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(0, -2));
 			}
 			// Normal case for moved pawn. 
-			this.addIfAvaliable(chessBoard, this.getPosition().getDown(1));
-			this.addIfAvaliable(chessBoard, this.getPosition().getDown(1).getLeft(1));
-			this.addIfAvaliable(chessBoard, this.getPosition().getDown(1).getRight(1));
+			this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(0, -1));
+			this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(-1, -1));
+			this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(1, -1));
 		}
 	}
 

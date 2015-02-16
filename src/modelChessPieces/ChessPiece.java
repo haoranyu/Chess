@@ -124,14 +124,15 @@ public abstract class ChessPiece {
 	 * 
 	 * @param chessBoard	The object of chess board
 	 * @param startPosition	The position where iteration starts
-	 * @param toRight		In each iteration we move how many step to right
-	 * @param toUp			In each iteration we move how many step to top
+	 * @param xDelta		In each iteration we move how many step on x
+	 * @param yDelta		In each iteration we move how many step on y
 	 */
-	protected void iterativeAddPossiblePosition(ChessBoard chessBoard, Position startPosition, int toRight, int toUp) {
+	protected void iterativeAddPossiblePosition(ChessBoard chessBoard, 
+							Position startPosition, int xDelta, int yDelta) {
 		boolean shouldGoOn = true;
 		Position position = new Position(startPosition);
 		while(position.valid(chessBoard)) {
-			position = new Position(position.getRight(toRight).getUp(toUp));
+			position = new Position(position.getRelativePosition(xDelta, yDelta));
 			shouldGoOn = addIfAvaliable(chessBoard, position);
 			if(!shouldGoOn) {
 				break;

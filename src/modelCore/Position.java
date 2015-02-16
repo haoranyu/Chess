@@ -46,45 +46,15 @@ public class Position {
 	}
 	
 	/**
-	 * Get the position to number of step away to the right
+	 * Get the position relative to number of step away
 	 * 
-	 * @param step	The number of steps
-	 * @return		The new position after calucation
+	 * @param xDelta
+	 * @param yDelta
+	 * @return
 	 */
-	public Position getRight(int step) {
-		Position newPosition = new Position(this.row, this.getCol() + step);
+	public Position getRelativePosition( int xDelta, int yDelta) {
+		Position newPosition = new Position(this.row + yDelta, this.col + xDelta);
 		return newPosition;
-	}
-	
-	/**
-	 * Get the position to number of step away to the left
-	 * 
-	 * @param step	The number of steps
-	 * @return		The new position after calucation
-	 */
-	public Position getLeft(int step) {
-		return this.getRight(-step);
-	}
-	
-	/**
-	 * Get the position to number of step away to the top
-	 * 
-	 * @param step	The number of steps
-	 * @return		The new position after calucation
-	 */
-	public Position getUp(int step) {
-		Position newPosition = new Position(this.row + step, this.getCol());
-		return newPosition;
-	}
-	
-	/**
-	 * Get the position to number of step away to the bottom
-	 * 
-	 * @param step	The number of steps
-	 * @return		The new position after calucation
-	 */
-	public Position getDown(int step) {
-		return this.getUp(-step);
 	}
 	
 	/**

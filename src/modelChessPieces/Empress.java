@@ -64,15 +64,15 @@ public class Empress extends ChessPiece {
 		// remove all before computing new possible next position
 		this.possibleNextPositions.clear();
 		
-		this.addIfAvaliable(chessBoard, this.getPosition().getDown(1).getLeft(2));
-		this.addIfAvaliable(chessBoard, this.getPosition().getDown(1).getRight(2));
-		this.addIfAvaliable(chessBoard, this.getPosition().getUp(1).getLeft(2));
-		this.addIfAvaliable(chessBoard, this.getPosition().getUp(1).getRight(2));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(-2, -1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(2, -1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(-2, 1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(2, 1));
 		
-		this.addIfAvaliable(chessBoard, this.getPosition().getDown(2).getLeft(1));
-		this.addIfAvaliable(chessBoard, this.getPosition().getDown(2).getRight(1));
-		this.addIfAvaliable(chessBoard, this.getPosition().getUp(2).getLeft(1));
-		this.addIfAvaliable(chessBoard, this.getPosition().getUp(2).getRight(1));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(1, 2));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(-1, 2));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(1, -2));
+		this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(-1, -2));
 		
 		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), -1, 0);
 		this.iterativeAddPossiblePosition(chessBoard, this.getPosition(), 1, 0);
