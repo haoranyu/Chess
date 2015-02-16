@@ -24,56 +24,10 @@ public abstract class ChessPiece {
 	protected 	int 		number;	/**< the numbering for the same kind of chess piece */
 	protected 	Position 	position; /**< the position of the chess piece */ 
 	
-	ArrayList<Position> possibleNextPositions = new ArrayList<>(); 
+	public ArrayList<Position> possibleNextPositions = new ArrayList<>(); 
 	// the list for storing the next possible positions
 	
-	/**
-	 * The move function for a chessPiece to move
-	 * 
-	 * @param chessBoard	The object of chess board
-	 * @param newPosition	The position we are moving to
-	 * @return				Return true if it is possible
-	 */
-	public boolean move(ChessBoard chessBoard, Position newPosition) {
-		this.getpossibleNextPositions(chessBoard);
-		if(this.possibleNextPositions.contains(newPosition)){
-			// TODO add the original dead piece to the stack
-			
-			// Mark this chess piece as moved
-			if(this.moved == false) {
-				this.moved = true;
-			}
-
-			if(chessBoard.getChessPieceInPosition(newPosition).getName().equals("king") &&
-				!chessBoard.getChessPieceInPosition(newPosition).getType().equals(this.getType())) {
-				chessBoard.setWin(this.getType());
-				System.out.print("WARNING: "+this.getType()+" win!\n");
-			}
-
-			// Add a record for this movement
-			chessBoard.addRecord(this.getPosition(), chessBoard.getChessPieceInPosition(this.getPosition()), 
-					newPosition, chessBoard.getChessPieceInPosition(newPosition));
-			
-			
-			chessBoard.setChessPieceInPosition(newPosition, this);
-			chessBoard.clearPosition(this.getPosition());
-			
-			this.setPosition(newPosition);
-			
-			if(this.checkOtherKing(chessBoard)) {
-				System.out.print("WARNING: Other's king get checked\n");
-			}
-			
-			return true;
-		}
-		else{
-			// will be handled by controller. Now just print error out
-			System.out.print("WARNING: You cannot move to ");
-			newPosition.show();
-			System.out.print("\n");
-			return false;
-		}
-	}
+	
 	
 	/**
 	 * Check whether the expected position is occupied by the same color
@@ -221,6 +175,20 @@ public abstract class ChessPiece {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	/**
+	 * @return the moved
+	 */
+	public boolean isMoved() {
+		return moved;
+	}
+
+	/**
+	 * @param moved the moved to set
+	 */
+	public void setMoved(boolean moved) {
+		this.moved = moved;
 	}
 	
 }

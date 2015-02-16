@@ -44,7 +44,7 @@ public class MoveToSelfOccupiedTest {
 	
 	@Test
 	public void moveToEmptyTest() {
-		chessBoard.getChessPieceInPosition(testPosition[0]).move(this.chessBoard, testPosition[1]);
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[0]), testPosition[1]);
 		
 		assertEquals("Still chess piece 1 name", "rook", chessBoard.getChessPieceInPosition(testPosition[0]).getName());
 		assertEquals("Still chess piece 1 type", "white", chessBoard.getChessPieceInPosition(testPosition[0]).getType());

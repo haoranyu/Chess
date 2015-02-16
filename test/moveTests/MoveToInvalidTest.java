@@ -43,7 +43,7 @@ public class MoveToInvalidTest {
 	
 	@Test
 	public void moveToEmptyTest() {
-		chessBoard.getChessPieceInPosition(testPosition[0]).move(this.chessBoard, testPosition[1]);
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[0]), testPosition[1]);
 		
 		assertEquals("Still chess piece name", "pawn", chessBoard.getChessPieceInPosition(testPosition[0]).getName());
 		assertEquals("Still chess piece type", "white", chessBoard.getChessPieceInPosition(testPosition[0]).getType());

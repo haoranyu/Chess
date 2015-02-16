@@ -44,7 +44,7 @@ public class MoveToEmptyTest {
 	
 	@Test
 	public void moveToEmptyTest() {
-		chessBoard.getChessPieceInPosition(testPosition[0]).move(this.chessBoard, testPosition[1]);
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[0]), testPosition[1]);
 		
 		assertEquals("New Empty test", "null", chessBoard.getChessPieceInPosition(testPosition[0]).getType());
 		assertEquals("New Chess piece name", "pawn", chessBoard.getChessPieceInPosition(testPosition[1]).getName());

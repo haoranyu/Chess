@@ -30,8 +30,8 @@ public class CheckTest {
 		testPosition[1] = new Position(2, 5);
 		testPosition[2] = new Position(1, 6);
 		testPosition[3] = new Position(5, 2);
-		chessBoard.getChessPieceInPosition(testPosition[0]).move(this.chessBoard, testPosition[0].getRelativePosition(0, -1));
-		chessBoard.getChessPieceInPosition(testPosition[1]).move(this.chessBoard, testPosition[1].getRelativePosition(0, 1));
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[0]), testPosition[0].getRelativePosition(0, -1));
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[1]), testPosition[1].getRelativePosition(0, 1));
 	}
 
 	@Test
@@ -41,7 +41,7 @@ public class CheckTest {
 	
 	@Test
 	public void testCheck() {
-		chessBoard.getChessPieceInPosition(testPosition[2]).move(this.chessBoard, testPosition[3]);
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[2]), testPosition[3]);
 		assertEquals("Check", true, chessBoard.getChessPieceInPosition(testPosition[3]).checkOtherKing(chessBoard));
 	}
 

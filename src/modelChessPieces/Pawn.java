@@ -98,7 +98,7 @@ public class Pawn extends ChessPiece {
 		this.possibleNextPositions.clear();
 		
 		if(this.getType() == "white") {
-			if(this.moved == false) {
+			if(this.isMoved() == false) {
 				// check if not moved at all. Pawn can move 2 steps forward
 				this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(0, 2));
 			}
@@ -108,7 +108,7 @@ public class Pawn extends ChessPiece {
 			this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(1, 1));
 		}
 		else { // black
-			if(this.moved == false) {
+			if(this.isMoved() == false) {
 				// check if not moved at all. Pawn can move 2 steps forward
 				this.addIfAvaliable(chessBoard, this.getPosition().getRelativePosition(0, -2));
 			}

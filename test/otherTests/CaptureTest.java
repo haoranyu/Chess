@@ -31,14 +31,14 @@ public class CaptureTest {
 		testPosition[2] = new Position(1, 6);
 		testPosition[3] = new Position(5, 2);
 		testPosition[4] = new Position(8, 5);
-		chessBoard.getChessPieceInPosition(testPosition[0]).move(this.chessBoard, testPosition[0].getRelativePosition(0, -1));
-		chessBoard.getChessPieceInPosition(testPosition[1]).move(this.chessBoard, testPosition[1].getRelativePosition(0, 1));
-		chessBoard.getChessPieceInPosition(testPosition[2]).move(this.chessBoard, testPosition[3]);
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[0]), testPosition[0].getRelativePosition(0, -1));
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[1]), testPosition[1].getRelativePosition(0, 1));
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[2]), testPosition[3]);
 	}
 	
 	@Test
 	public void testapture() {
-		chessBoard.getChessPieceInPosition(testPosition[3]).move(this.chessBoard, testPosition[4]);
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[3]), testPosition[4]);
 		assertEquals("Original Empty", "null", chessBoard.getChessPieceInPosition(testPosition[3]).getType());
 		assertEquals("King Replaced - type", "white", chessBoard.getChessPieceInPosition(testPosition[4]).getType());
 		assertEquals("King Replaced - name", "bishop", chessBoard.getChessPieceInPosition(testPosition[4]).getName());

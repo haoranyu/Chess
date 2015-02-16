@@ -181,6 +181,55 @@ public class ChessBoard {
 	}
 
 	/**
+	 * The move function for a chessPiece to move
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @param newPosition	The position we are moving to
+	 * @return				Return true if it is possible
+	 */
+	public boolean move(ChessPiece chessPiece, Position newPosition) {
+		chessPiece.getpossibleNextPositions(this);
+		if(chessPiece.possibleNextPositions.contains(newPosition)){
+			// TODO add the original dead piece to the stack
+			
+			// Mark this chess piece as moved
+			if(chessPiece.isMoved() == false) {
+				chessPiece.setMoved(true);
+			}
+
+			if(this.getChessPieceInPosition(newPosition).getName().equals("king") &&
+				!this.getChessPieceInPosition(newPosition).getType().equals(chessPiece.getType())) {
+				this.setWin(chessPiece.getType());
+				System.out.print("WARNING: "+chessPiece.getType()+" win!\n");
+			}
+
+			// Add a record for this movement
+			this.addRecord(chessPiece.getPosition(), this.getChessPieceInPosition(chessPiece.getPosition()), 
+					newPosition, this.getChessPieceInPosition(newPosition));
+			
+			
+			this.setChessPieceInPosition(newPosition, chessPiece);
+			this.clearPosition(chessPiece.getPosition());
+			
+			chessPiece.setPosition(newPosition);
+			
+			if(chessPiece.checkOtherKing(this)) {
+				System.out.print("WARNING: Other's king get checked\n");
+			}
+			
+			return true;
+		}
+		else{
+			// will be handled by controller. Now just print error out
+			System.out.print("WARNING: You cannot move to ");
+			newPosition.show();
+			System.out.print("\n");
+			return false;
+		}
+	}
+	
+	
+	/**
 	 * A function for adding a new record
 	 * @param fromPosition
 	 * @param fromChessPiece

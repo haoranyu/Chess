@@ -32,12 +32,12 @@ public class LastMoveTest {
 
 	@Test
 	public void chessWhiteMove() {
-		chessBoard.getChessPieceInPosition(testPosition[0]).move(this.chessBoard, testPosition[0].getRelativePosition(1, 2));
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[0]), testPosition[0].getRelativePosition(1, 2));
 		assertEquals("White move", "white", chessBoard.lastRecord().fromChessPiece.getType());
 	}
 	
 	public void chessBlackMove() {
-		chessBoard.getChessPieceInPosition(testPosition[1]).move(this.chessBoard, testPosition[1].getRelativePosition(0, -2));
+		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[1]), testPosition[1].getRelativePosition(0, -2));
 		assertEquals("Black move", "black", chessBoard.lastRecord().fromChessPiece.getType());
 	}
 
