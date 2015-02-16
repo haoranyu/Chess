@@ -5,7 +5,6 @@ package modelChessPieces;
  */
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import modelCore.ChessBoard;
 import modelCore.Position;
@@ -108,25 +107,6 @@ public abstract class ChessPiece {
 		}
 	}
 	
-	/**
-	 * See whether the chess piece is now checking the other king
-	 * 
-	 * @param chessBoard	The object of chess board
-	 * @return	True if there king of others is under checking
-	 */
-	public boolean checkOtherKing(ChessBoard chessBoard) {
-		this.getpossibleNextPositions(chessBoard);
-		
-		Iterator<Position> nextPositionItr = possibleNextPositions.iterator();
-		while (nextPositionItr.hasNext()) {
-			Position aimPosition = nextPositionItr.next();
-			if(chessBoard.getChessPieceInPosition(aimPosition).getName().equals("king") &&
-				!chessBoard.getChessPieceInPosition(aimPosition).getType().equals(this.getType())) {
-				return true;
-			}
-		}
-		return false;
-	}
 	
 	/**
 	 * According to the type of chessPiece and than calculate the possibleNextPositions

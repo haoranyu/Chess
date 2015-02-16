@@ -36,13 +36,13 @@ public class CheckTest {
 
 	@Test
 	public void testNotCheck() {
-		assertEquals("Check", false, chessBoard.getChessPieceInPosition(testPosition[2]).checkOtherKing(chessBoard));
+		assertEquals("Check", false, chessBoard.checkOtherKing(chessBoard.getChessPieceInPosition(testPosition[2])));
 	}
 	
 	@Test
 	public void testCheck() {
 		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[2]), testPosition[3]);
-		assertEquals("Check", true, chessBoard.getChessPieceInPosition(testPosition[3]).checkOtherKing(chessBoard));
+		assertEquals("Check", true, chessBoard.checkOtherKing(chessBoard.getChessPieceInPosition(testPosition[3])));
 	}
 
 }

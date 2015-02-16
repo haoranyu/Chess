@@ -6,7 +6,9 @@ package modelCore;
  */
 
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.Stack;
+import java.util.ArrayList;
 
 import modelChessPieces.Bishop;
 import modelChessPieces.ChessPiece;
@@ -28,6 +30,10 @@ public class ChessBoard {
 	private String win;  /**< who win */
 	public int	row; /**< how many rows for the chess board */
 	public int col; /**< how many columns for the chess board */
+	
+	King whiteKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
+	King blackKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
+	
 	
 	/**
 	 * Constructor for a new chessBoard with chess pieces defined
@@ -53,9 +59,9 @@ public class ChessBoard {
 	 * Initialize kings on chess board
 	 */
 	private void initilizeKings() {
-		King whiteKing = new King("white");
+		whiteKing = new King("white");
 		this.cells.put(whiteKing.getPosition(), whiteKing);
-		King blackKing = new King("black");
+		blackKing = new King("black");
 		this.cells.put(blackKing.getPosition(), blackKing);
 	}
 	
@@ -190,33 +196,32 @@ public class ChessBoard {
 	public boolean move(ChessPiece chessPiece, Position newPosition) {
 		chessPiece.getpossibleNextPositions(this);
 		if(chessPiece.possibleNextPositions.contains(newPosition)){
-			// TODO add the original dead piece to the stack
 			
 			// Mark this chess piece as moved
 			if(chessPiece.isMoved() == false) {
 				chessPiece.setMoved(true);
 			}
 
-			if(this.getChessPieceInPosition(newPosition).getName().equals("king") &&
-				!this.getChessPieceInPosition(newPosition).getType().equals(chessPiece.getType())) {
-				this.setWin(chessPiece.getType());
-				System.out.print("WARNING: "+chessPiece.getType()+" win!\n");
-			}
-
 			// Add a record for this movement
 			this.addRecord(chessPiece.getPosition(), this.getChessPieceInPosition(chessPiece.getPosition()), 
 					newPosition, this.getChessPieceInPosition(newPosition));
-			
 			
 			this.setChessPieceInPosition(newPosition, chessPiece);
 			this.clearPosition(chessPiece.getPosition());
 			
 			chessPiece.setPosition(newPosition);
 			
-			if(chessPiece.checkOtherKing(this)) {
-				System.out.print("WARNING: Other's king get checked\n");
+			if(this.checkOtherKing(chessPiece)) {
+				System.out.print("WARNING: you win!\n");
 			}
 			
+			if(this.selfChecked(chessPiece)) {
+				this.revertMove();
+				System.out.print("WARNING: You cannot move to ");
+				newPosition.show();
+				System.out.print(". It will cause chassmate on your own king\n");
+				return false;
+			}
 			return true;
 		}
 		else{
@@ -228,6 +233,78 @@ public class ChessBoard {
 		}
 	}
 	
+	/**
+	 * Judge whether 
+	 * @param chessPiece
+	 * @return
+	 */
+	private boolean selfChecked(ChessPiece chessPiece) {
+		if(chessPiece.getType().equals("white")) {
+			return isKingChecked(this.whiteKing);
+		}
+		else { // black
+			return isKingChecked(this.blackKing);
+		}
+	}
+		
+	/**
+	 * See whether the chess piece is now checking the other king and 
+	 * should win the game
+	 * 
+	 * @param chessBoard	The object of chess board
+	 * @return	True if there king of others is under check-mate
+	 */
+	public boolean checkOtherKing(ChessPiece chessPiece) {
+		chessPiece.getpossibleNextPositions(this);
+		
+		Iterator<Position> nextPositionItr = chessPiece.possibleNextPositions.iterator();
+		while (nextPositionItr.hasNext()) {
+			Position aimPosition = nextPositionItr.next();
+			if(this.getChessPieceInPosition(aimPosition).getName().equals("king") &&
+				!this.getChessPieceInPosition(aimPosition).getType().equals(chessPiece.getType())) {
+				if(!isKingChecked(this.getChessPieceInPosition(aimPosition))) {
+					return false;
+				}
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * Check whether a king is under check-mate
+	 * @param king
+	 * @return 
+	 */
+	public boolean isKingChecked(ChessPiece king) {
+		king.getpossibleNextPositions(this);
+		String enemyColor;
+		if(king.getType() == "white") {
+			enemyColor = "black";
+		}
+		else {
+			enemyColor = "white";
+		}
+			
+		for(Position possibleKingNextPositions : king.possibleNextPositions) {
+			if(!allPossiblePositionsOf(enemyColor).contains(possibleKingNextPositions)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * Revert the last move
+	 */
+	public void revertMove(){
+		Record lastRecord = this.records.pop();
+		lastRecord.fromChessPiece.setPosition(lastRecord.fromPosition);
+		this.setChessPieceInPosition(lastRecord.fromPosition, lastRecord.fromChessPiece);
+		
+		lastRecord.toChessPiece.setPosition(lastRecord.fromPosition);
+		this.setChessPieceInPosition(lastRecord.toPosition, lastRecord.toChessPiece);
+	}
 	
 	/**
 	 * A function for adding a new record
@@ -242,10 +319,33 @@ public class ChessBoard {
 	}
 	
 	/**
+	 * Find all possible positions for the chess pieces of player of COLOR to move
+	 * @param color the player color 
+	 * @return all possible positions for the chess pieces of player of COLOR to move
+	 */
+	public ArrayList<Position> allPossiblePositionsOf(String color) {
+		ArrayList<Position> possiblePositions = new ArrayList<>(); 
+		for(int row = 1; row <= this.row; row++) {
+			for(int col = 1; col <= this.row; col++){
+				Position position = new Position(row, col);
+				if(this.getChessPieceInPosition(position).getType().equals(color)) {
+					this.getChessPieceInPosition(position).getpossibleNextPositions(this);
+					for(Position possiblePosition : this.getChessPieceInPosition(position).possibleNextPositions) {
+						if(!possiblePositions.contains(possiblePosition)) {
+							possiblePositions.add(possiblePosition);
+						}
+					}
+				}
+			}
+		}
+		return possiblePositions;
+	}
+	
+	/**
 	 * @return the last pushed in record
 	 */
 	public Record lastRecord() {
-		return this.records.pop();
+		return this.records.peek();
 	}
 	
 	/**
