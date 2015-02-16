@@ -103,8 +103,8 @@ public abstract class ChessPiece {
 	public void showpossibleNextPositions(ChessBoard chessBoard) {
 		System.out.print("All possible next positions are:\n");
 		this.getpossibleNextPositions(chessBoard);
-		for (int counter = 0; counter < this.possibleNextPositions.size(); counter++) {
-			this.possibleNextPositions.get(counter).show();
+		for( Position possibleNextPosition : this.possibleNextPositions) {
+			possibleNextPosition.show();
 		}
 	}
 	
