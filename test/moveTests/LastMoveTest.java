@@ -36,9 +36,9 @@ public class LastMoveTest {
 		assertEquals("White move", "white", chessBoard.lastRecord().fromChessPiece.getType());
 	}
 	
-	public void chessBlackMove() {
-		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[1]), testPosition[1].getRelativePosition(0, -2));
-		assertEquals("Black move", "black", chessBoard.lastRecord().fromChessPiece.getType());
-	}
+//	public void chessBlackMove() {
+//		chessBoard.move(chessBoard.getChessPieceInPosition(testPosition[1]), testPosition[1].getRelativePosition(0, -2));
+//		assertEquals("Black move", "black", chessBoard.lastRecord().fromChessPiece.getType());
+//	}
 
 }

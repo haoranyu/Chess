@@ -63,7 +63,16 @@ public abstract class ChessPiece {
 				// do not add available if self occupied
 				if(!this.possibleNextPositions.contains(position)) {
 					// get rid of duplicates
-					this.possibleNextPositions.add(position);
+
+//					ChessBoard pusedoChessBoard = new ChessBoard(chessBoard);
+//					pusedoChessBoard.setChessPieceInPosition(position, this);
+//					pusedoChessBoard.clearPosition(this.getPosition());
+//					
+//					if(!pusedoChessBoard.selfChecked(this)) {
+//						position.show();
+
+						this.possibleNextPositions.add(position);
+//					}
 				}
 			}
 		}
@@ -128,6 +137,21 @@ public abstract class ChessPiece {
 		this.position = position;
 	}
 
+	/**
+	 * @return the enemy type
+	 */
+	public String getEnemyType() {
+		if(this.type.equals("white")) {
+			return "black";
+		}
+		else if(this.type.equals("black")){
+			return "white";
+		}
+		else {
+			return "null";
+		}
+	}
+	
 	/**
 	 * @return the type
 	 */

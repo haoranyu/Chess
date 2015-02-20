@@ -31,8 +31,8 @@ public class ChessBoard {
 	public int	row; /**< how many rows for the chess board */
 	public int col; /**< how many columns for the chess board */
 	
-	King whiteKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
-	King blackKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
+	public King whiteKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
+	public King blackKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
 	
 	
 	/**
@@ -41,7 +41,7 @@ public class ChessBoard {
 	public ChessBoard() {
 		this.cells = new Hashtable<Position, ChessPiece>();
 		this.records = new Stack<Record>();
-		this.setWin(null);
+		this.win = null;
 		this.row = 8;
 		this.col = 8;
 		
@@ -53,6 +53,20 @@ public class ChessBoard {
 		this.initilizePawns();
 		
 		this.setEmpty();
+	}
+	
+	/**
+	 * Copy Constructor
+	 */
+	public ChessBoard(ChessBoard chessBoard) {
+		this.cells = chessBoard.cells;
+		this.records = chessBoard.records;
+		this.win = chessBoard.getWin();
+		this.row = chessBoard.row;
+		this.col = chessBoard.col;
+		
+		this.whiteKing = new King(chessBoard.whiteKing);
+		this.blackKing = new King(chessBoard.blackKing);
 	}
 	
 	/**
@@ -196,6 +210,10 @@ public class ChessBoard {
 	
 	public boolean move(ChessPiece chessPiece, Position newPosition) {
 		chessPiece.getpossibleNextPositions(this);
+		
+		chessPiece.showpossibleNextPositions(this);
+		
+		
 		if(chessPiece.possibleNextPositions.contains(newPosition)){
 			
 			// Mark this chess piece as moved
@@ -239,7 +257,7 @@ public class ChessBoard {
 	 * @param chessPiece
 	 * @return
 	 */
-	private boolean selfChecked(ChessPiece chessPiece) {
+	public boolean selfChecked(ChessPiece chessPiece) {
 		if(chessPiece.getType().equals("white")) {
 			return isKingChecked(this.whiteKing);
 		}
@@ -273,22 +291,16 @@ public class ChessBoard {
 	}
 	
 	/**
-	 * Check whether a king is under check-mate
+	 * Check whether a king is under check
 	 * @param king
 	 * @return 
 	 */
 	public boolean isKingChecked(ChessPiece king) {
 		king.getpossibleNextPositions(this);
-		String enemyColor;
-		if(king.getType() == "white") {
-			enemyColor = "black";
-		}
-		else {
-			enemyColor = "white";
-		}
-			
+		// add the original position which is for staying
+		king.possibleNextPositions.add(king.getPosition());
 		for(Position possibleKingNextPositions : king.possibleNextPositions) {
-			if(!allPossiblePositionsOf(enemyColor).contains(possibleKingNextPositions)) {
+			if(!allPossiblePositionsOf(king.getEnemyType()).contains(possibleKingNextPositions)) {
 				return false;
 			}
 		}

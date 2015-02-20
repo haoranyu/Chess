@@ -38,6 +38,19 @@ public class King extends ChessPiece {
 	}
 	
 	/**
+	 * Copy constructor
+	 * @param king
+	 */
+	public King(King king) {
+		this.position = king.getPosition();
+		this.moved = king.moved;
+		this.name =  king.getName();
+		this.type = king.getType();
+		this.number = king.number;
+	}
+	
+	
+	/**
 	 * Constructor for King with specified position
 	 * 
 	 * @param type		the color or null
