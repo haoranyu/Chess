@@ -46,7 +46,7 @@ public class Chess {
 			chessView.refreshChessBoard(chessBoard);
 		}
 		else {
-			
+			chessView.popMsg("There is no record of move avaliable");
 		}
 	}
 

@@ -179,4 +179,8 @@ public class GUI{
 		this.gameFrame.setVisible(true);
 	}
 	
+	public void popMsg(String msg) {
+		JOptionPane.showMessageDialog(null, msg, "Warning", JOptionPane.PLAIN_MESSAGE);
+	}
+	
 }
