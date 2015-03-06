@@ -1,5 +1,10 @@
 var annotated =
 [
+    [ "controller", null, [
+      [ "Chess", "classcontroller_1_1_chess.html", "classcontroller_1_1_chess" ],
+      [ "MenuListener", "classcontroller_1_1_menu_listener.html", "classcontroller_1_1_menu_listener" ],
+      [ "PieceListener", "classcontroller_1_1_piece_listener.html", "classcontroller_1_1_piece_listener" ]
+    ] ],
     [ "modelChessPieces", null, [
       [ "Bishop", "classmodel_chess_pieces_1_1_bishop.html", "classmodel_chess_pieces_1_1_bishop" ],
       [ "ChessPiece", "classmodel_chess_pieces_1_1_chess_piece.html", "classmodel_chess_pieces_1_1_chess_piece" ],
@@ -13,9 +18,12 @@ var annotated =
       [ "Rook", "classmodel_chess_pieces_1_1_rook.html", "classmodel_chess_pieces_1_1_rook" ]
     ] ],
     [ "modelCore", null, [
-      [ "Chess", "classmodel_core_1_1_chess.html", null ],
       [ "ChessBoard", "classmodel_core_1_1_chess_board.html", "classmodel_core_1_1_chess_board" ],
       [ "Position", "classmodel_core_1_1_position.html", "classmodel_core_1_1_position" ],
       [ "Record", "classmodel_core_1_1_record.html", "classmodel_core_1_1_record" ]
-    ] ]
+    ] ],
+    [ "views", null, [
+      [ "GUI", "classviews_1_1_g_u_i.html", "classviews_1_1_g_u_i" ]
+    ] ],
+    [ "Main", "class_main.html", null ]
 ];

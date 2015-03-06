@@ -1,0 +1,92 @@
+\hypertarget{classcontroller_1_1_chess}{\section{controller.\+Chess Class Reference}
+\label{classcontroller_1_1_chess}\index{controller.\+Chess@{controller.\+Chess}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcontroller_1_1_chess_a2c1309e8692f00316241d98e2f6b7e5e}{Chess} ()
+\item 
+void \hyperlink{classcontroller_1_1_chess_afc19fcbd3f986a303420c3f0a839939b}{move} (\hyperlink{classmodel_core_1_1_position}{Position} from\+Position, \hyperlink{classmodel_core_1_1_position}{Position} to\+Position)
+\item 
+void \hyperlink{classcontroller_1_1_chess_afc0facf7bde50143b81e1ad32adaf15f}{revert\+Move} ()
+\item 
+void \hyperlink{classcontroller_1_1_chess_a73d82959d3d274bf9288755e27dba9f0}{set\+Lose} ()
+\item 
+void \hyperlink{classcontroller_1_1_chess_a28506a76694846950209b6b5bdd703f6}{refresh\+Chess\+Board} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} \hyperlink{classcontroller_1_1_chess_a164cd5f5f19d10c48516afd818e410f9}{chess\+Board})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} \hyperlink{classcontroller_1_1_chess_a164cd5f5f19d10c48516afd818e410f9}{chess\+Board}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+haoranyu 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcontroller_1_1_chess_a2c1309e8692f00316241d98e2f6b7e5e}{\index{controller\+::\+Chess@{controller\+::\+Chess}!Chess@{Chess}}
+\index{Chess@{Chess}!controller\+::\+Chess@{controller\+::\+Chess}}
+\subsubsection[{Chess}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+Chess.\+Chess (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_chess_a2c1309e8692f00316241d98e2f6b7e5e}
+The constructor initialize the G\+U\+I and chess board and also set the original score for both side to 0 and bind two listeners to this controller 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcontroller_1_1_chess_afc19fcbd3f986a303420c3f0a839939b}{\index{controller\+::\+Chess@{controller\+::\+Chess}!move@{move}}
+\index{move@{move}!controller\+::\+Chess@{controller\+::\+Chess}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\+Chess.\+move (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{from\+Position, }
+\item[{{\bf Position}}]{to\+Position}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_chess_afc19fcbd3f986a303420c3f0a839939b}
+The controller for move a chess piece 
+\begin{DoxyParams}{Parameters}
+{\em from\+Position} & The position get clicked first \\
+\hline
+{\em to\+Position} & The position get clicked after \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcontroller_1_1_chess_a28506a76694846950209b6b5bdd703f6}{\index{controller\+::\+Chess@{controller\+::\+Chess}!refresh\+Chess\+Board@{refresh\+Chess\+Board}}
+\index{refresh\+Chess\+Board@{refresh\+Chess\+Board}!controller\+::\+Chess@{controller\+::\+Chess}}
+\subsubsection[{refresh\+Chess\+Board}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\+Chess.\+refresh\+Chess\+Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_chess_a28506a76694846950209b6b5bdd703f6}
+The helper function to refresh the chess board has been used everywhere 
+\begin{DoxyParams}{Parameters}
+{\em chess\+Board} & The chess\+Board to be displayed on G\+U\+I \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcontroller_1_1_chess_afc0facf7bde50143b81e1ad32adaf15f}{\index{controller\+::\+Chess@{controller\+::\+Chess}!revert\+Move@{revert\+Move}}
+\index{revert\+Move@{revert\+Move}!controller\+::\+Chess@{controller\+::\+Chess}}
+\subsubsection[{revert\+Move}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\+Chess.\+revert\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_chess_afc0facf7bde50143b81e1ad32adaf15f}
+Undo the last move Can be done time to time until a empty stack \hypertarget{classcontroller_1_1_chess_a73d82959d3d274bf9288755e27dba9f0}{\index{controller\+::\+Chess@{controller\+::\+Chess}!set\+Lose@{set\+Lose}}
+\index{set\+Lose@{set\+Lose}!controller\+::\+Chess@{controller\+::\+Chess}}
+\subsubsection[{set\+Lose}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\+Chess.\+set\+Lose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_chess_a73d82959d3d274bf9288755e27dba9f0}
+Set who lose the game 
+
+\subsection{Member Data Documentation}
+\hypertarget{classcontroller_1_1_chess_a164cd5f5f19d10c48516afd818e410f9}{\index{controller\+::\+Chess@{controller\+::\+Chess}!chess\+Board@{chess\+Board}}
+\index{chess\+Board@{chess\+Board}!controller\+::\+Chess@{controller\+::\+Chess}}
+\subsubsection[{chess\+Board}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Chess\+Board} controller.\+Chess.\+chess\+Board}}\label{classcontroller_1_1_chess_a164cd5f5f19d10c48516afd818e410f9}
+the chess\+Board we really play on 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/controller/Chess.\+java\end{DoxyCompactItemize}

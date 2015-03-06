@@ -4,7 +4,7 @@ var classmodel_chess_pieces_1_1_chess_piece =
     [ "getEnemyType", "classmodel_chess_pieces_1_1_chess_piece.html#a09214c36497f15c4d85af11a8dd8bfed", null ],
     [ "getName", "classmodel_chess_pieces_1_1_chess_piece.html#ac73d3ae34142cdbf7571a086ffb122c9", null ],
     [ "getPosition", "classmodel_chess_pieces_1_1_chess_piece.html#a6e88271516d06a50162a36321d10ff0e", null ],
-    [ "getpossibleNextPositions", "classmodel_chess_pieces_1_1_chess_piece.html#a920de36744a00c01fde87cb4a12e4dec", null ],
+    [ "getPossibleNextPositions", "classmodel_chess_pieces_1_1_chess_piece.html#a2620c9629424998a33babb6a55ffa6d1", null ],
     [ "getType", "classmodel_chess_pieces_1_1_chess_piece.html#a189d923d883085ce16d051c161c93e68", null ],
     [ "isMoved", "classmodel_chess_pieces_1_1_chess_piece.html#ad6b3bbf9101c70a29ad8087f9431b8ee", null ],
     [ "iterativeAddPossiblePosition", "classmodel_chess_pieces_1_1_chess_piece.html#a86900a063a4596d7445e8bd2af895445", null ],
