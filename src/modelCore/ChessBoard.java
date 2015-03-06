@@ -340,13 +340,20 @@ public class ChessBoard {
 	/**
 	 * Revert the last move
 	 */
-	public void revertMove(){
-		Record lastRecord = this.records.pop();
-		lastRecord.fromChessPiece.setPosition(lastRecord.fromPosition);
-		this.setChessPieceInPosition(lastRecord.fromPosition, lastRecord.fromChessPiece);
-		
-		lastRecord.toChessPiece.setPosition(lastRecord.fromPosition);
-		this.setChessPieceInPosition(lastRecord.toPosition, lastRecord.toChessPiece);
+	public boolean revertMove(){
+		if(this.records.isEmpty()) {
+			return false;
+		}
+		else {
+			Record lastRecord = this.records.pop();
+			lastRecord.fromChessPiece.setPosition(lastRecord.fromPosition);
+			this.setChessPieceInPosition(lastRecord.fromPosition, lastRecord.fromChessPiece);
+			
+			lastRecord.toChessPiece.setPosition(lastRecord.fromPosition);
+			this.setChessPieceInPosition(lastRecord.toPosition, lastRecord.toChessPiece);
+			this.changeTurn();
+			return true;
+		}
 	}
 	
 	/**

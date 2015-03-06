@@ -6,8 +6,6 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import modelCore.ChessBoard;
-
 /**
  * @author haoranyu
  *
@@ -36,6 +34,12 @@ public class MenuListener implements ActionListener {
 			System.exit(0);
 		}
 		if(e.getActionCommand() == "New Game") {
+			controller.refreshChessBoard(null);
+		}
+		if(e.getActionCommand() == "Undo") {
+			controller.revertMove();
+		}
+		if(e.getActionCommand() == "Give Up") {
 			controller.refreshChessBoard(null);
 		}
 	}

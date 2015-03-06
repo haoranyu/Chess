@@ -14,7 +14,6 @@ public class Chess {
 	private GUI chessView;
 	private ChessBoard chessBoard;
 	private Hashtable<String, Integer> score;
-	private String turn;
 	
 	/**
 	 * @param args not specified
@@ -39,6 +38,15 @@ public class Chess {
 				chessView.refreshChessBoard(chessBoard);
 				chessBoard.changeTurn();
 			}
+		}
+	}
+	
+	public void revertMove() {
+		if(chessBoard.revertMove()){
+			chessView.refreshChessBoard(chessBoard);
+		}
+		else {
+			
 		}
 	}
 

@@ -98,8 +98,11 @@ public class GUI{
         game.add(exit);
 
         JMenu option = new JMenu("Option");
-        option.add(new JMenuItem("Redo"));
-        option.add(new JMenuItem("Undo"));
+        
+        JMenuItem undo = new JMenuItem("Undo");
+        undo.addActionListener(new MenuListener());
+        option.add(undo);
+
         option.add(new JMenuItem("Give Up"));
         
         menubar.add(game);
