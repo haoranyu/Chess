@@ -54,11 +54,17 @@ public class GUI{
 		
 	}
 	
+	/**
+	 * Initialize the main panel for info  and chess pieces
+	 */
 	private void initializeMain() {
 		this.gameMain = new JPanel(new BorderLayout());
 		this.gameFrame.add(this.gameMain);
 	}
 	
+	/**
+	 * Initialize the info part
+	 */
 	private void initializeInfo() {
 		this.gameInfo = new JLabel("White Score: 0    Black Score: 0");
 		this.gameInfo.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
