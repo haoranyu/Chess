@@ -12,7 +12,7 @@ import views.GUI;
 public class Chess {
 	
 	private GUI chessView; /**< the GUI object as the view */
-	private ChessBoard chessBoard; /**< the chessBoard we really play on */
+	public ChessBoard chessBoard; /**< the chessBoard we really play on */
 	private HashMap<String, Integer> score; /**< the hash for score saving */
 	
 	/**
