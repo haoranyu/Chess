@@ -16,11 +16,12 @@ import modelCore.Position;
  */
 public class GUI implements ActionListener {
 	private ChessBoard chessBoard;
-	private JFrame gameFrame;
 	private int gameFrameHeight;
 	private int gameFrameWidth;
-	private JPanel gamePanel; 
 	private int gridSize;
+	
+	private JFrame gameFrame;
+	public JPanel gamePanel; 
 	
 	/**
 	 * The constructor for GUI
@@ -71,13 +72,20 @@ public class GUI implements ActionListener {
         JMenuBar menubar = new JMenuBar();
         
         JMenu game = new JMenu("Game");
-        game.add(new JMenuItem("New Traditional Game"));
-        game.add(new JMenuItem("New Customized Game"));
-        game.add(new JMenuItem("Exit"));
+        
+        JMenuItem newGame = new JMenuItem("New Game");
+        game.add(newGame);
+        newGame.addActionListener(this);
+   
+        JMenuItem exit = new JMenuItem("Exit");
+        game.add(exit);
+        exit.addActionListener(this);
+        
         
         JMenu option = new JMenu("Option");
         option.add(new JMenuItem("Redo"));
         option.add(new JMenuItem("Undo"));
+        option.add(new JMenuItem("Give Up"));
         
         menubar.add(game);
         menubar.add(option);
@@ -120,7 +128,9 @@ public class GUI implements ActionListener {
 			case "rook": iconString = "\u2656"; break;
 			case "bishop": iconString = "\u2657"; break;
 			case "knight": iconString = "\u2658"; break;
-			case "pawn": iconString = "\u2659";
+			case "pawn": iconString = "\u2659"; break;
+			case "princess": iconString = "\u2740"; break;
+			case "empress": iconString = "\u272C";
 			}
 		}
 		else if(type.equals("black")){ // black
@@ -130,7 +140,9 @@ public class GUI implements ActionListener {
 			case "rook": iconString = "\u265C"; break;
 			case "bishop": iconString = "\u265D"; break;
 			case "knight": iconString = "\u265E"; break;
-			case "pawn": iconString = "\u265F";
+			case "pawn": iconString = "\u265F"; break;
+			case "princess": iconString = "\u273F"; break;
+			case "empress": iconString = "\u272B";
 			}
 		}
 		else {
@@ -140,13 +152,25 @@ public class GUI implements ActionListener {
 	}
 	
 
+	public void refreshChessBoard(ChessBoard chessBoard) {
+		this.chessBoard = chessBoard;
+		gamePanel.removeAll();
+		initializePieces();
+	}
+	
+
+
 	/* (non-Javadoc)
 	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
+		if(e.getActionCommand() == "Exit") {
+			System.exit(0);
+		}
+		if(e.getActionCommand() == "New Game") {
+			ChessBoard chessBoard = new ChessBoard();
+			refreshChessBoard(chessBoard);
+		}
+	}	
 }

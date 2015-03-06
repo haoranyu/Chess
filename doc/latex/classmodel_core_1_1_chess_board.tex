@@ -6,6 +6,8 @@
 \item 
 \hyperlink{classmodel_core_1_1_chess_board_a50f1163eb1a59a7193668a8d1cf89435}{Chess\+Board} ()
 \item 
+\hyperlink{classmodel_core_1_1_chess_board_a74d33500fe30c1441989710578d9725d}{Chess\+Board} (\hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} chess\+Board)
+\item 
 \hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} \hyperlink{classmodel_core_1_1_chess_board_ad700d180ac71927b8fd0e5c3e09ddd2b}{get\+Chess\+Piece\+In\+Position} (\hyperlink{classmodel_core_1_1_position}{Position} position)
 \item 
 void \hyperlink{classmodel_core_1_1_chess_board_af1a00d0d402bde8b8b5e5a23a96e6374}{set\+Chess\+Piece\+In\+Position} (\hyperlink{classmodel_core_1_1_position}{Position} position, \hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} chess\+Piece)
@@ -15,6 +17,8 @@ void \hyperlink{classmodel_core_1_1_chess_board_a59800c1635a93d08909d34814bfffd2
 boolean \hyperlink{classmodel_core_1_1_chess_board_abf420a5f1ea25fe7a8c6cdce3427c0af}{occupied} (\hyperlink{classmodel_core_1_1_position}{Position} position)
 \item 
 boolean \hyperlink{classmodel_core_1_1_chess_board_ab9216efa0fa5ce7794f813a500887647}{move} (\hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} chess\+Piece, \hyperlink{classmodel_core_1_1_position}{Position} new\+Position)
+\item 
+boolean \hyperlink{classmodel_core_1_1_chess_board_aed20e0cd69a469134238b8ce28403e76}{self\+Checked} (\hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} chess\+Piece)
 \item 
 boolean \hyperlink{classmodel_core_1_1_chess_board_a65d2495b5efc7db5a62e8af13ca0dda0}{check\+Other\+King} (\hyperlink{classmodel_chess_pieces_1_1_chess_piece}{Chess\+Piece} chess\+Piece)
 \item 
@@ -38,6 +42,10 @@ void \hyperlink{classmodel_core_1_1_chess_board_a504f3ee56db184a7e2d8a0aa0b4da1a
 int \hyperlink{classmodel_core_1_1_chess_board_a97b8b44a011e141557812f801be59fb3}{row}
 \item 
 int \hyperlink{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e}{col}
+\item 
+\hyperlink{classmodel_chess_pieces_1_1_king}{King} \hyperlink{classmodel_core_1_1_chess_board_ac35268604f4e0b6c5b0b1a454f71f6b6}{white\+King}
+\item 
+\hyperlink{classmodel_chess_pieces_1_1_king}{King} \hyperlink{classmodel_core_1_1_chess_board_a4a811ce68180a71f5fea55095c3ef0f5}{black\+King}
 \end{DoxyCompactItemize}
 
 
@@ -46,10 +54,10 @@ int \hyperlink{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e
 haoranyu 
 \end{DoxyAuthor}
 \begin{DoxySince}{Since}
-2015-\/02-\/13 18\+:02\+:29 
+2015-\/02-\/16 03\+:56\+:14 
 \end{DoxySince}
 \begin{DoxyVersion}{Version}
-1.\+0 
+1.\+1 
 \end{DoxyVersion}
 
 
@@ -61,7 +69,14 @@ haoranyu
 {}
 \end{DoxyParamCaption}
 )}}\label{classmodel_core_1_1_chess_board_a50f1163eb1a59a7193668a8d1cf89435}
-Constructor for a new chess\+Board with chess pieces defined 
+Constructor for a new chess\+Board with chess pieces defined \hypertarget{classmodel_core_1_1_chess_board_a74d33500fe30c1441989710578d9725d}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!Chess\+Board@{Chess\+Board}}
+\index{Chess\+Board@{Chess\+Board}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{Chess\+Board}]{\setlength{\rightskip}{0pt plus 5cm}model\+Core.\+Chess\+Board.\+Chess\+Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Board}}]{chess\+Board}
+\end{DoxyParamCaption}
+)}}\label{classmodel_core_1_1_chess_board_a74d33500fe30c1441989710578d9725d}
+Copy Constructor 
 
 \subsection{Member Function Documentation}
 \hypertarget{classmodel_core_1_1_chess_board_af36430e89b73d56b322509621d8b27ee}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!add\+Record@{add\+Record}}
@@ -165,7 +180,7 @@ the win
 \item[{{\bf Chess\+Piece}}]{king}
 \end{DoxyParamCaption}
 )}}\label{classmodel_core_1_1_chess_board_a031a84fd458cb11464d0eadc6317b945}
-Check whether a king is under check-\/mate 
+Check whether a king is under check 
 \begin{DoxyParams}{Parameters}
 {\em king} & \\
 \hline
@@ -227,7 +242,22 @@ True if any chess piece in this position
 {}
 \end{DoxyParamCaption}
 )}}\label{classmodel_core_1_1_chess_board_ad1bf119fff1c4af0b315c00ccec4c40b}
-Revert the last move \hypertarget{classmodel_core_1_1_chess_board_af1a00d0d402bde8b8b5e5a23a96e6374}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!set\+Chess\+Piece\+In\+Position@{set\+Chess\+Piece\+In\+Position}}
+Revert the last move \hypertarget{classmodel_core_1_1_chess_board_aed20e0cd69a469134238b8ce28403e76}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!self\+Checked@{self\+Checked}}
+\index{self\+Checked@{self\+Checked}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{self\+Checked}]{\setlength{\rightskip}{0pt plus 5cm}boolean model\+Core.\+Chess\+Board.\+self\+Checked (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\+Piece}}]{chess\+Piece}
+\end{DoxyParamCaption}
+)}}\label{classmodel_core_1_1_chess_board_aed20e0cd69a469134238b8ce28403e76}
+Judge whether 
+\begin{DoxyParams}{Parameters}
+{\em chess\+Piece} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classmodel_core_1_1_chess_board_af1a00d0d402bde8b8b5e5a23a96e6374}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!set\+Chess\+Piece\+In\+Position@{set\+Chess\+Piece\+In\+Position}}
 \index{set\+Chess\+Piece\+In\+Position@{set\+Chess\+Piece\+In\+Position}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
 \subsubsection[{set\+Chess\+Piece\+In\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void model\+Core.\+Chess\+Board.\+set\+Chess\+Piece\+In\+Position (
 \begin{DoxyParamCaption}
@@ -259,13 +289,19 @@ Set a chess\+Piece into the chess\+Board
 
 
 \subsection{Member Data Documentation}
-\hypertarget{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!col@{col}}
+\hypertarget{classmodel_core_1_1_chess_board_a4a811ce68180a71f5fea55095c3ef0f5}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!black\+King@{black\+King}}
+\index{black\+King@{black\+King}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{black\+King}]{\setlength{\rightskip}{0pt plus 5cm}{\bf King} model\+Core.\+Chess\+Board.\+black\+King}}\label{classmodel_core_1_1_chess_board_a4a811ce68180a71f5fea55095c3ef0f5}
+since king is unique we set it as a member of \hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} which is also easier to access \hypertarget{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!col@{col}}
 \index{col@{col}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
 \subsubsection[{col}]{\setlength{\rightskip}{0pt plus 5cm}int model\+Core.\+Chess\+Board.\+col}}\label{classmodel_core_1_1_chess_board_ad7110bd9ee10396094cb5a58406bd04e}
 how many columns for the chess board \hypertarget{classmodel_core_1_1_chess_board_a97b8b44a011e141557812f801be59fb3}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!row@{row}}
 \index{row@{row}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
 \subsubsection[{row}]{\setlength{\rightskip}{0pt plus 5cm}int model\+Core.\+Chess\+Board.\+row}}\label{classmodel_core_1_1_chess_board_a97b8b44a011e141557812f801be59fb3}
-how many rows for the chess board 
+how many rows for the chess board \hypertarget{classmodel_core_1_1_chess_board_ac35268604f4e0b6c5b0b1a454f71f6b6}{\index{model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}!white\+King@{white\+King}}
+\index{white\+King@{white\+King}!model\+Core\+::\+Chess\+Board@{model\+Core\+::\+Chess\+Board}}
+\subsubsection[{white\+King}]{\setlength{\rightskip}{0pt plus 5cm}{\bf King} model\+Core.\+Chess\+Board.\+white\+King}}\label{classmodel_core_1_1_chess_board_ac35268604f4e0b6c5b0b1a454f71f6b6}
+since king is unique we set it as a member of \hyperlink{classmodel_core_1_1_chess_board}{Chess\+Board} which is also easier to access 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

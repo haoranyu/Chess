@@ -12,10 +12,12 @@ import java.util.ArrayList;
 
 import modelChessPieces.Bishop;
 import modelChessPieces.ChessPiece;
+import modelChessPieces.Empress;
 import modelChessPieces.Empty;
 import modelChessPieces.King;
 import modelChessPieces.Knight;
 import modelChessPieces.Pawn;
+import modelChessPieces.Princess;
 import modelChessPieces.Queen;
 import modelChessPieces.Rook;
 
@@ -34,7 +36,6 @@ public class ChessBoard {
 	public King whiteKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
 	public King blackKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
 	
-	
 	/**
 	 * Constructor for a new chessBoard with chess pieces defined
 	 */
@@ -51,6 +52,8 @@ public class ChessBoard {
 		this.initilizeBishops();
 		this.initilizeKnights();
 		this.initilizePawns();
+		this.initilizeEmpress();
+		this.initilizePrincess();
 		
 		this.setEmpty();
 	}
@@ -134,6 +137,30 @@ public class ChessBoard {
 			this.cells.put(whitePawn.getPosition(), whitePawn);
 			Pawn blackPawn = new Pawn("black", count);
 			this.cells.put(blackPawn.getPosition(), blackPawn);
+		}
+	}
+	
+	/**
+	 * Initialize expresses on chess board
+	 */
+	private void initilizeEmpress() {
+		for(int count = 1; count <= 2; count++) {
+			Empress whiteEmpress = new Empress("white", count);
+			this.cells.put(whiteEmpress.getPosition(), whiteEmpress);
+			Empress blackEmpress = new Empress("black", count);
+			this.cells.put(blackEmpress.getPosition(), blackEmpress);
+		}
+	}
+	
+	/**
+	 * Initialize princesses on chess board
+	 */
+	private void initilizePrincess() {
+		for(int count = 1; count <= 2; count++) {
+			Princess whitePrincess = new Princess("white", count);
+			this.cells.put(whitePrincess.getPosition(), whitePrincess);
+			Princess blackPrincess = new Princess("black", count);
+			this.cells.put(blackPrincess.getPosition(), blackPrincess);
 		}
 	}
 	

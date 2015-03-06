@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['selfchecked',['selfChecked',['../classmodel_core_1_1_chess_board.html#aed20e0cd69a469134238b8ce28403e76',1,'modelCore::ChessBoard']]],
   ['selfoccupied',['selfOccupied',['../classmodel_chess_pieces_1_1_chess_piece.html#a8045974b8d8f1e88722cd54b050774c5',1,'modelChessPieces::ChessPiece']]],
   ['setchesspieceinposition',['setChessPieceInPosition',['../classmodel_core_1_1_chess_board.html#af1a00d0d402bde8b8b5e5a23a96e6374',1,'modelCore::ChessBoard']]],
   ['setmoved',['setMoved',['../classmodel_chess_pieces_1_1_chess_piece.html#a43b4de8cc87600ac934d85cb09c852a1',1,'modelChessPieces::ChessPiece']]],
