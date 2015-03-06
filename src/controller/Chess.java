@@ -16,6 +16,7 @@ public class Chess {
 	private GUI chessView;
 	private ChessBoard chessBoard;
 	private Hashtable<String, Integer> score;
+	private String turn;
 	
 	/**
 	 * @param args not specified
@@ -29,11 +30,25 @@ public class Chess {
 		score.put("black", 0);
 		score.put("white", 0);
 		
+		turn = "white";
+		
 		PieceListener.setController(this);
 	}
 	
+	private void changeTurn(){
+		if(this.turn.equals("white")) {
+			this.turn = "black";
+		}
+		else {
+			this.turn = "white";
+		}
+	}
+	
 	public void move(Position fromPosition, Position toPosition) {
-		chessBoard.move(chessBoard.getChessPieceInPosition(fromPosition), toPosition);
-		chessView.refreshChessBoard(chessBoard);
+		if(chessBoard.getChessPieceInPosition(fromPosition).getType().equals(this.turn)) {
+			chessBoard.move(chessBoard.getChessPieceInPosition(fromPosition), toPosition);
+			chessView.refreshChessBoard(chessBoard);
+			this.changeTurn();
+		}
 	}
 }
