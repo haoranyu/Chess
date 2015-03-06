@@ -5,6 +5,12 @@ import modelCore.Position;
 
 /**
  * This is the class for princess
+ * A princess (also known as a cardinal,
+ *  archbishop, or simply bishop+knight compound) 
+ *  is a fairy chess piece that can move like a 
+ *  bishop or a knight. It cannot jump over other
+ *  pieces when moving as a bishop, but may do 
+ *  so when moving as a knight. 
  */
 
 /**

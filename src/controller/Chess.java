@@ -11,12 +11,14 @@ import views.GUI;
  */
 public class Chess {
 	
-	private GUI chessView;
-	private ChessBoard chessBoard;
-	private HashMap<String, Integer> score;
+	private GUI chessView; /**< the GUI object as the view */
+	private ChessBoard chessBoard; /**< the chessBoard we really play on */
+	private HashMap<String, Integer> score; /**< the hash for score saving */
 	
 	/**
-	 * @param args not specified
+	 * The constructor initialize the GUI and chess board
+	 * and also set the original score for both side to 0
+	 * and bind two listeners to this controller 
 	 */
 	public Chess() {
 		chessView = new GUI(80);
@@ -31,7 +33,11 @@ public class Chess {
 		MenuListener.setController(this);
 	}
 	
-
+	/**
+	 * The controller for move a chess piece 
+	 * @param fromPosition	The position get clicked first
+	 * @param toPosition	The position get clicked after
+	 */
 	public void move(Position fromPosition, Position toPosition) {
 		if(chessBoard.getChessPieceInPosition(fromPosition).getType().equals(chessBoard.getTurn())) {
 			if(chessBoard.move(chessBoard.getChessPieceInPosition(fromPosition), toPosition)){
@@ -49,6 +55,10 @@ public class Chess {
 		}
 	}
 	
+	/**
+	 * Undo the last move
+	 * Can be done time to time until a empty stack
+	 */
 	public void revertMove() {
 		if(chessBoard.revertMove()){
 			chessView.refreshChessBoard(chessBoard);
@@ -58,6 +68,9 @@ public class Chess {
 		}
 	}
 	
+	/**
+	 * Set who lose the game
+	 */
 	public void setLose() {
 		if(chessBoard.getTurn().equals("white")) {
 			chessView.popMsg("Black Win!");
@@ -72,8 +85,9 @@ public class Chess {
 	}
 
 	/**
-	 * 
-	 * @param chessBoard
+	 * The helper function to refresh the chess board
+	 * has been used everywhere
+	 * @param chessBoard	The chessBoard to be displayed on GUI
 	 */
 	public void refreshChessBoard(ChessBoard chessBoard) {
 		if(chessBoard == null) {

@@ -392,6 +392,7 @@ public class ChessBoard {
 	}
 	
 	/**
+	 * Get the last move in the record stack
 	 * @return the last pushed in record
 	 */
 	public Record lastRecord() {
@@ -399,16 +400,24 @@ public class ChessBoard {
 	}
 	
 	/**
+	 * Get who win or null
 	 * @return the win
 	 */
 	public String getWin() {
 		return win;
 	}
 	
+	/**
+	 * Get whose turn is it
+	 * @return	the turn
+	 */
 	public String getTurn() {
 		return turn;
 	}
 	
+	/**
+	 * Change turn after a move
+	 */
 	public void changeTurn() {
 		if(this.turn.equals("white")) {
 			this.turn = "black";

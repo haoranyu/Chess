@@ -12,14 +12,18 @@ import java.awt.event.ActionListener;
  */
 public class MenuListener implements ActionListener {
 	
-	private static Chess controller;
+	private static Chess controller; /**< the controlled for the class */
 	
+	/**
+	 * Constructor for listener of menu
+	 */
 	public MenuListener() {
 		super();
 	}
 	
 	/**
-	 * @param chess
+	 * Set controller to the main chess controller
+	 * @param chess	The chess controller
 	 */
 	public static void setController(Chess chess) {
 		controller = chess;

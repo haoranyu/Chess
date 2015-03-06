@@ -83,7 +83,9 @@ public class GUI{
         this.gameMain.add("Center", this.gamePanel);
 	}
 		
-	
+	/**
+	 * Initialize the menu
+	 */
 	private void initializeMenu() {
         JMenuBar menubar = new JMenuBar();
         
@@ -174,6 +176,10 @@ public class GUI{
 	}
 	
 
+	/**
+	 * The real refresh action on GUI
+	 * @param chessBoard	The aim chessBoard it will become
+	 */
 	public void refreshChessBoard(ChessBoard chessBoard) {
 		this.chessBoard = chessBoard;
 		
@@ -182,13 +188,18 @@ public class GUI{
 		this.gameFrame.setVisible(true);
 	}
 	
+	/**
+	 * Alert a message for user
+	 * @param msg	The content of alert
+	 */
 	public void popMsg(String msg) {
 		JOptionPane.showMessageDialog(null, msg, "Warning", JOptionPane.PLAIN_MESSAGE);
 	}
 
 	/**
-	 * @param integer
-	 * @param integer2
+	 * Refresh the score on the interface
+	 * @param whiteScore	The score for white player
+	 * @param blackScore	The score for black player
 	 */
 	public void refreshScore(Integer whiteScore, Integer blackScore) {
 		this.gameInfo.setText("White Score: " + whiteScore.toString() + "    Black Score: " +  blackScore.toString());

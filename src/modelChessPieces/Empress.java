@@ -4,6 +4,12 @@ import modelCore.Position;
 
 /**
  * This is the class for empress
+ * An empress (also known as a marshal,
+ *  chancellor, or simply rook+knight compound) 
+ *  is a fairy chess piece that can move like a 
+ *  rook or a knight. It cannot jump over other 
+ *  pieces when moving as a rook, but may do so 
+ *  when moving as a knight. 
  */
 
 /**

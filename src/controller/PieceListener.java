@@ -13,17 +13,22 @@ import modelCore.Position;
  */
 
 public class PieceListener implements ActionListener {
-	private static Position initialPosition = null;
-	private static Chess controller;
-	private Position position;
+	private static Position initialPosition = null; /**< the first position clicked */
+	private static Chess controller; /**< the controlled for the class */
+	private Position position; /**< the position this action clicked */
 	
+	/**
+	 * receive the position on the chessboard where is clicked
+	 * @param position
+	 */
 	public PieceListener(Position position) {
 		super();
 		this.position = position;
 	}
 
 	/**
-	 * @param chess
+	 * Set controller to the main chess controller
+	 * @param chess	The chess controller
 	 */
 	public static void setController(Chess chess) {
 		controller = chess;
