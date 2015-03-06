@@ -3,14 +3,12 @@
  */
 package views;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
 import modelCore.ChessBoard;
 import modelCore.Position;
-
+import controller.MenuListener;
 import controller.PieceListener;
 /**
  * @author haoranyu
@@ -90,8 +88,14 @@ public class GUI{
         JMenuBar menubar = new JMenuBar();
         
         JMenu game = new JMenu("Game");
-        game.add(new JMenuItem("New Game"));
-        game.add(new JMenuItem("Exit"));
+        
+        JMenuItem newGame = new JMenuItem("New Game");
+        newGame.addActionListener(new MenuListener());
+        game.add(newGame);
+       
+        JMenuItem exit = new JMenuItem("Exit");
+        exit.addActionListener(new MenuListener());
+        game.add(exit);
 
         JMenu option = new JMenu("Option");
         option.add(new JMenuItem("Redo"));
@@ -166,6 +170,7 @@ public class GUI{
 
 	public void refreshChessBoard(ChessBoard chessBoard) {
 		this.chessBoard = chessBoard;
+		
 		gamePanel.removeAll();
 		initializePieces();
 		this.gameFrame.setVisible(true);

@@ -1,6 +1,4 @@
 package controller;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Hashtable;
 
 import modelCore.ChessBoard;
@@ -30,25 +28,32 @@ public class Chess {
 		score.put("black", 0);
 		score.put("white", 0);
 		
-		turn = "white";
-		
 		PieceListener.setController(this);
+		MenuListener.setController(this);
 	}
 	
-	private void changeTurn(){
-		if(this.turn.equals("white")) {
-			this.turn = "black";
+
+	public void move(Position fromPosition, Position toPosition) {
+		if(chessBoard.getChessPieceInPosition(fromPosition).getType().equals(chessBoard.getTurn())) {
+			if(chessBoard.move(chessBoard.getChessPieceInPosition(fromPosition), toPosition)){
+				chessView.refreshChessBoard(chessBoard);
+				chessBoard.changeTurn();
+			}
+		}
+	}
+
+	/**
+	 * 
+	 * @param chessBoard
+	 */
+	public void refreshChessBoard(ChessBoard chessBoard) {
+		if(chessBoard == null) {
+			this.chessBoard = new ChessBoard();
 		}
 		else {
-			this.turn = "white";
+			this.chessBoard = chessBoard;
 		}
+		chessView.refreshChessBoard(this.chessBoard);
 	}
 	
-	public void move(Position fromPosition, Position toPosition) {
-		if(chessBoard.getChessPieceInPosition(fromPosition).getType().equals(this.turn)) {
-			chessBoard.move(chessBoard.getChessPieceInPosition(fromPosition), toPosition);
-			chessView.refreshChessBoard(chessBoard);
-			this.changeTurn();
-		}
-	}
 }

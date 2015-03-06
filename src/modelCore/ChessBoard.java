@@ -30,6 +30,7 @@ public class ChessBoard {
 	Hashtable<Position, ChessPiece> cells;	/**< store the chess piece in each cell by position */
 	private Stack<Record>  	records;  /**< store the record of movement on chess board */
 	private String win;  /**< who win */
+	private String turn;
 	public int	row; /**< how many rows for the chess board */
 	public int col; /**< how many columns for the chess board */
 	
@@ -45,6 +46,7 @@ public class ChessBoard {
 		this.win = null;
 		this.row = 8;
 		this.col = 8;
+		this.turn = "white";
 		
 		this.initilizeKings();
 		this.initilizeQueens();
@@ -67,6 +69,7 @@ public class ChessBoard {
 		this.win = chessBoard.getWin();
 		this.row = chessBoard.row;
 		this.col = chessBoard.col;
+		this.turn = "white";
 		
 		this.whiteKing = new King(chessBoard.whiteKing);
 		this.blackKing = new King(chessBoard.blackKing);
@@ -402,4 +405,16 @@ public class ChessBoard {
 		this.win = win;
 	}
 	
+	public String getTurn() {
+		return turn;
+	}
+	
+	public void changeTurn() {
+		if(this.turn.equals("white")) {
+			this.turn = "black";
+		}
+		else {
+			this.turn = "white";
+		}
+	}
 }
