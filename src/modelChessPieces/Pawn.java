@@ -93,7 +93,7 @@ public class Pawn extends ChessPiece {
 	 * @param chessBoard the chess board we are now on
 	 */
 	@Override
-	public void getpossibleNextPositions(ChessBoard chessBoard) {
+	public void getPossibleNextPositions(ChessBoard chessBoard) {
 		// remove all before computing new possible next position
 		this.possibleNextPositions.clear();
 		

@@ -60,7 +60,7 @@ public class Bishop extends ChessPiece {
 	 * @param chessBoard the chess board we are now on
 	 */
 	@Override
-	public void getpossibleNextPositions(ChessBoard chessBoard) {
+	public void getPossibleNextPositions(ChessBoard chessBoard) {
 
 		System.out.println(this.getType()+" "+this.getName());
 		

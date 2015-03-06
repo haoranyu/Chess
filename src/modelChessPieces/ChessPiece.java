@@ -109,7 +109,7 @@ public abstract class ChessPiece {
 	 */
 	public void showpossibleNextPositions(ChessBoard chessBoard) {
 		System.out.print("All possible next positions are:\n");
-		this.getpossibleNextPositions(chessBoard);
+		this.getPossibleNextPositions(chessBoard);
 		for( Position possibleNextPosition : this.possibleNextPositions) {
 			possibleNextPosition.show();
 		}
@@ -121,7 +121,7 @@ public abstract class ChessPiece {
 	 * 
 	 * @param chessBoard	The object of chess board
 	 */
-	public abstract void getpossibleNextPositions(ChessBoard chessBoard);
+	public abstract void getPossibleNextPositions(ChessBoard chessBoard);
 
 	/**
 	 * @return the position

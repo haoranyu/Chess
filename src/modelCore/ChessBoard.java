@@ -236,7 +236,7 @@ public class ChessBoard {
 	 */
 	
 	public boolean move(ChessPiece chessPiece, Position newPosition) {
-		chessPiece.getpossibleNextPositions(this);
+		chessPiece.getPossibleNextPositions(this);
 		
 		chessPiece.showpossibleNextPositions(this);
 		
@@ -301,7 +301,7 @@ public class ChessBoard {
 	 * @return	True if there king of others is under check-mate
 	 */
 	public boolean checkOtherKing(ChessPiece chessPiece) {
-		chessPiece.getpossibleNextPositions(this);
+		chessPiece.getPossibleNextPositions(this);
 		
 		Iterator<Position> nextPositionItr = chessPiece.possibleNextPositions.iterator();
 		while (nextPositionItr.hasNext()) {
@@ -323,7 +323,7 @@ public class ChessBoard {
 	 * @return 
 	 */
 	public boolean isKingChecked(ChessPiece king) {
-		king.getpossibleNextPositions(this);
+		king.getPossibleNextPositions(this);
 		// add the original position which is for staying
 		king.possibleNextPositions.add(king.getPosition());
 		for(Position possibleKingNextPositions : king.possibleNextPositions) {
@@ -369,7 +369,7 @@ public class ChessBoard {
 			for(int col = 1; col <= this.row; col++){
 				Position position = new Position(row, col);
 				if(this.getChessPieceInPosition(position).getType().equals(color)) {
-					this.getChessPieceInPosition(position).getpossibleNextPositions(this);
+					this.getChessPieceInPosition(position).getPossibleNextPositions(this);
 					for(Position possiblePosition : this.getChessPieceInPosition(position).possibleNextPositions) {
 						if(!possiblePositions.contains(possiblePosition)) {
 							possiblePositions.add(possiblePosition);

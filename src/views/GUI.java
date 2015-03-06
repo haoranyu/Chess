@@ -7,6 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+import javax.swing.text.html.HTMLDocument;
+import javax.swing.text.html.HTMLEditorKit;
 
 import modelCore.ChessBoard;
 import modelCore.Position;
@@ -20,8 +23,10 @@ public class GUI implements ActionListener {
 	private int gameFrameWidth;
 	private int gridSize;
 	
-	private JFrame gameFrame;
+	public JFrame gameFrame;
 	public JPanel gamePanel; 
+	public JPanel gameMain; 
+	public JLabel gameInfo; 
 	
 	/**
 	 * The constructor for GUI
@@ -30,14 +35,15 @@ public class GUI implements ActionListener {
 	public GUI(int size) {
 		this.gridSize = size;
 		this.chessBoard = new ChessBoard();
-		this.gameFrameHeight = this.chessBoard.row * this.gridSize;
+		this.gameFrameHeight = this.chessBoard.row * this.gridSize + 60;
 		this.gameFrameWidth = this.chessBoard.col * this.gridSize;
 		
 		initializeFrame();
+		initializeMain();
+		initializeInfo();
 		initializePanel();
 		initializePieces();
 		initializeMenu();
-		
 		this.gameFrame.setVisible(true);
 	}
 	
@@ -50,6 +56,18 @@ public class GUI implements ActionListener {
 		this.gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
+	
+	private void initializeMain() {
+		this.gameMain = new JPanel(new BorderLayout());
+		this.gameFrame.add(this.gameMain);
+	}
+	
+	private void initializeInfo() {
+		this.gameInfo = new JLabel("White Score: 0    Black Score: 0");
+		this.gameInfo.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+		this.gameMain.add("North", this.gameInfo);
+	}
+	
 	
 	/**
 	 * Initialize the panel for the game
@@ -64,9 +82,10 @@ public class GUI implements ActionListener {
                 Image img = background.getImage();  
                 g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), background.getImageObserver());  
             }  
-        };  
-        this.gameFrame.add(this.gamePanel);
+        };
+        this.gameMain.add("Center", this.gamePanel);
 	}
+		
 	
 	private void initializeMenu() {
         JMenuBar menubar = new JMenuBar();
