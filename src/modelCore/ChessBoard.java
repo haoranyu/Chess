@@ -238,7 +238,7 @@ public class ChessBoard {
 	public boolean move(ChessPiece chessPiece, Position newPosition) {
 		chessPiece.getPossibleNextPositions(this);
 		
-		chessPiece.showpossibleNextPositions(this);
+		// chessPiece.showpossibleNextPositions(this);
 		
 		
 		if(chessPiece.possibleNextPositions.contains(newPosition)){

@@ -61,9 +61,6 @@ public class Bishop extends ChessPiece {
 	 */
 	@Override
 	public void getPossibleNextPositions(ChessBoard chessBoard) {
-
-		System.out.println(this.getType()+" "+this.getName());
-		
 		
 		// remove all before computing new possible next position
 		this.possibleNextPositions.clear();

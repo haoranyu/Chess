@@ -7,17 +7,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
-import javax.swing.text.html.HTMLDocument;
-import javax.swing.text.html.HTMLEditorKit;
 
 import modelCore.ChessBoard;
 import modelCore.Position;
+
+import controller.PieceListener;
 /**
  * @author haoranyu
  * 
  */
-public class GUI implements ActionListener {
+public class GUI{
 	private ChessBoard chessBoard;
 	private int gameFrameHeight;
 	private int gameFrameWidth;
@@ -91,16 +90,9 @@ public class GUI implements ActionListener {
         JMenuBar menubar = new JMenuBar();
         
         JMenu game = new JMenu("Game");
-        
-        JMenuItem newGame = new JMenuItem("New Game");
-        game.add(newGame);
-        newGame.addActionListener(this);
-   
-        JMenuItem exit = new JMenuItem("Exit");
-        game.add(exit);
-        exit.addActionListener(this);
-        
-        
+        game.add(new JMenuItem("New Game"));
+        game.add(new JMenuItem("Exit"));
+
         JMenu option = new JMenu("Option");
         option.add(new JMenuItem("Redo"));
         option.add(new JMenuItem("Undo"));
@@ -126,6 +118,7 @@ public class GUI implements ActionListener {
 				piece.setOpaque(false);
 				piece.setContentAreaFilled(false);
 				piece.setBorderPainted(false);
+				piece.addActionListener(new PieceListener(new Position(row, col)));
 				this.gamePanel.add(piece);
 			}
 		}
@@ -175,21 +168,7 @@ public class GUI implements ActionListener {
 		this.chessBoard = chessBoard;
 		gamePanel.removeAll();
 		initializePieces();
+		this.gameFrame.setVisible(true);
 	}
 	
-
-
-	/* (non-Javadoc)
-	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
-	 */
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if(e.getActionCommand() == "Exit") {
-			System.exit(0);
-		}
-		if(e.getActionCommand() == "New Game") {
-			ChessBoard chessBoard = new ChessBoard();
-			refreshChessBoard(chessBoard);
-		}
-	}	
 }
