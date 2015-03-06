@@ -24,7 +24,7 @@ public class MoveToSelfOccupiedTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		chessBoard = new ChessBoard();
+		chessBoard = new ChessBoard(false);
 		testPosition = new Position[10];
 		testPosition[0] = new Position(1, 1);
 		testPosition[1] = new Position(1, 2);

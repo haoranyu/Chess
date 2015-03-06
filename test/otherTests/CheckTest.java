@@ -24,7 +24,7 @@ public class CheckTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		chessBoard = new ChessBoard();
+		chessBoard = new ChessBoard(false);
 		testPosition = new Position[10];
 		testPosition[0] = new Position(7, 4);
 		testPosition[1] = new Position(2, 5);

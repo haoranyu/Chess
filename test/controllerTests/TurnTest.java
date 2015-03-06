@@ -15,7 +15,7 @@ import controller.Chess;
  * @author haoranyu
  *
  */
-public class turnTest {
+public class TurnTest {
 	Chess chess;
 	Position testPosition;
 	

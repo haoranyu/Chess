@@ -37,9 +37,6 @@ public class ChessBoard {
 	public King whiteKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
 	public King blackKing; /**< since king is unique we set it as a member of ChessBoard which is also easier to access */
 	
-	/**
-	 * Constructor for a new chessBoard with chess pieces defined
-	 */
 	public ChessBoard() {
 		this.cells = new Hashtable<Position, ChessPiece>();
 		this.records = new Stack<Record>();
@@ -56,6 +53,32 @@ public class ChessBoard {
 		this.initilizePawns();
 		this.initilizeEmpress();
 		this.initilizePrincess();
+		
+		this.setEmpty();
+	}
+
+	/**
+	 * Constructor for a new chessBoard with chess pieces defined
+	 */
+	public ChessBoard(boolean customize) {
+		this.cells = new Hashtable<Position, ChessPiece>();
+		this.records = new Stack<Record>();
+		this.win = null;
+		this.row = 8;
+		this.col = 8;
+		this.turn = "white";
+		
+		this.initilizeKings();
+		this.initilizeQueens();
+		this.initilizeRooks();
+		this.initilizeBishops();
+		this.initilizeKnights();
+		this.initilizePawns();
+		
+		if(customize == true) {
+			this.initilizeEmpress();
+			this.initilizePrincess();
+		}
 		
 		this.setEmpty();
 	}
