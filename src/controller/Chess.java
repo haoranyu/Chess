@@ -1,5 +1,5 @@
 package controller;
-import java.util.Hashtable;
+import java.util.HashMap;
 
 import modelCore.ChessBoard;
 import modelCore.Position;
@@ -13,7 +13,7 @@ public class Chess {
 	
 	private GUI chessView;
 	private ChessBoard chessBoard;
-	private Hashtable<String, Integer> score;
+	private HashMap<String, Integer> score;
 	
 	/**
 	 * @param args not specified
@@ -23,7 +23,7 @@ public class Chess {
 		
 		chessBoard = new ChessBoard();
 		
-		score = new Hashtable<String, Integer>();
+		score = new HashMap<String, Integer>();
 		score.put("black", 0);
 		score.put("white", 0);
 		
@@ -36,7 +36,15 @@ public class Chess {
 		if(chessBoard.getChessPieceInPosition(fromPosition).getType().equals(chessBoard.getTurn())) {
 			if(chessBoard.move(chessBoard.getChessPieceInPosition(fromPosition), toPosition)){
 				chessView.refreshChessBoard(chessBoard);
-				chessBoard.changeTurn();
+				if(chessBoard.getWin() == null) {
+					chessBoard.changeTurn();
+				}
+				else {
+					chessBoard.changeTurn();
+					if(!chessBoard.getWin().equals(chessBoard.getTurn())) {
+						this.setLose();
+					}
+				}
 			}
 		}
 	}
@@ -48,6 +56,19 @@ public class Chess {
 		else {
 			chessView.popMsg("There is no record of move avaliable");
 		}
+	}
+	
+	public void setLose() {
+		if(chessBoard.getTurn().equals("white")) {
+			chessView.popMsg("Black Win!");
+			score.put("black", score.get("black") + 1);
+		}
+		else {
+			chessView.popMsg("White Win!");
+			score.put("white", score.get("white") + 1);
+		}
+		chessView.refreshScore(score.get("white"), score.get("black"));
+		this.refreshChessBoard(null);
 	}
 
 	/**

@@ -103,7 +103,10 @@ public class GUI{
         undo.addActionListener(new MenuListener());
         option.add(undo);
 
-        option.add(new JMenuItem("Give Up"));
+        
+        JMenuItem giveUp = new JMenuItem("Give Up");
+        giveUp.addActionListener(new MenuListener());
+        option.add(giveUp);
         
         menubar.add(game);
         menubar.add(option);
@@ -181,6 +184,15 @@ public class GUI{
 	
 	public void popMsg(String msg) {
 		JOptionPane.showMessageDialog(null, msg, "Warning", JOptionPane.PLAIN_MESSAGE);
+	}
+
+	/**
+	 * @param integer
+	 * @param integer2
+	 */
+	public void refreshScore(Integer whiteScore, Integer blackScore) {
+		this.gameInfo.setText("White Score: " + whiteScore.toString() + "    Black Score: " +  blackScore.toString());
+		this.gameFrame.setVisible(true);
 	}
 	
 }

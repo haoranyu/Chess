@@ -261,7 +261,7 @@ public class ChessBoard {
 			chessPiece.setPosition(newPosition);
 			
 			if(this.checkOtherKing(chessPiece)) {
-				System.out.print("WARNING: you win!\n");
+				this.win = chessPiece.getType();
 			}
 			
 			if(this.selfChecked(chessPiece)) {
@@ -403,13 +403,6 @@ public class ChessBoard {
 	 */
 	public String getWin() {
 		return win;
-	}
-
-	/**
-	 * @param win the win to set
-	 */
-	public void setWin(String win) {
-		this.win = win;
 	}
 	
 	public String getTurn() {

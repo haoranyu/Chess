@@ -40,7 +40,7 @@ public class MenuListener implements ActionListener {
 			controller.revertMove();
 		}
 		if(e.getActionCommand() == "Give Up") {
-			controller.refreshChessBoard(null);
+			controller.setLose();
 		}
 	}
 }
